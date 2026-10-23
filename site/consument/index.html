@@ -364,6 +364,7 @@ body.zonder-check .check{display:none}
 /* ===== cadeau-blok en bijschriften ===== */
 .cadeau-blok{display:flex;gap:16px;align-items:center;background:var(--zand);border-radius:var(--radius);padding:12px 16px 12px 12px;margin:16px 0}
 .cadeau-blok img{width:76px;height:76px;object-fit:contain;background:#fff;border-radius:3px;flex:none;padding:4px}
+.cadeau-blok .cadeau-label{display:inline-block;font-family:Jost,sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--corten);padding:3px 8px;border-radius:2px;margin-bottom:6px}
 .cadeau-blok .kop{font-weight:600;font-size:17px;color:var(--tekst)}
 .cadeau-blok .kop span{color:var(--corten)}
 .cadeau-blok p+p{margin-top:2px;font-size:14.5px;color:var(--tekst-zacht)}
@@ -418,13 +419,13 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <button class="pijl vorige" type="button" aria-label="Vorige foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="pijl volgende" type="button" aria-label="Volgende foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         <p class="bijschrift" id="bijschrift"></p>
-        <span class="teller" id="teller" aria-live="polite">1 / 14</span>
+        <span class="teller" id="teller" aria-live="polite">1 / 17</span>
       </div>
       <div class="thumbs" id="thumbs" role="group" aria-label="Productfoto's"></div>
       <!-- 2. MAAK HEM COMPLEET -->
       <fieldset class="extra extra-onder">
         <legend>Pas hem aan je tuin aan</legend>
-        <label><input type="checkbox" checked disabled><span class="naam">Wind Shield<small>Sluit één kant helemaal af. De warmte kaatst terug naar de kant waar jij zit.</small></span><span class="bedrag">Cadeau<small style="display:block;color:var(--as-donker);font-size:12.5px">t.w.v. €274</small></span></label>
+        <label><input type="checkbox" checked disabled><span class="naam">Wind Shield<small>Sluit één kant helemaal af. De warmte kaatst terug naar de kant waar jij zit.</small></span><span class="bedrag">Cadeau<small style="display:block;color:var(--as-donker);font-size:12.5px">t.w.v. €274 · t/m 30 nov</small></span></label>
         <label><input type="checkbox" data-prijs="274"><span class="naam">Extra Wind Control-paneel<small>Waait het vaak uit dezelfde hoek? Scherm 2/3 van de vuurkamer af, en je ziet de vlammen nog.</small></span><span class="bedrag num">+ €274</span></label>
         <label><input type="checkbox" data-prijs="119"><span class="naam">Mobility Kit<small>Vier zwenkwielen, twee met rem. Rij de haard naar de plek waar de avond is.</small></span><span class="bedrag num">+ €119</span></label>
         <div class="totaal" style="padding:12px 16px;margin:0;border-top:1px solid var(--lijn)"><span>Totaal met extra's</span><strong class="num" id="totaal" aria-live="polite">€2.076</strong></div>
@@ -439,7 +440,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
       <div class="cadeau-blok">
         <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
-        <div><p class="kop">+ Gratis Wind Shield <span>t.w.v. €274</span></p><p>Sluit één kant af en kaatst de warmte naar je toe. Wordt automatisch toegevoegd.</p></div>
+        <div><p class="cadeau-label">Black Friday-cadeau</p><p class="kop">+ Gratis Wind Shield <span>t.w.v. €274</span></p><p><b>Alleen t/m 30 november.</b> Sluit één kant af en kaatst de warmte naar je toe. Wordt automatisch toegevoegd.</p></div>
       </div>
 
       <p class="voorraad"><span class="stip" aria-hidden="true"></span>Op voorraad, in 1-2 werkdagen in huis. <span class="laag">Nog beperkte voorraad.</span> <span class="check">CHECK: klopt de lage voorraad?</span></p>
@@ -509,7 +510,8 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <span class="nr">3</span>
         <h3>Pas hem aan op de wind</h3>
         <p>Waait het vaak uit één hoek? Het Wind Control-paneel zit er standaard bij. Je haalt het eruit en zet het aan de windkant, zonder gereedschap. De hoge schoorsteen zit er ook al op, dus een pijp bijkopen is niet nodig.</p>
-        <p class="spec">Wind Control-paneel inbegrepen · Wind Shield nu gratis</p>
+        <p>Wil je één kant helemaal dicht? Dan is er het Wind Shield. Dat krijg je nu met Black Friday gratis, maar alleen tot en met 30 november.</p>
+        <p class="spec">Wind Control-paneel inbegrepen · <span style="color:var(--corten)">Wind Shield (t.w.v. €274) gratis t/m 30 november</span></p>
       </div>
     </article>
 
@@ -657,6 +659,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     ['video/vlammen.mp4','Video: de vlammen in de vuurkamer van dichtbij',1,'video/vlammen.jpg'],
     ['video/tuin-friesland.mp4','Video: geleverd in een tuin in Friesland, de haard brandt naast de loungebank',1,'video/tuin-friesland.jpg'],
     ['Ventor_63.jpg','Twee mannen bij de brandende VENTOR® Original op een terras bij zonsondergang',1],
+    ['windscreen1.png','Het Wind Shield van cortenstaal, in november gratis bij de VENTOR® Original',0],
     ['Ventor_57.jpg','Gasten aan tafel op een terras, met de VENTOR® Original brandend ernaast',1],
     ['Ventor_original_vuurkamer.jpg','Vuurkamer met lamellen en brandend hout, van dichtbij',1],
     ['Ventor_02.jpg','Vrienden proosten aan tafel naast het vuur',1],
@@ -680,6 +683,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   });
   var BIJ={
     'Ventor_original_buitenhaard.png':'Vuur op ooghoogte, van alle kanten te zien.',
+    'windscreen1.png':'Black Friday-cadeau: gratis Wind Shield t.w.v. €274, alleen t/m 30 november.',
     'video/vlammen.mp4':'Een groot, levendig vuur achter slanke lamellen.',
     'video/tuin-friesland.mp4':'Bij een klant in Friesland: het middelpunt van de tuin.',
     'Ventor_63.jpg':'De schoorsteen voert de rook af, hoog boven de hoofden.',
