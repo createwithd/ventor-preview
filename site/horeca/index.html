@@ -394,6 +394,7 @@ body.zonder-check .check{display:none}
 /* ===== cadeau-blok en bijschriften ===== */
 .cadeau-blok{display:flex;gap:16px;align-items:center;background:var(--zand);border-radius:var(--radius);padding:12px 16px 12px 12px;margin:16px 0}
 .cadeau-blok img{width:76px;height:76px;object-fit:contain;background:#fff;border-radius:3px;flex:none;padding:4px}
+.cadeau-blok .cadeau-label{display:inline-block;font-family:Jost,sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--corten);padding:3px 8px;border-radius:2px;margin-bottom:6px}
 .cadeau-blok .kop{font-weight:600;font-size:17px;color:var(--tekst)}
 .cadeau-blok .kop span{color:var(--corten)}
 .cadeau-blok p+p{margin-top:2px;font-size:14.5px;color:var(--tekst-zacht)}
@@ -446,35 +447,11 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <video id="hoofdvideo" muted loop playsinline preload="none"></video>
         <button class="pijl vorige" type="button" aria-label="Vorige foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="pijl volgende" type="button" aria-label="Volgende foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-        <span class="teller" id="teller" aria-live="polite">1 / 10</span>
+        <p class="bijschrift" id="bijschrift"></p>
+        <span class="teller" id="teller" aria-live="polite">1 / 13</span>
       </div>
       <div class="thumbs" id="thumbs" role="group" aria-label="Foto's"></div>
-    </div>
-
-    <div class="info">
-      <span class="bf-label">Black Friday voor horeca · <em>25% korting</em></span>
-      <h1>VENTOR® Original voor horeca: cortenstalen buitenhaard, 220 cm</h1>
-      <p class="kop-onder">Het vuur waar uw gasten omheen gaan zitten.</p>
-      <p class="sub">Handgemaakt in Nederland, gebouwd voor elke dag buiten. Het vuur staat op ooghoogte en is van alle kanten te zien, dus elke tafel eromheen kijkt erin.</p>
-
-      <div class="bf-prijs"><span class="nu num">€1.858,68</span><s class="num" aria-label="Normaal €2.478,51">€2.478,51</s><span class="procent">Alleen Black Friday −25%</span></div>
-      <p class="bf-set">excl. btw per haard · €2.249 incl. btw · de hele maand november</p><p style="margin-top:6px"><span class="check">CHECK: €2.999 moet 30 dagen vóór de actie de echte prijs zijn (nu €2.595)</span></p>
-
-      <div class="cadeau-blok">
-        <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
-        <div><p class="kop">+ Gratis Wind Shield <span>t.w.v. €226,45 excl. btw</span></p><p>Bij elke haard. Sluit één kant af en kaatst de warmte naar uw gasten.</p></div>
-      </div>
-
-      <p class="voorraad"><span class="stip" aria-hidden="true"></span>Op voorraad. Levering op een pallet, op een afgesproken dag. <span class="check">CHECK: levertijd bij grotere aantallen</span></p>
-
-      <ul class="voordelen">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><span><b>Tafels rondom.</b> 360° zicht op het vuur, op ooghoogte. Er is geen slechte plek.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 21V10h6v11M10.5 10V3h3v7"/></svg><span><b>Rook boven de tafels.</b> Schoorsteen Ø 40 cm, uitlaat op 220 cm, met vonkenvanger.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M3 14h18"/></svg><span><b>Verplaatsbaar.</b> Met de Mobility Kit rijdt u hem naar een andere plek op het terras.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><span><b>Staat het hele jaar buiten.</b> Cortenstaal, geen onderhoud behalve de as.</span></li>
-      </ul>
-
-      <div class="reken">
+      <div class="reken extra-onder">
         <label for="aantal">Aantal haarden voor uw terras</label>
         <div class="stepper">
           <button type="button" id="min" aria-label="Eén minder">−</button>
@@ -484,16 +461,31 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <div class="reken-uit"><span>Indicatie excl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€3.717,36</strong></div>
         <p class="reken-noot">Black Friday-prijs × aantal. Staffelkorting voor meerdere haarden staat op uw offerte. <span class="check">CHECK: staffel vanaf hoeveel stuks, en bovenop de 25%?</span></p>
       </div>
+    </div>
 
-      <a class="btn btn-primair" href="#offerte" id="naarOfferte">Vraag een offerte met Black Friday-korting aan</a>
-      <p class="micro">Liever direct bestellen? <a href="#">Bestel online</a>, factuur op uw bedrijfsnaam.</p>
+    <div class="info">
+      <h1>VENTOR® Original voor horeca: cortenstalen buitenhaard, 220 cm</h1>
+      <p class="kop-onder">Het vuur waar uw gasten omheen gaan zitten.</p>
 
-      <ul class="vertrouwen">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l4-4m0 0l3-7 6-5-5 6-7 3z"/></svg>Handgemaakt in Nederland</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>2 jaar garantie</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Levering op afspraak</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Persoonlijk advies</li>
+      <div class="bf-prijs"><span class="nu num">€1.858,68</span><s class="num" aria-label="Normaal €2.478,51">€2.478,51</s><span class="procent">Alleen Black Friday −25%</span></div>
+      <p class="bf-set">excl. btw per haard · €2.249 incl. btw</p>
+      <p style="margin-top:6px"><span class="check">CHECK: €2.999 moet 30 dagen vóór de actie de echte prijs zijn (nu €2.595)</span></p>
+
+      <div class="cadeau-blok">
+        <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
+        <div><p class="cadeau-label">Black Friday-cadeau</p><p class="kop">+ Gratis Wind Shield <span>t.w.v. €226,45 excl. btw</span></p><p><b>Alleen t/m 30 november.</b> Bij elke haard. Sluit één kant af en kaatst de warmte naar uw gasten.</p></div>
+      </div>
+
+      <p class="voorraad"><span class="stip" aria-hidden="true"></span>Op voorraad, levering op een afgesproken dag. <span class="laag">Nog beperkte voorraad.</span> <span class="check">CHECK: klopt de lage voorraad, en de levertijd bij grotere aantallen?</span></p>
+
+      <ul class="voordelen">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><span><b>Tafels rondom.</b> 360° zicht op het vuur, op ooghoogte. Er is geen slechte plek.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 21V10h6v11M10.5 10V3h3v7"/></svg><span><b>Rook boven de tafels.</b> Schoorsteen Ø 40 cm, uitlaat op 220 cm, met vonkenvanger.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M3 14h18"/></svg><span><b>Verplaatsbaar.</b> Met de Mobility Kit rijdt u hem naar een andere plek op het terras.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><span><b>Staat het hele jaar buiten.</b> Cortenstaal, geen onderhoud behalve de as.</span></li>
       </ul>
+
+      <a class="btn btn-primair" href="#offerte" id="naarOfferte">Vraag een offerte aan</a>
     </div>
   </div>
 </section>
@@ -531,13 +523,13 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     </article>
 
     <article class="vd reveal">
-      <div class="vd-beeld"><img src="img/Ventor_haard_met_Mobility_kit_93efa256-fb4c-4179-80a5-97f460dbe4cc.png" alt="VENTOR® Original op wielen met de Mobility Kit" loading="lazy" class="contain"></div>
-      <div class="vd-tekst"><span class="nr">3</span><h3>Aan te passen aan uw opstelling</h3><p>Het Wind Control-paneel (standaard) en het Wind Shield (in november gratis) schermen de kant af waar de wind vandaan komt. Met de Mobility Kit verplaatst u de haard naar een andere plek, op een harde, vlakke ondergrond en altijd als hij uit en afgekoeld is.</p><p class="spec">Mobility Kit: 4 zwenkwielen, 2 met rem · €119 (€98,35 excl. btw)</p></div>
+      <div class="vd-beeld staand"><video autoplay muted loop playsinline preload="metadata" poster="video/paneel.jpg" aria-label="Video: het Wind Control-paneel wordt met de hand verplaatst"><source src="video/paneel.mp4" type="video/mp4"></video></div>
+      <div class="vd-tekst"><span class="nr">3</span><h3>Aan te passen aan uw opstelling</h3><p>Het Wind Control-paneel (standaard) en het Wind Shield (alleen met Black Friday gratis, t/m 30 november) schermen de kant af waar de wind vandaan komt. Met de Mobility Kit verplaatst u de haard naar een andere plek, op een harde, vlakke ondergrond en altijd als hij uit en afgekoeld is.</p><p class="spec">Mobility Kit: 4 zwenkwielen, 2 met rem · €119 (€98,35 excl. btw)</p></div>
     </article>
 
     <article class="vd vd-om reveal">
       <div class="vd-beeld wit"><img src="img/roestproces.jpg" alt="Zes stadia van de patina van cortenstaal" loading="lazy" class="contain"></div>
-      <div class="vd-tekst"><span class="nr">4</span><h3>Gebouwd voor elke dag buiten</h3><p>Cortenstaal maakt zijn eigen roestlaag en kan het hele jaar buiten staan. Schilderen of behandelen hoeft nooit. Volgens VENTOR® is de haard ontwikkeld voor intensief professioneel gebruik.</p><p class="spec">Cortenstaal gemiddeld 2,5 mm · vuurplaat 10 mm · 2 jaar garantie</p></div>
+      <div class="vd-tekst"><span class="nr">4</span><h3>Van staalgrijs naar warm roestbruin</h3><p>Cortenstaal krijgt in een paar weken tot maanden een warme roestkleur. Die laag beschermt het staal, zodat de haard elke dag en het hele jaar buiten kan staan. Schilderen of behandelen hoeft nooit. Volgens VENTOR® is de haard ontwikkeld voor intensief professioneel gebruik.</p><p class="spec">Cortenstaal gemiddeld 2,5 mm · vuurplaat 10 mm · 2 jaar garantie</p></div>
     </article>
   </div>
 </section>
@@ -677,6 +669,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     ['video/terras-gasten.mp4','Video: gasten op een strandterras rond de VENTOR® Original',1,'video/terras-gasten.jpg'],
     ['video/vlammen.mp4','Video: de vlammen in de vuurkamer van dichtbij',1,'video/vlammen.jpg'],
     ['video/papas-beach-house.mp4','Video: de VENTOR® Original op het terras van Papas Beach House',1,'video/papas-beach-house.jpg'],
+    ['windscreen1.png','Het Wind Shield van cortenstaal, in november gratis bij elke haard',0],
     ['Ventor_63.jpg','Twee mannen bij de VENTOR® Original op een terras bij zonsondergang',1],
     ['Ventor_02.jpg','Gasten proosten aan tafel naast het vuur',1],
     ['Ventor_65.jpg','De VENTOR® Original op een houten terras',1],
@@ -684,7 +677,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     ['Ventor_original_buitenhaard.png','VENTOR® Original met brandend vuur',0],
     ['Ventor_original_vuurkamer.jpg','Vuurkamer met lamellen, van dichtbij',1],
     ['Ventor_haard_met_Mobility_kit_93efa256-fb4c-4179-80a5-97f460dbe4cc.png','VENTOR® Original op wielen met de Mobility Kit',0],
-    ['windscreen1.png','Het Wind Shield van cortenstaal',0],
     ['onderdelen.png','Technische tekening van de onderdelen',0]
   ];
   var hoofd=document.getElementById('hoofdbeeld'), thumbs=document.getElementById('thumbs'), teller=document.getElementById('teller'), huidig=0;
@@ -695,6 +687,23 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     b.innerHTML='<img src="'+(isV?f[3]:B+f[0])+'" alt="" loading="lazy">';
     b.addEventListener('click',function(){toon(i)}); thumbs.appendChild(b);
   });
+  var BIJ={
+    'Ventor_57.jpg':'Een vuur midden tussen de tafels.',
+    'video/terras-gasten.mp4':'Gasten rond het vuur, ook na zonsondergang.',
+    'video/vlammen.mp4':'Een groot vuur, van alle tafels te zien.',
+    'video/papas-beach-house.mp4':'Op het terras van Papas Beach House.',
+    'windscreen1.png':'Black Friday-cadeau: gratis Wind Shield bij elke haard, alleen t/m 30 november.',
+    'Ventor_63.jpg':'De schoorsteen voert de rook af, hoog boven de tafels.',
+    'Ventor_02.jpg':'Het middelpunt van uw terras.',
+    'Ventor_65.jpg':'Overdag een blikvanger, \'s avonds de sfeermaker.',
+    'Ventor_36.jpg':'Geen slechte plek: vuur van alle kanten.',
+    'Ventor_original_buitenhaard.png':'Vuur op ooghoogte, 220 cm cortenstaal.',
+    'Ventor_original_vuurkamer.jpg':'Ruime vuurkamer van 62 cm.',
+    'Ventor_haard_met_Mobility_kit_93efa256-fb4c-4179-80a5-97f460dbe4cc.png':'Met de Mobility Kit verplaatst u hem over het terras.',
+    'onderdelen.png':'Uit 33 onderdelen, met de hand gemaakt in Nederland.'
+  };
+  var bijschrift=document.getElementById('bijschrift');
+  bijschrift.textContent=BIJ[fotos[0][0]]||'';
   teller.textContent='1 / '+fotos.length;
   var vid=document.getElementById('hoofdvideo'), stil=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
   if(stil){vid.controls=true;document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.controls=true})}
@@ -709,6 +718,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       var nieuw=new Image(); nieuw.onload=nieuw.onerror=function(){hoofd.src=nieuw.src;hoofd.alt=f[1];hoofd.classList.toggle('cover',!!f[2]);hoofd.classList.remove('laden')};
       nieuw.src=B+f[0];
     }
+    bijschrift.textContent=BIJ[f[0]]||'';
     teller.textContent=(huidig+1)+' / '+fotos.length;
     [].forEach.call(thumbs.children,function(t,k){t.setAttribute('aria-current',k===huidig?'true':'false')});
     var t=thumbs.children[huidig]; thumbs.scrollTo({left:t.offsetLeft-thumbs.offsetLeft-thumbs.clientWidth/2+t.clientWidth/2,behavior:'smooth'});
