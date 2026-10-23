@@ -391,6 +391,20 @@ body.zonder-check .check{display:none}
 .thumbs button.video::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-35%,-50%);border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;filter:drop-shadow(0 1px 3px rgba(0,0,0,.6))}
 .mozaiek video,.vd-beeld video{width:100%;height:100%;object-fit:cover;display:block}
 
+/* ===== cadeau-blok en bijschriften ===== */
+.cadeau-blok{display:flex;gap:16px;align-items:center;background:var(--zand);border-radius:var(--radius);padding:12px 16px 12px 12px;margin:16px 0}
+.cadeau-blok img{width:76px;height:76px;object-fit:contain;background:#fff;border-radius:3px;flex:none;padding:4px}
+.cadeau-blok .kop{font-weight:600;font-size:17px;color:var(--tekst)}
+.cadeau-blok .kop span{color:var(--corten)}
+.cadeau-blok p+p{margin-top:2px;font-size:14.5px;color:var(--tekst-zacht)}
+.voorraad .laag{color:var(--corten-donker);font-weight:600}
+.bijschrift{position:absolute;left:12px;bottom:12px;right:84px;width:max-content;max-width:calc(100% - 96px);background:rgba(28,28,28,.74);color:#fff;font-size:14px;line-height:1.35;padding:7px 11px;border-radius:4px;pointer-events:none}
+.bijschrift:empty{display:none}
+.vd-beeld.staand{aspect-ratio:4/5;max-height:640px}
+@media(max-width:600px){.bijschrift{font-size:13px}}
+.balk .btn{white-space:nowrap}
+@media(max-width:600px){.balk-extra{display:none}}
+
 .concept-badge{position:fixed;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:80;background:#1C1C1C;color:#F6F2EC;font:600 12px/1.2 Inter,system-ui,sans-serif;letter-spacing:.02em;padding:7px 11px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.2);pointer-events:none}
 @media(max-width:900px){.concept-badge{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 
@@ -406,7 +420,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
 <div class="kop-sticky">
 <div class="bf-balk" role="region" aria-label="Black Friday">
-  <div class="wrap"><b>Black Friday voor horeca</b><span class="lang">20% korting op de VENTOR® Original met Wind Shield</span><span class="kort">20% korting</span><span class="bf-klok" data-klok>Hele maand november</span></div>
+  <div class="wrap"><b>Black Friday voor horeca</b><span class="lang">20% korting op de VENTOR® Original + gratis Wind Shield</span><span class="kort">−20% + gratis Wind Shield</span><span class="bf-klok" data-klok>Hele maand november</span></div>
 </div>
 <header class="top">
   <div class="wrap">
@@ -443,10 +457,13 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <p class="kop-onder">Het vuur waar uw gasten omheen gaan zitten.</p>
       <p class="sub">Handgemaakt in Nederland, gebouwd voor elke dag buiten. Het vuur staat op ooghoogte en is van alle kanten te zien, dus elke tafel eromheen kijkt erin.</p>
 
-      <div class="bf-prijs"><span class="nu num">€1.887,27</span><s class="num" aria-label="Normaal €2.371,07">€2.371,07</s><span class="procent">−20%</span></div>
-      <p class="bf-set">excl. btw · per Black Friday-set: VENTOR® Original + Wind Shield</p>
-      <p class="bf-voordeel">U bespaart €483,80 per set · de hele maand november</p>
-      <p class="prijs-klein">€2.283,60 incl. btw</p>
+      <div class="bf-prijs"><span class="nu num">€1.715,70</span><s class="num" aria-label="Normaal €2.144,63">€2.144,63</s><span class="procent">Black Friday −20%</span></div>
+      <p class="bf-set">excl. btw per haard · €2.076 incl. btw · de hele maand november</p>
+
+      <div class="cadeau-blok">
+        <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
+        <div><p class="kop">+ Gratis Wind Shield <span>t.w.v. €226,45 excl. btw</span></p><p>Bij elke haard. Sluit één kant af en kaatst de warmte naar uw gasten.</p></div>
+      </div>
 
       <p class="voorraad"><span class="stip" aria-hidden="true"></span>Op voorraad. Levering op een pallet, op een afgesproken dag. <span class="check">CHECK: levertijd bij grotere aantallen</span></p>
 
@@ -464,7 +481,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
           <input id="aantal" type="number" min="1" max="50" value="2" inputmode="numeric">
           <button type="button" id="plus" aria-label="Eén meer">+</button>
         </div>
-        <div class="reken-uit"><span>Indicatie excl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€3.774,54</strong></div>
+        <div class="reken-uit"><span>Indicatie excl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€3.431,40</strong></div>
         <p class="reken-noot">Black Friday-prijs × aantal. Staffelkorting voor meerdere haarden staat op uw offerte. <span class="check">CHECK: staffel vanaf hoeveel stuks, en bovenop de 20%?</span></p>
       </div>
 
@@ -515,7 +532,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
     <article class="vd reveal">
       <div class="vd-beeld"><img src="img/Ventor_haard_met_Mobility_kit_93efa256-fb4c-4179-80a5-97f460dbe4cc.png" alt="VENTOR® Original op wielen met de Mobility Kit" loading="lazy" class="contain"></div>
-      <div class="vd-tekst"><span class="nr">3</span><h3>Aan te passen aan uw opstelling</h3><p>Het Wind Control-paneel (standaard) en het Wind Shield (in de Black Friday-set) schermen de kant af waar de wind vandaan komt. Met de Mobility Kit verplaatst u de haard naar een andere plek, op een harde, vlakke ondergrond en altijd als hij uit en afgekoeld is.</p><p class="spec">Mobility Kit: 4 zwenkwielen, 2 met rem · €119 (€98,35 excl. btw)</p></div>
+      <div class="vd-tekst"><span class="nr">3</span><h3>Aan te passen aan uw opstelling</h3><p>Het Wind Control-paneel (standaard) en het Wind Shield (in november gratis) schermen de kant af waar de wind vandaan komt. Met de Mobility Kit verplaatst u de haard naar een andere plek, op een harde, vlakke ondergrond en altijd als hij uit en afgekoeld is.</p><p class="spec">Mobility Kit: 4 zwenkwielen, 2 met rem · €119 (€98,35 excl. btw)</p></div>
     </article>
 
     <article class="vd vd-om reveal">
@@ -555,10 +572,10 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <div class="rij"><dt>Vuurplaat</dt><dd class="num">10 mm</dd></div>
       <div class="rij"><dt>Vonkenvanger</dt><dd>Geïntegreerd, openingen 5 × 5 mm</dd></div>
       <div class="rij"><dt>Gewicht</dt><dd><span class="check">CHECK: 78, 79, 50 of 41 kg</span></dd></div>
-      <div class="rij"><dt>In de Black Friday-set</dt><dd>Haard, Wind Control-paneel, Wind Shield</dd></div>
+      <div class="rij"><dt>In de levering</dt><dd>Haard, Wind Control-paneel; in november ook het Wind Shield</dd></div>
       <div class="rij"><dt>Productie</dt><dd>Handgemaakt in Nederland</dd></div>
       <div class="rij"><dt>Garantie</dt><dd>2 jaar op constructie- en fabricagefouten</dd></div>
-      <div class="rij"><dt>Prijs set (BF)</dt><dd class="num">€1.887,27 excl. btw</dd></div>
+      <div class="rij"><dt>Black Friday-prijs</dt><dd class="num">€1.715,70 excl. btw per haard</dd></div>
       <div class="rij"><dt>Artikelnummer haard</dt><dd>VEN-ORI-220-CS</dd></div>
     </dl>
   </div>
@@ -572,7 +589,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <h2 class="reveal">Black Friday-korting voor uw terras.</h2>
       <p class="lead reveal">Vul in hoeveel haarden u zoekt. U krijgt een offerte met de Black Friday-prijs en, bij meerdere haarden, de staffelkorting.</p>
       <ul class="off-punten reveal">
-        <li>20% korting op de set Original + Wind Shield, de hele maand november</li>
+        <li>20% korting op de haard en een gratis Wind Shield, de hele maand november</li>
         <li>Factuur op uw bedrijfsnaam, prijzen excl. btw</li>
         <li>Advies over aantal en plaatsing</li>
       </ul>
@@ -613,7 +630,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <details><summary>Hebben mijn gasten last van rook?<span class="plus" aria-hidden="true"></span></summary><div class="antw">De rook gaat via de schoorsteen omhoog en komt er op 220 cm uit, boven de tafels. Rookvrij is geen houtvuur. Met droog hardhout (onder 20% vocht) en van bovenaf aansteken blijft het bij weinig.<p class="check">BEWIJS NODIG: ervaring van een horecaklant</p></div></details>
       <details><summary>Is hij geschikt voor dagelijks gebruik?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja. VENTOR® heeft de Original ontwikkeld voor intensief professioneel gebruik. Hij is van cortenstaal, met een vuurplaat van 10 mm, en kan het hele jaar buiten blijven staan.</div></details>
       <details><summary>Hoe doof ik hem bij sluitingstijd?<span class="plus" aria-hidden="true"></span></summary><div class="antw"><span class="check">CHECK: advies van VENTOR® nodig (laten uitbranden, as-opvang, nooit met water?)</span></div></details>
-      <details><summary>Krijg ik korting bij meerdere haarden?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja, bij meerdere haarden staat de staffelkorting op uw offerte. In november krijgt u daarnaast 20% Black Friday-korting op de set Original + Wind Shield.<p class="check">CHECK: zijn staffel en Black Friday-korting te combineren?</p></div></details>
+      <details><summary>Krijg ik korting bij meerdere haarden?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja, bij meerdere haarden staat de staffelkorting op uw offerte. In november krijgt u daarnaast 20% Black Friday-korting op de haard en een gratis Wind Shield.<p class="check">CHECK: zijn staffel en Black Friday-korting te combineren?</p></div></details>
       <details><summary>Hoe wordt hij geleverd?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Op een mini-pallet, compleet en klaar voor gebruik. De vervoerder belt vooraf om een dag af te spreken.</div></details>
       <details><summary>Kan ik een zakelijke bestelling retourneren?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Zakelijke bestellingen vallen niet onder het consumentenherroepingsrecht. Twijfelt u, bekijk de haard dan eerst bij een dealer of vraag advies over uw terras.</div></details>
       <details><summary>Hoeveel garantie krijg ik?<span class="plus" aria-hidden="true"></span></summary><div class="antw">2 jaar op constructie- en fabricagefouten, vanaf de leverdatum.</div></details>
@@ -627,7 +644,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   <div class="wrap">
     <span class="bf-slot">Black Friday voor horeca · hele maand november</span>
     <h2>Zet het vuur midden op uw terras</h2>
-    <p>20% korting op de set Original + Wind Shield. Meerdere haarden? Vraag naar staffelkorting.</p>
+    <p>20% korting op de haard en een gratis Wind Shield. Meerdere haarden? Vraag naar staffelkorting.</p>
     <div class="acties">
       <a class="btn btn-licht" href="#offerte">Vraag een offerte aan</a>
       <a class="btn btn-lijn" href="../consument/">of bekijk de haard voor thuis</a>
@@ -645,7 +662,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
 <div class="balk" id="balk" aria-hidden="true">
   <div class="wrap">
-    <div class="t"><b>VENTOR® Original voor horeca</b>Black Friday −20% · €1.887,27 excl. btw</div>
+    <div class="t"><b>VENTOR® Original voor horeca</b><span class="balk-extra">−20% + gratis Wind Shield · </span>€1.715,70 excl. btw</div>
     <a class="btn btn-primair" href="#offerte" tabindex="-1">Offerte</a>
   </div>
 </div>
@@ -703,7 +720,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   vak.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)toon(huidig+(dx<0?1:-1));x0=null});
 
   // rekenhulp
-  var PRIJS=1887.27, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal'), fAantal=document.getElementById('f-aantal');
+  var PRIJS=1715.70, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal'), fAantal=document.getElementById('f-aantal');
   function euro(n){return '€'+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2})}
   function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); fAantal.value=n}
   document.getElementById('min').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)-1;reken()});
