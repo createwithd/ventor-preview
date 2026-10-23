@@ -27,7 +27,7 @@ jobs:
       - name: Site samenstellen (na 22 november alleen de melding "verlopen")
         run: |
           mkdir -p _site
-          if [ "$(date -u +%Y%m%d)" -ge 20261122 ]; then
+          if [ "$(date -u +%Y%m%d)" -ge 20261121 ]; then
             for p in . consument horeca; do mkdir -p "_site/$p"; cp verlopen/index.html "_site/$p/index.html"; done
             cp verlopen/index.html _site/404.html
           else

@@ -353,6 +353,14 @@ body.zonder-check .check{display:none}
 .bf-voordeel{font-size:15px;color:var(--corten);font-weight:600;margin-top:4px}
 .slot .bf-slot{display:inline-block;margin-bottom:10px;font-family:Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--gloed)}
 
+/* ===== video's ===== */
+.galerij .hoofd video{display:none;width:100%;height:100%;object-fit:cover;background:#1C1C1C}
+.galerij .hoofd.toont-video video{display:block}
+.galerij .hoofd.toont-video #hoofdbeeld{display:none}
+.thumbs button{position:relative}
+.thumbs button.video::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-35%,-50%);border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;filter:drop-shadow(0 1px 3px rgba(0,0,0,.6))}
+.mozaiek video,.vd-beeld video{width:100%;height:100%;object-fit:cover;display:block}
+
 .concept-badge{position:fixed;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:80;background:#1C1C1C;color:#F6F2EC;font:600 12px/1.2 Inter,system-ui,sans-serif;letter-spacing:.02em;padding:7px 11px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.2);pointer-events:none}
 @media(max-width:900px){.concept-badge{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 
@@ -392,6 +400,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     <div class="galerij">
       <div class="hoofd" id="hoofd">
         <img id="hoofdbeeld" src="img/Ventor_original_buitenhaard.png" alt="VENTOR® Original buitenhaard van cortenstaal met brandend vuur" width="1023" height="1537" fetchpriority="high">
+        <video id="hoofdvideo" muted loop playsinline preload="none"></video>
         <button class="pijl vorige" type="button" aria-label="Vorige foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="pijl volgende" type="button" aria-label="Volgende foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         <span class="teller" id="teller" aria-live="polite">1 / 14</span>
@@ -456,7 +465,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <p class="lead reveal">Hij is gemaakt voor de avonden waarop het eten op is en niemand naar binnen wil.</p>
     </div>
     <div class="mozaiek">
-      <figure class="m1 reveal"><img src="img/Ventor_57.jpg" alt="Gasten aan tafel op een terras bij zonsondergang, met de VENTOR® Original brandend ernaast" loading="lazy"></figure>
+      <figure class="m1 reveal"><video autoplay muted loop playsinline preload="metadata" poster="video/terras-avond.jpg" aria-label="Video: gasten aan tafel op een terras bij zonsondergang, met de VENTOR® Original" style="object-position:50% 50%"><source src="video/terras-avond.mp4" type="video/mp4"></video></figure>
       <figure class="m2 reveal"><img src="img/Ventor_02.jpg" alt="Vrienden proosten aan tafel naast het vuur" loading="lazy"></figure>
       <figure class="m3 reveal"><img src="img/Ventor_36.jpg" alt="Gasten rond de VENTOR® Original in het avondlicht" loading="lazy"></figure>
     </div>
@@ -470,7 +479,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     <h2 class="reveal">Vijf dingen die je merkt op de eerste avond.</h2>
 
     <article class="vd reveal">
-      <div class="vd-beeld"><img src="img/Ventor_original_vuurkamer.jpg" alt="De vuurkamer met lamellen en brandend hout, van dichtbij" loading="lazy"></div>
+      <div class="vd-beeld"><video autoplay muted loop playsinline preload="metadata" poster="video/vlammen.jpg" aria-label="Video: de vlammen in de vuurkamer van dichtbij" style="object-position:50% 62%"><source src="video/vlammen.mp4" type="video/mp4"></video></div>
       <div class="vd-tekst">
         <span class="nr">1</span>
         <h3>Iedereen kijkt in het vuur</h3>
@@ -660,6 +669,8 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   var B='img/';
   var fotos=[
     ['Ventor_original_buitenhaard.png','VENTOR® Original buitenhaard van cortenstaal met brandend vuur',0],
+    ['video/vlammen.mp4','Video: de vlammen in de vuurkamer van dichtbij',1,'video/vlammen.jpg'],
+    ['video/tuin-friesland.mp4','Video: geleverd in een tuin in Friesland, de haard brandt naast de loungebank',1,'video/tuin-friesland.jpg'],
     ['Ventor_63.jpg','Twee mannen bij de brandende VENTOR® Original op een terras bij zonsondergang',1],
     ['Ventor_57.jpg','Gasten aan tafel op een terras, met de VENTOR® Original brandend ernaast',1],
     ['Ventor_original_vuurkamer.jpg','Vuurkamer met lamellen en brandend hout, van dichtbij',1],
@@ -678,14 +689,24 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   fotos.forEach(function(f,i){
     var b=document.createElement('button'); b.type='button'; if(f[2]) b.className='cover';
     b.setAttribute('aria-label','Foto '+(i+1)+': '+f[1]); b.setAttribute('aria-current',i===0?'true':'false');
-    b.innerHTML='<img src="'+B+f[0]+'?width=220" alt="" loading="lazy">';
+    var isV=/\.mp4$/.test(f[0]); if(isV) b.className+=' video';
+    b.innerHTML='<img src="'+(isV?f[3]:B+f[0])+'" alt="" loading="lazy">';
     b.addEventListener('click',function(){toon(i)}); thumbs.appendChild(b);
   });
+  teller.textContent='1 / '+fotos.length;
+  var vid=document.getElementById('hoofdvideo'), stil=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if(stil){vid.controls=true;document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.controls=true})}
   function toon(i){
-    huidig=(i+fotos.length)%fotos.length; var f=fotos[huidig];
-    hoofd.classList.add('laden');
-    var nieuw=new Image(); nieuw.onload=nieuw.onerror=function(){hoofd.src=nieuw.src;hoofd.alt=f[1];hoofd.classList.toggle('cover',!!f[2]);hoofd.classList.remove('laden')};
-    nieuw.src=B+f[0];
+    huidig=(i+fotos.length)%fotos.length; var f=fotos[huidig], vakje=document.getElementById('hoofd');
+    if(/\.mp4$/.test(f[0])){
+      vid.poster=f[3]; vid.src=f[0]; vid.setAttribute('aria-label',f[1]); vakje.classList.add('toont-video');
+      if(!stil){var pr=vid.play(); if(pr&&pr.catch)pr.catch(function(){});}
+    } else {
+      vid.pause(); vakje.classList.remove('toont-video');
+      hoofd.classList.add('laden');
+      var nieuw=new Image(); nieuw.onload=nieuw.onerror=function(){hoofd.src=nieuw.src;hoofd.alt=f[1];hoofd.classList.toggle('cover',!!f[2]);hoofd.classList.remove('laden')};
+      nieuw.src=B+f[0];
+    }
     teller.textContent=(huidig+1)+' / '+fotos.length;
     [].forEach.call(thumbs.children,function(t,k){t.setAttribute('aria-current',k===huidig?'true':'false')});
     var t=thumbs.children[huidig]; thumbs.scrollTo({left:t.offsetLeft-thumbs.offsetLeft-thumbs.clientWidth/2+t.clientWidth/2,behavior:'smooth'});
