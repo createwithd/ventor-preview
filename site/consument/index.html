@@ -376,6 +376,16 @@ body.zonder-check .check{display:none}
 .balk .btn{white-space:nowrap}
 @media(max-width:600px){.balk-extra{display:none}}
 
+/* ===== bewijs: hier brandt hij al ===== */
+.bewijs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0 8px}
+.bewijs figure{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--lijn)}
+.bewijs img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.bewijs figcaption{padding:14px 16px;font-size:15px;color:var(--tekst-zacht)}
+.bewijs figcaption b{display:block;color:var(--tekst);font-size:16px;margin-bottom:2px}
+.bron{font-size:13px;color:var(--as-donker);margin-bottom:64px}
+@media(max-width:700px){.bewijs{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.bewijs{grid-template-columns:1fr}}
+
 .concept-badge{position:fixed;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:80;background:#1C1C1C;color:#F6F2EC;font:600 12px/1.2 Inter,system-ui,sans-serif;letter-spacing:.02em;padding:7px 11px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.2);pointer-events:none}
 @media(max-width:900px){.concept-badge{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 
@@ -500,7 +510,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <p>Warme lucht stijgt op. De vorm van de vuurkamer leidt hem naar de schoorsteen, en van onderen komt verse lucht binnen. Zo gaat de rook omhoog en komt hij er op 220 cm uit, boven de hoofden.</p>
         <p>Geen houtgestookte haard is rookvrij: met droog hout en van bovenaf aansteken houd je het bij weinig.</p>
         <p class="spec">Schoorsteen Ø 40 cm · Vonkenvanger met openingen van 5 × 5 mm</p>
-        <p class="check blok">BEWIJS NODIG: korte video van het aansteken en het eerste kwartier, ook met wind</p>
       </div>
     </article>
 
@@ -532,7 +541,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <h3>Met de hand gemaakt in Nederland</h3>
         <p>Het staal wordt draaiend tegen een mal gedrukt. Zo krijgt de haard zijn ronde vorm zonder naden. Daarna wordt hij met de hand gelast en afgewerkt, uit 33 onderdelen. Merk en ontwerp zijn geregistreerd in de Europese Unie.</p>
         <p class="spec">33 onderdelen · Forceertechniek en laswerk</p>
-        <p class="check blok">CHECK: mag de maker of Haarlem genoemd worden?</p>
       </div>
     </article>
   </div>
@@ -549,7 +557,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <div class="reveal"><h3>Buiten</h3><p>Stook alleen in de open lucht, niet onder een overkapping of veranda.</p></div>
       <div class="reveal"><h3>Roestwater</h3><p>De eerste maanden kan er roestwater afkomen. Zet hem dan niet direct op lichte tegels of natuursteen.</p></div>
       <div class="reveal"><h3>Hout</h3><p>Droog hardhout met minder dan 20% vocht, zoals eiken, beuken of essen.</p></div>
-      <div class="reveal tip"><h3>Twijfel je over de plek?</h3><p>Stuur een foto van je tuin via de chat. Dan denken we mee.</p><p class="check">CHECK: kan het team dit aan?</p></div>
     </div>
   </div>
 </section>
@@ -582,7 +589,14 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 <!-- 7. ZIE HEM IN HET ECHT (in plaats van reviews) -->
 <section class="dealers" id="dealers">
   <div class="wrap">
-    <p class="check blok reveal">BEWIJS NODIG: echte klantreviews. Tot die er zijn staat hier dit blok, zonder sterrenscore.</p>
+    <span class="label reveal">Hier brandt hij al</span>
+    <h2 class="reveal">Bij klanten in de tuin en op het terras.</h2>
+    <div class="bewijs reveal">
+      <figure><img src="video/tuin-friesland.jpg" alt="De VENTOR® Original brandt in een tuin in Friesland, naast een loungebank" loading="lazy"><figcaption><b>Een tuin in Friesland</b>Geleverd en meteen aangestoken, naast de loungebank.</figcaption></figure>
+      <figure><img src="video/papas-beach-house.jpg" alt="De VENTOR® Original op het terras van Papas Beach House" loading="lazy"><figcaption><b>Papas Beach House</b>Op het terras aan het water.</figcaption></figure>
+      <figure><img src="video/terras-avond.jpg" alt="De VENTOR® Original op een strandterras bij zonsondergang, met gasten aan tafel" loading="lazy" style="object-position:62% 50%"><figcaption><b>Een strandterras aan zee</b>Midden tussen de tafels, bij zonsondergang.</figcaption></figure>
+    </div>
+    <p class="bron reveal">Foto's van het Instagram-account van VENTOR® (@ventor_fire).</p>
     <span class="label reveal">Zie hem in het echt</span>
     <h2 class="reveal">Een vuur koop je liever niet blind.</h2>
     <p class="lead reveal">Bij deze dealers staat de VENTOR® Original in de showroom.</p>
@@ -608,7 +622,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <details><summary>Moet ik de pijp verlengen?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Nee. De schoorsteen is al 40 cm breed en loopt door tot 220 cm hoog. Verlengen is niet nodig, en niet mogelijk.<p class="check">CHECK: klopt "niet mogelijk"?</p></div></details>
       <details><summary>Ruiken mijn kleren na een avond naar rook?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Dat hangt af van je hout, de wind en waar je zit. De rook komt boven de hoofden naar buiten, dus je zit er minder middenin dan bij een vuurkorf. Belooft iemand je dat je helemaal niets ruikt, dan is dat bij hout niet eerlijk.<p class="check">BEWIJS NODIG: klantervaringen</p></div></details>
       <details><summary>Wat vinden de buren ervan? Mag het?<span class="plus" aria-hidden="true"></span></summary><div class="antw">In veel gemeenten mag het, als je veilig stookt en geen overlast geeft. Kijk vooraf op de Stookwijzer en stook niet bij windstil of mistig weer. Twijfel je, kijk dan op de site van je gemeente.</div></details>
-      <details><summary>Past hij in mijn tuin?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Hij is 220 cm hoog en de vuurkamer is ongeveer 62 cm breed. Belangrijker is de vrije ruimte eromheen: houd afstand tot schuttingen, struiken en gevels. Stuur gerust een foto van je tuin, dan denken we mee.</div></details>
+      <details><summary>Past hij in mijn tuin?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Hij is 220 cm hoog en de vuurkamer is ongeveer 62 cm breed. Belangrijker is de vrije ruimte eromheen: houd afstand tot schuttingen, struiken en gevels.</div></details>
       <details><summary>Mag hij op mijn houten vlonder of onder de overkapping?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Nee. Zet hem op een vlakke, niet-brandbare ondergrond zoals tegels of grind, en stook alleen in de open lucht.</div></details>
       <details><summary>Krijg ik roestvlekken op mijn terras?<span class="plus" aria-hidden="true"></span></summary><div class="antw">De eerste maanden kan cortenstaal roestwater afgeven. Zet hem in die periode niet direct op lichte tegels of natuursteen, of leg er iets onder. Daarna neemt het sterk af.</div></details>
       <details><summary>Wat als het waait?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Bij lichte tot matige wind zet je het meegeleverde Wind Control-paneel aan de windkant. Wil je één kant helemaal dicht, gebruik dan het Wind Shield. Bij harde wind of erg droog weer stook je beter niet.</div></details>
