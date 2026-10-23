@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script>if(Date.now()>=new Date('2026-11-22T00:00:00+01:00').getTime())document.documentElement.classList.add('verlopen')</script>
+<title>VENTOR® Horeca Black Friday</title>
+<meta name="description" content="Black Friday voor horeca: 20% korting op de VENTOR® Original met Wind Shield. Buitenhaard met het vuur op ooghoogte voor uw terras. Handgemaakt in Nederland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --houtskool:#1C1C1C;
+  --houtskool-2:#262321;
+  --corten:#8A4B2A;
+  --corten-donker:#6E3A20;
+  --gloed:#D9822B;
+  --zand:#E9D9BF;
+  --wit:#F6F2EC;
+  --as:#8C8580;
+  --as-donker:#5E5853;
+  --lijn:#DDD3C4;
+  --tekst:#1C1C1C;
+  --tekst-zacht:#4A4440;
+  --radius:4px;
+  --max:1200px;
+  --gutter:clamp(16px,4vw,40px);
+  --sectie:clamp(72px,10vw,140px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--tekst);background:var(--wit);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gloed);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.label{font-family:Jost,sans-serif;font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--corten)}
+.dark .label{color:var(--gloed)}
+h1,h2,h3{font-family:Jost,sans-serif;font-weight:500;line-height:1.12;letter-spacing:-.005em}
+h2{font-size:clamp(32px,4.4vw,52px);margin:14px 0 22px;max-width:16ch}
+h3{font-size:22px;margin-bottom:8px}
+p+p{margin-top:14px}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--tekst-zacht);max-width:52ch}
+.dark{background:var(--houtskool);color:var(--wit)}
+.dark .lead,.dark p{color:#D8D0C6}
+.num{font-variant-numeric:tabular-nums}
+
+/* knoppen */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:var(--radius);border:1px solid transparent;font-weight:500;font-size:16px;text-decoration:none;transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease)}
+.btn-primair{background:var(--corten);color:#fff}
+.btn-primair:hover{background:var(--corten-donker)}
+.btn-licht{background:var(--wit);color:var(--houtskool)}
+.btn-licht:hover{background:var(--zand)}
+.btn-lijn{border-color:currentColor;background:transparent}
+.btn-lijn:hover{background:rgba(255,255,255,.08)}
+.btn svg{width:18px;height:18px}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(246,242,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--lijn)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.logo img{height:20px;width:auto;mix-blend-mode:multiply}
+.nav{display:flex;gap:28px;list-style:none;font-size:15px}
+.nav a{text-decoration:none;color:var(--tekst-zacht);padding:8px 0}
+.nav a:hover{color:var(--tekst)}
+.top .btn{min-height:44px;padding:0 20px;font-size:15px}
+@media(max-width:860px){.nav{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,820px);display:flex;align-items:flex-end;color:var(--wit);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,12,.62) 0%,rgba(20,16,12,.25) 55%,rgba(20,16,12,0) 80%),linear-gradient(180deg,rgba(20,16,12,0) 35%,rgba(20,16,12,.7) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:clamp(48px,8vw,96px);width:100%}
+.hero h1{font-size:clamp(44px,7vw,92px);max-width:12ch;margin:16px 0 20px}
+.hero p{font-size:clamp(18px,1.7vw,21px);max-width:44ch;color:#EFE7DC}
+.hero .acties{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero .label{color:var(--zand)}
+
+/* usp-strip */
+.strip{background:var(--houtskool);color:#D8D0C6;font-size:15px}
+.strip ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding:20px 0}
+.strip li{display:flex;align-items:center;gap:10px}
+.strip svg{width:18px;height:18px;color:var(--gloed);flex:none}
+
+/* koopblok */
+.koop{padding:var(--sectie) 0}
+.koop .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+@media(max-width:900px){.koop .grid{grid-template-columns:1fr}}
+.galerij{min-width:0}
+.galerij .hoofd{position:relative;background:#fff;border-radius:var(--radius);aspect-ratio:4/5;overflow:hidden;touch-action:pan-y}
+.galerij .hoofd img{width:100%;height:100%;object-fit:contain;padding:4%;transition:opacity .25s var(--ease)}
+.galerij .hoofd img.cover{object-fit:cover;padding:0}
+.galerij .hoofd img.laden{opacity:.35}
+.pijl{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(246,242,236,.92);color:var(--houtskool);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.12);transition:background .2s}
+.pijl:hover{background:#fff}
+.pijl svg{width:20px;height:20px}
+.pijl.vorige{left:12px}.pijl.volgende{right:12px}
+.teller{position:absolute;right:12px;bottom:12px;background:rgba(28,28,28,.72);color:#fff;font-size:13px;padding:4px 10px;border-radius:999px}
+.thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;scrollbar-width:thin}
+.thumbs button{flex:0 0 76px;height:96px;border:1px solid var(--lijn);border-radius:var(--radius);background:#fff;padding:0;overflow:hidden;scroll-snap-align:start;transition:border-color .2s,opacity .2s;opacity:.78}
+.thumbs button:hover{opacity:1}
+.thumbs button img{width:100%;height:100%;object-fit:contain;padding:4px}
+.thumbs button.cover img{object-fit:cover;padding:0}
+.thumbs button[aria-current="true"]{border-color:var(--corten);box-shadow:inset 0 0 0 1px var(--corten);opacity:1}
+.info h1{font-size:clamp(30px,3.4vw,42px);margin:12px 0 10px}
+.info .sub{color:var(--tekst-zacht);font-size:17px}
+.prijs{display:flex;align-items:baseline;gap:14px;margin:24px 0 4px}
+.prijs strong{font-family:Jost,sans-serif;font-weight:500;font-size:34px}
+.prijs span{color:var(--as-donker);font-size:15px}
+.voordelen{list-style:none;margin:26px 0;border-top:1px solid var(--lijn)}
+.voordelen li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--lijn)}
+.voordelen svg{width:22px;height:22px;color:var(--corten);flex:none;margin-top:2px}
+.voordelen b{font-weight:600}
+.cadeau{display:flex;gap:14px;align-items:center;background:var(--zand);border-radius:var(--radius);padding:14px 16px;font-size:15px;margin-bottom:22px}
+.cadeau svg{width:22px;height:22px;color:var(--corten);flex:none}
+.extra{border:1px solid var(--lijn);border-radius:var(--radius);margin-bottom:22px}
+.extra legend{font-family:Jost,sans-serif;font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--corten);padding:0 8px;margin-left:10px}
+.extra label{display:flex;align-items:center;gap:14px;padding:12px 16px;cursor:pointer;border-top:1px solid var(--lijn);min-height:56px}
+.extra label:first-of-type{border-top:0}
+.extra input{width:20px;height:20px;accent-color:var(--corten);flex:none}
+.extra .naam{flex:1;font-size:15px}
+.extra .naam small{display:block;color:var(--as-donker);font-size:13.5px}
+.extra .bedrag{font-size:15px;white-space:nowrap}
+.totaal{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;font-size:15px;color:var(--tekst-zacht)}
+.totaal strong{font-size:20px;color:var(--tekst);font-weight:600}
+.koop .btn{width:100%}
+.koop .btn+.btn{margin-top:10px}
+.zekerheid{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:20px;font-size:14px;color:var(--tekst-zacht)}
+.zekerheid div{display:flex;gap:10px;align-items:flex-start}
+.zekerheid svg{width:18px;height:18px;color:var(--as);flex:none;margin-top:3px}
+
+/* een avond */
+.avond{padding:var(--sectie) 0}
+.avond .kop{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+@media(max-width:900px){.avond .kop{grid-template-columns:1fr}}
+.tijdlijn{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #3a3532;counter-reset:t}
+.tijdlijn li{padding:28px 24px 0 0;position:relative}
+.tijdlijn li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gloed)}
+.tijdlijn time{font-family:Jost,sans-serif;font-size:30px;font-weight:400;color:var(--wit);display:block;margin-bottom:8px}
+.tijdlijn h3{font-size:17px;font-family:Inter,sans-serif;font-weight:600;color:var(--wit);margin-bottom:6px}
+.tijdlijn p{font-size:15.5px;line-height:1.6}
+@media(max-width:900px){.tijdlijn{grid-template-columns:1fr;border-top:0;border-left:1px solid #3a3532;margin-left:4px}.tijdlijn li{padding:0 0 32px 28px}.tijdlijn li::before{top:10px;left:-5px}}
+.mozaiek{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1fr 1fr;gap:12px;margin-top:64px;height:clamp(420px,52vw,640px)}
+.mozaiek figure{border-radius:var(--radius);overflow:hidden}
+.mozaiek img{width:100%;height:100%;object-fit:cover}
+.mozaiek .m1{grid-row:1/3}
+@media(max-width:700px){.mozaiek{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;height:auto}.mozaiek .m1{grid-column:1/3;grid-row:auto;aspect-ratio:4/3}.mozaiek .m2,.mozaiek .m3{aspect-ratio:1}}
+
+/* trek */
+.trek{padding:var(--sectie) 0}
+.trek .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
+@media(max-width:900px){.trek .grid{grid-template-columns:1fr}}
+.schets{background:#fff;border:1px solid var(--lijn);border-radius:var(--radius);padding:24px}
+.schets svg{width:100%;height:auto;display:block}
+.stappen{list-style:none;margin-top:28px}
+.stappen li{display:grid;grid-template-columns:36px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--lijn)}
+.stappen .n{font-family:Jost,sans-serif;font-size:15px;width:32px;height:32px;border:1px solid var(--corten);color:var(--corten);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.eerlijk{margin-top:26px;padding:18px 20px;border-radius:var(--radius);background:var(--zand);font-size:16px}
+
+/* ooghoogte */
+.ooghoogte{padding:0 0 var(--sectie)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.split .beeld{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.split .beeld img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.split{grid-template-columns:1fr}.split .beeld{aspect-ratio:4/3}}
+.feiten{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.feit{border-top:1px solid var(--lijn);padding-top:14px}
+.feit strong{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:34px;line-height:1.1}
+.feit span{font-size:15px;color:var(--tekst-zacht)}
+
+/* vergelijking */
+.vergelijk{padding:var(--sectie) 0;background:var(--zand)}
+.tabel-wrap{overflow-x:auto;margin-top:40px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:16px;background:var(--wit);border-radius:var(--radius);overflow:hidden}
+th,td{text-align:left;padding:18px 20px;border-bottom:1px solid var(--lijn);vertical-align:top}
+thead th{font-family:Jost,sans-serif;font-weight:500;font-size:18px}
+thead th.wij{background:var(--houtskool);color:var(--wit)}
+td.wij{background:#FBF8F4;font-weight:500}
+tbody th{font-weight:600;font-size:15px;color:var(--tekst-zacht);width:22%}
+.voetnoot{font-size:14px;color:var(--tekst-zacht);margin-top:14px}
+
+/* handgemaakt */
+.hand{padding:var(--sectie) 0}
+.maak{display:block}
+.maak figure{border-radius:var(--radius);overflow:hidden;background:#fff}
+.maak .foto{position:relative}
+.maak .foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 50%}
+.maak figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;font-size:13.5px;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent)}
+@media(max-width:900px){.maak .foto img{aspect-ratio:3/2}}
+
+/* patina */
+.patina{padding:var(--sectie) 0}
+.patina figure{margin-top:48px;background:#fff;border-radius:var(--radius);padding:clamp(16px,3vw,40px)}
+.patina figcaption{display:flex;justify-content:space-between;font-size:14px;color:var(--as-donker);margin-top:14px;gap:12px}
+.patina .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+@media(max-width:800px){.patina .tips{grid-template-columns:1fr}}
+.patina .tips p{font-size:16px}
+
+/* accessoires */
+.acc{padding:var(--sectie) 0}
+.acc .kaarten{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+@media(max-width:900px){.acc .kaarten{grid-template-columns:1fr}}
+.kaart{background:#fff;border:1px solid var(--lijn);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.kaart .img{aspect-ratio:1;background:#fff;display:flex;align-items:center;justify-content:center;padding:20px}
+.kaart .img img{max-height:100%;width:auto;object-fit:contain}
+.kaart .tekst{padding:22px 24px 26px;border-top:1px solid var(--lijn);flex:1}
+.kaart .tekst p{font-size:15.5px;color:var(--tekst-zacht)}
+.kaart .p{margin-top:14px;font-weight:600}
+
+/* specs */
+.specs{padding:var(--sectie) 0}
+.specs dl{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;margin-top:36px}
+@media(max-width:700px){.specs dl{grid-template-columns:1fr}}
+.specs .rij{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid #3a3532}
+.specs dt{color:#B9AFA4}
+.specs dd{text-align:right;color:var(--wit)}
+.specs .inhoud{margin-top:40px;font-size:16px}
+
+/* dealers */
+.dealers{padding:var(--sectie) 0}
+.dealers .lijst{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px;margin-top:40px}
+@media(max-width:900px){.dealers .lijst{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.dealers .lijst{grid-template-columns:1fr}}
+.dealer{padding:20px 0;border-top:1px solid var(--lijn)}
+.dealer b{display:block;font-weight:600}
+.dealer span{font-size:15px;color:var(--tekst-zacht)}
+.tag{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--corten);border:1px solid var(--corten);border-radius:999px;padding:3px 10px}
+
+/* faq */
+.faq{padding:var(--sectie) 0;background:#fff}
+.faq .grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(32px,6vw,96px)}
+@media(max-width:900px){.faq .grid{grid-template-columns:1fr}}
+details{border-top:1px solid var(--lijn)}
+details:last-child{border-bottom:1px solid var(--lijn)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-weight:600;font-size:17px;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary .plus{width:22px;height:22px;flex:none;position:relative}
+summary .plus::before,summary .plus::after{content:"";position:absolute;left:3px;right:3px;top:10px;height:2px;background:var(--corten);transition:transform .25s var(--ease)}
+summary .plus::after{transform:rotate(90deg)}
+details[open] summary .plus::after{transform:rotate(0)}
+details .antw{padding:0 0 24px;color:var(--tekst-zacht);max-width:62ch}
+
+/* slot */
+.slot{position:relative;padding:clamp(120px,16vw,200px) 0;color:var(--wit);text-align:center;overflow:hidden}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot::after{content:"";position:absolute;inset:0;background:rgba(18,14,10,.62)}
+.slot .wrap{position:relative;z-index:1}
+.slot h2{margin:14px auto 20px;max-width:14ch}
+.slot p{max-width:46ch;margin:0 auto 32px;color:#EFE7DC}
+.slot .acties{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+footer{background:var(--houtskool);color:#B9AFA4;padding:48px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
+footer img{height:16px;width:auto;filter:invert(1);mix-blend-mode:screen}
+
+/* sticky koopbalk */
+.balk{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--houtskool);color:var(--wit);transform:translateY(110%);transition:transform .3s var(--ease);box-shadow:0 -8px 24px rgba(0,0,0,.18)}
+.balk.zichtbaar{transform:none}
+.balk .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+.balk .t{font-size:14px;line-height:1.35}
+.balk .t b{display:block;font-size:16px;font-family:Jost,sans-serif;font-weight:500}
+.balk .btn{min-height:48px;padding:0 22px}
+
+.toast{position:fixed;left:50%;top:84px;transform:translate(-50%,-20px);background:var(--houtskool);color:var(--wit);padding:14px 20px;border-radius:var(--radius);font-size:15px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s var(--ease);z-index:70;max-width:calc(100% - 32px)}
+.toast.aan{opacity:1;transform:translate(-50%,0)}
+
+/* rustige reveal */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ===== versie 2 ===== */
+.koop-v2{padding:clamp(24px,4vw,56px) 0 var(--sectie)}
+.koop-v2 .info h1{font-size:clamp(24px,2.4vw,30px);margin:0 0 6px;letter-spacing:0}
+.kop-onder{font-family:Jost,sans-serif;font-weight:500;font-size:clamp(26px,2.8vw,36px);line-height:1.15;color:var(--corten);margin-bottom:12px}
+.koop-v2 .prijs{margin:20px 0 2px}
+.prijs-klein{font-size:14px;color:var(--as-donker)}
+.prijs-klein a{color:var(--corten)}
+.voorraad{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:14px 0 16px;font-size:15px;font-weight:500}
+.stip{width:9px;height:9px;border-radius:50%;background:#2F7D4A;box-shadow:0 0 0 3px rgba(47,125,74,.15)}
+.koop-v2 .voordelen{margin:18px 0 22px}
+.koop-v2 .voordelen li{padding:11px 0;font-size:15.5px}
+.micro{font-size:14px;color:var(--tekst-zacht);margin-top:10px;text-align:center}
+.vertrouwen{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin:18px 0 12px;padding:16px;border:1px solid var(--lijn);border-radius:var(--radius);font-size:14px;color:var(--tekst-zacht)}
+.vertrouwen li{display:flex;gap:8px;align-items:center}
+.vertrouwen svg{width:18px;height:18px;color:var(--corten);flex:none}
+.vertrouwen a{color:var(--tekst)}
+.tweede{font-size:14.5px;margin-bottom:26px}
+.tweede a{color:var(--corten)}
+.koop-v2 .extra{margin-top:8px}
+.koop-v2 .extra-onder{margin-top:20px;margin-bottom:0}
+@media(max-width:900px){.koop-v2 .grid{display:flex;flex-direction:column}.koop-v2 .galerij{display:contents}.koop-v2 .galerij .hoofd{order:1}.koop-v2 .thumbs{order:2}.koop-v2 .info{order:3}.koop-v2 .extra-onder{order:4;margin-top:0}.koop-v2 .grid>*,.koop-v2 .hoofd,.koop-v2 .thumbs,.koop-v2 .extra-onder{min-width:0;width:100%;max-width:100%}}
+.check{display:inline-block;font-family:Inter,sans-serif;font-size:12px;font-weight:600;letter-spacing:.02em;color:#7A4B00;background:#FFF1C9;border:1px dashed #C99A2E;border-radius:3px;padding:1px 6px;margin-left:4px;vertical-align:middle}
+.check.blok{display:block;margin:14px 0 0;padding:8px 10px}
+body.zonder-check .check{display:none}
+.linkknop{background:none;border:0;color:inherit;text-decoration:underline;font-size:inherit}
+@media(max-width:900px){.galerij .hoofd{aspect-ratio:auto;height:min(62vh,520px)}}
+
+.intro{padding:var(--sectie) 0}
+.intro-tekst{max-width:760px}
+.intro h2{max-width:20ch}
+.intro .lead{max-width:62ch;color:#D8D0C6}
+
+.voordelen-v2{padding:var(--sectie) 0}
+.voordelen-v2 > .wrap > h2{margin-bottom:56px}
+.vd{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center;padding:40px 0;border-top:1px solid var(--lijn)}
+.vd-om .vd-beeld{order:2}
+.vd-beeld{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:#fff}
+.vd-beeld img{width:100%;height:100%;object-fit:cover}
+.vd-beeld img.contain{object-fit:contain;padding:16px}
+.schets-wit{display:flex;align-items:center;justify-content:center;padding:16px;border:1px solid var(--lijn)}
+.schets-wit svg{height:100%;width:auto;max-height:420px}
+.vd-tekst .nr{font-family:Jost,sans-serif;font-size:14px;color:var(--corten);border:1px solid var(--corten);border-radius:50%;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px}
+.vd-tekst h3{font-size:clamp(24px,2.4vw,30px);margin-bottom:12px}
+.vd-tekst p{color:var(--tekst-zacht)}
+.vd-tekst .spec{margin-top:16px;font-size:14.5px;color:var(--tekst);font-weight:500;padding-top:12px;border-top:1px solid var(--lijn)}
+@media(max-width:900px){.vd{grid-template-columns:1fr}.vd-om .vd-beeld{order:0}.schets-wit{aspect-ratio:1}}
+
+.past{padding:var(--sectie) 0;background:var(--zand)}
+.past-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+.past-grid > div{background:var(--wit);border-radius:var(--radius);padding:22px 22px 24px}
+.past-grid h3{font-size:19px;margin-bottom:6px}
+.past-grid p{font-size:15.5px;color:var(--tekst-zacht)}
+.past-grid .tip{background:var(--houtskool)}
+.past-grid .tip h3{color:var(--wit)}.past-grid .tip p{color:#D8D0C6}.past-grid .tip p.check{color:#7A4B00}
+@media(max-width:900px){.past-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.past-grid{grid-template-columns:1fr}}
+.lijst-2{grid-template-columns:repeat(2,1fr)!important;max-width:760px}
+@media(max-width:600px){.lijst-2{grid-template-columns:1fr!important}}
+.slot img{object-position:50% 40%}
+
+/* ===== Black Friday (toevoeging op v2) ===== */
+.kop-sticky{position:sticky;top:0;z-index:50}
+.kop-sticky .top{position:static}
+.bf-balk{background:#0E0C0B;color:#F6F2EC;font-size:14px}
+.bf-balk .wrap{display:flex;align-items:center;justify-content:center;gap:8px 22px;flex-wrap:wrap;min-height:42px;padding-top:7px;padding-bottom:7px;text-align:center}
+.bf-balk b{font-family:Jost,sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gloed)}
+.bf-balk a{color:#F6F2EC}
+.bf-klok{font-variant-numeric:tabular-nums;color:#D8D0C6}
+.bf-balk .kort{display:none}
+@media(max-width:600px){.bf-balk .lang{display:none}.bf-balk .kort{display:inline}.bf-balk .wrap{gap:10px;font-size:13px}}
+.bf-label{display:inline-block;font-family:Jost,sans-serif;font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:var(--houtskool);padding:6px 12px;border-radius:2px;margin-bottom:14px}
+.bf-label em{font-style:normal;color:var(--gloed)}
+.bf-prijs{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin:20px 0 2px}
+.bf-prijs .nu{font-family:Jost,sans-serif;font-weight:500;font-size:38px}
+.bf-prijs s{font-size:20px;color:var(--as-donker)}
+.bf-prijs .procent{font-size:14px;font-weight:600;color:#fff;background:var(--corten);padding:3px 9px;border-radius:2px;align-self:center}
+.bf-set{font-size:14.5px;color:var(--tekst-zacht);margin-top:4px}
+.bf-voordeel{font-size:15px;color:var(--corten);font-weight:600;margin-top:4px}
+.slot .bf-slot{display:inline-block;margin-bottom:10px;font-family:Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--gloed)}
+
+/* ===== horeca ===== */
+.reken{border:1px solid var(--lijn);border-radius:var(--radius);padding:16px 18px;margin:4px 0 18px;background:#fff}
+.reken label{display:block;font-weight:600;font-size:15px;margin-bottom:10px}
+.stepper{display:inline-flex;border:1px solid var(--lijn);border-radius:var(--radius);overflow:hidden}
+.stepper button{width:48px;height:48px;border:0;background:var(--wit);font-size:22px;color:var(--tekst)}
+.stepper button:hover{background:var(--zand)}
+.stepper input{width:64px;height:48px;border:0;border-left:1px solid var(--lijn);border-right:1px solid var(--lijn);text-align:center;font:inherit;font-size:18px;-moz-appearance:textfield}
+.stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.reken-uit{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;font-size:15px;color:var(--tekst-zacht)}
+.reken-uit strong{font-size:22px;color:var(--tekst);font-weight:600}
+.reken-noot{font-size:13.5px;color:var(--as-donker);margin-top:6px}
+.koop-v2 a.btn-primair{width:100%}
+.micro a{color:var(--corten)}
+.offerte{padding:var(--sectie) 0;background:var(--zand)}
+.grid-off{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,88px);align-items:start}
+@media(max-width:900px){.grid-off{grid-template-columns:1fr}}
+.off-punten{list-style:none;margin-top:24px}
+.off-punten li{padding:10px 0 10px 30px;border-top:1px solid rgba(0,0,0,.08);position:relative}
+.off-punten li::before{content:"";position:absolute;left:4px;top:18px;width:12px;height:7px;border-left:2px solid var(--corten);border-bottom:2px solid var(--corten);transform:rotate(-45deg)}
+.form{background:var(--wit);border-radius:var(--radius);padding:clamp(20px,3vw,32px)}
+.veld{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;min-width:0}
+.veld-2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:520px){.veld-2{grid-template-columns:1fr}}
+.veld label{font-size:14.5px;font-weight:600}
+.veld input,.veld select,.veld textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #CFC3B2;border-radius:var(--radius);background:#fff;color:var(--tekst);min-height:48px;width:100%}
+.veld input:focus,.veld select:focus,.veld textarea:focus{outline:2px solid var(--gloed);outline-offset:1px;border-color:var(--corten)}
+.veld [aria-invalid="true"]{border-color:#B3261E;background:#FFF6F5}
+.fout{color:#B3261E;font-size:14.5px;min-height:1px;margin-bottom:8px}
+.form .btn{width:100%}
+
+.concept-badge{position:fixed;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:80;background:#1C1C1C;color:#F6F2EC;font:600 12px/1.2 Inter,system-ui,sans-serif;letter-spacing:.02em;padding:7px 11px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.2);pointer-events:none}
+@media(max-width:900px){.concept-badge{bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+
+html.verlopen body>*:not(.verlopen-melding){display:none!important}
+.verlopen-melding{display:none}
+html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;font:500 20px/1.5 Inter,system-ui,sans-serif;color:#1C1C1C;background:#F6F2EC}
+</style>
+</head>
+<body>
+<div class="verlopen-melding"><p>Deze preview is verlopen.</p></div>
+<script>document.documentElement.classList.add('js')</script>
+<div class="concept-badge">Concept · Create &amp; Convert</div>
+
+<div class="kop-sticky">
+<div class="bf-balk" role="region" aria-label="Black Friday">
+  <div class="wrap"><b>Black Friday voor horeca</b><span class="lang">20% korting op de VENTOR® Original met Wind Shield</span><span class="kort">20% korting</span><span class="bf-klok" data-klok>Hele maand november</span></div>
+</div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="VENTOR® home"><img src="img/ventor-logo.jpg" alt="VENTOR®" width="220" height="40"></a>
+    <ul class="nav">
+      <li><a href="#terras">Op uw terras</a></li>
+      <li><a href="#voor-u-bestelt">Regels &amp; plaatsing</a></li>
+      <li><a href="#specs">Specificaties</a></li>
+      <li><a href="#faq">Vragen</a></li>
+    </ul>
+    <a class="btn btn-primair" href="#offerte">Offerte aanvragen</a>
+  </div>
+</header>
+</div>
+
+<main>
+<!-- KOOPBLOK HORECA -->
+<section class="koop koop-v2" id="kopen">
+  <div class="wrap grid">
+    <div class="galerij">
+      <div class="hoofd" id="hoofd">
+        <img id="hoofdbeeld" class="cover" src="img/Ventor_57.jpg" alt="Gasten aan tafel op een strandterras met de VENTOR® Original brandend ernaast" width="1600" height="1067" fetchpriority="high">
+        <button class="pijl vorige" type="button" aria-label="Vorige foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="pijl volgende" type="button" aria-label="Volgende foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <span class="teller" id="teller" aria-live="polite">1 / 10</span>
+      </div>
+      <div class="thumbs" id="thumbs" role="group" aria-label="Foto's"></div>
+    </div>
+
+    <div class="info">
+      <span class="bf-label">Black Friday voor horeca · <em>20% korting</em></span>
+      <h1>VENTOR® Original voor horeca: cortenstalen buitenhaard, 220 cm</h1>
+      <p class="kop-onder">Het vuur waar uw gasten omheen gaan zitten.</p>
+      <p class="sub">Handgemaakt in Nederland, gebouwd voor elke dag buiten. Het vuur staat op ooghoogte en is van alle kanten te zien, dus elke tafel eromheen kijkt erin.</p>
+
+      <div class="bf-prijs"><span class="nu num">€1.887,27</span><s class="num" aria-label="Normaal €2.371,07">€2.371,07</s><span class="procent">−20%</span></div>
+      <p class="bf-set">excl. btw · per Black Friday-set: VENTOR® Original + Wind Shield</p>
+      <p class="bf-voordeel">U bespaart €483,80 per set · de hele maand november</p>
+      <p class="prijs-klein">€2.283,60 incl. btw</p>
+
+      <p class="voorraad"><span class="stip" aria-hidden="true"></span>Op voorraad. Levering op een pallet, op een afgesproken dag. <span class="check">CHECK: levertijd bij grotere aantallen</span></p>
+
+      <ul class="voordelen">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><span><b>Tafels rondom.</b> 360° zicht op het vuur, op ooghoogte. Er is geen slechte plek.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 21V10h6v11M10.5 10V3h3v7"/></svg><span><b>Rook boven de tafels.</b> Schoorsteen Ø 40 cm, uitlaat op 220 cm, met vonkenvanger.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M3 14h18"/></svg><span><b>Verplaatsbaar.</b> Met de Mobility Kit rijdt u hem naar een andere plek op het terras.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><span><b>Staat het hele jaar buiten.</b> Cortenstaal, geen onderhoud behalve de as.</span></li>
+      </ul>
+
+      <div class="reken">
+        <label for="aantal">Aantal haarden voor uw terras</label>
+        <div class="stepper">
+          <button type="button" id="min" aria-label="Eén minder">−</button>
+          <input id="aantal" type="number" min="1" max="50" value="2" inputmode="numeric">
+          <button type="button" id="plus" aria-label="Eén meer">+</button>
+        </div>
+        <div class="reken-uit"><span>Indicatie excl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€3.774,54</strong></div>
+        <p class="reken-noot">Black Friday-prijs × aantal. Staffelkorting voor meerdere haarden staat op uw offerte. <span class="check">CHECK: staffel vanaf hoeveel stuks, en bovenop de 20%?</span></p>
+      </div>
+
+      <a class="btn btn-primair" href="#offerte" id="naarOfferte">Vraag een offerte met Black Friday-korting aan</a>
+      <p class="micro">Liever direct bestellen? <a href="#">Bestel online</a>, factuur op uw bedrijfsnaam.</p>
+
+      <ul class="vertrouwen">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l4-4m0 0l3-7 6-5-5 6-7 3z"/></svg>Handgemaakt in Nederland</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>2 jaar garantie</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Levering op afspraak</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Persoonlijk advies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro dark" id="terras">
+  <div class="wrap">
+    <div class="intro-tekst">
+      <h2 class="reveal">Een vuur in het midden van uw terras</h2>
+      <p class="lead reveal">De VENTOR® Original is een buitenhaard van 2,2 meter hoog. Het vuur brandt op ooghoogte, achter slanke lamellen, en is van alle tafels te zien. De rook gaat via de schoorsteen omhoog en komt er pas op 220 cm uit.</p>
+      <p class="lead reveal">Gemaakt voor de avonden waarop gasten nog een ronde bestellen in plaats van de rekening te vragen.</p>
+    </div>
+    <div class="mozaiek">
+      <figure class="m1 reveal"><img src="img/Ventor_02.jpg" alt="Gasten proosten aan tafel naast het vuur" loading="lazy"></figure>
+      <figure class="m2 reveal"><img src="img/Ventor_65.jpg" alt="De VENTOR® Original op een houten terras bij zonsondergang" loading="lazy"></figure>
+      <figure class="m3 reveal"><img src="img/Ventor_36.jpg" alt="Gasten rond de VENTOR® Original in het avondlicht" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VOORDELEN HORECA -->
+<section class="voordelen-v2">
+  <div class="wrap">
+    <span class="label reveal">Waarom horeca kiest voor VENTOR®</span>
+    <h2 class="reveal">Vier dingen die u op uw terras merkt.</h2>
+
+    <article class="vd reveal">
+      <div class="vd-beeld"><img src="img/Ventor_57.jpg" alt="Tafels rond de VENTOR® Original" loading="lazy"></div>
+      <div class="vd-tekst"><span class="nr">1</span><h3>Elke tafel kijkt in het vuur</h3><p>Een terrasheater geeft warmte, maar geen middelpunt. De VENTOR® zet het vuur op ooghoogte, met lamellen rondom. U kunt er tafels aan alle kanten omheen zetten.</p><p class="spec">Vuurkamer Ø 62 cm, verhoogd · 360° zicht</p></div>
+    </article>
+
+    <article class="vd vd-om reveal">
+      <div class="vd-beeld"><img src="img/Ventor_63.jpg" alt="De schoorsteen van de VENTOR® Original boven de gasten" loading="lazy"></div>
+      <div class="vd-tekst"><span class="nr">2</span><h3>De rook gaat boven de tafels weg</h3><p>De vorm van de vuurkamer en de hoge schoorsteen zorgen voor trek. De rook komt er op 220 cm uit, boven de hoofden van uw gasten. Rookvrij is geen houtvuur: stook met droog hardhout, dan blijft het bij weinig rook.</p><p class="spec">Schoorsteen Ø 40 cm · vonkenvanger 5 × 5 mm</p><p class="check blok">BEWIJS NODIG: video van de trek op een terras, ook bij wind</p></div>
+    </article>
+
+    <article class="vd reveal">
+      <div class="vd-beeld"><img src="img/Ventor_haard_met_Mobility_kit_93efa256-fb4c-4179-80a5-97f460dbe4cc.png" alt="VENTOR® Original op wielen met de Mobility Kit" loading="lazy" class="contain"></div>
+      <div class="vd-tekst"><span class="nr">3</span><h3>Aan te passen aan uw opstelling</h3><p>Het Wind Control-paneel (standaard) en het Wind Shield (in de Black Friday-set) schermen de kant af waar de wind vandaan komt. Met de Mobility Kit verplaatst u de haard naar een andere plek, op een harde, vlakke ondergrond en altijd als hij uit en afgekoeld is.</p><p class="spec">Mobility Kit: 4 zwenkwielen, 2 met rem · €119 (€98,35 excl. btw)</p></div>
+    </article>
+
+    <article class="vd vd-om reveal">
+      <div class="vd-beeld wit"><img src="img/roestproces.jpg" alt="Zes stadia van de patina van cortenstaal" loading="lazy" class="contain"></div>
+      <div class="vd-tekst"><span class="nr">4</span><h3>Gebouwd voor elke dag buiten</h3><p>Cortenstaal maakt zijn eigen roestlaag en kan het hele jaar buiten staan. Schilderen of behandelen hoeft nooit. Volgens VENTOR® is de haard ontwikkeld voor intensief professioneel gebruik.</p><p class="spec">Cortenstaal gemiddeld 2,5 mm · vuurplaat 10 mm · 2 jaar garantie</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- VOOR U BESTELT -->
+<section class="past" id="voor-u-bestelt">
+  <div class="wrap">
+    <span class="label reveal">Voor u bestelt</span>
+    <h2 class="reveal">Regels en plaatsing op een terras.</h2>
+    <div class="past-grid">
+      <div class="reveal"><h3>Vergunning</h3><p>Regels voor open vuur op een terras verschillen per gemeente. Sommige gemeenten staan het niet toe. Check uw terrasvergunning of vraag het na bij de gemeente.</p></div>
+      <div class="reveal"><h3>Open lucht</h3><p>Niet onder een luifel, overkapping, parasol of zeil. Houd afstand tot gevels, plantenbakken en houten meubels.</p></div>
+      <div class="reveal"><h3>Ondergrond</h3><p>Een vlakke, niet-brandbare ondergrond: tegels, klinkers of beton. Niet op een houten vlonder zonder hittebestendige plaat.</p></div>
+      <div class="reveal"><h3>Toezicht</h3><p>De buitenkant wordt heet. Zorg dat er altijd iemand van het team toezicht houdt, en houd kinderen op afstand.</p></div>
+      <div class="reveal"><h3>Hout</h3><p>Droog hardhout met minder dan 20% vocht. Dat geeft de minste rook voor uw gasten en de buren.</p></div>
+      <div class="reveal tip"><h3>Advies voor uw terras?</h3><p>Stuur een foto of plattegrond mee met uw offerteaanvraag. Dan denken we mee over het aantal en de plek.</p></div>
+    </div>
+    <p class="check blok reveal">CHECK: mogen de haarden op de houten vlonders van de strandterrassen op de foto's staan? Zo ja, met welke ondergrond?</p>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs dark" id="specs">
+  <div class="wrap">
+    <span class="label reveal">Specificaties</span>
+    <h2 class="reveal">Alles op een rij.</h2>
+    <dl class="reveal">
+      <div class="rij"><dt>Hoogte</dt><dd class="num">220 cm</dd></div>
+      <div class="rij"><dt>Diameter vuurkamer</dt><dd class="num">ca. 62 cm</dd></div>
+      <div class="rij"><dt>Diameter schoorsteen</dt><dd class="num">40 cm</dd></div>
+      <div class="rij"><dt>Materiaal</dt><dd>Cortenstaal, gemiddeld 2,5 mm</dd></div>
+      <div class="rij"><dt>Vuurplaat</dt><dd class="num">10 mm</dd></div>
+      <div class="rij"><dt>Vonkenvanger</dt><dd>Geïntegreerd, openingen 5 × 5 mm</dd></div>
+      <div class="rij"><dt>Gewicht</dt><dd><span class="check">CHECK: 78, 79, 50 of 41 kg</span></dd></div>
+      <div class="rij"><dt>In de Black Friday-set</dt><dd>Haard, Wind Control-paneel, Wind Shield</dd></div>
+      <div class="rij"><dt>Productie</dt><dd>Handgemaakt in Nederland</dd></div>
+      <div class="rij"><dt>Garantie</dt><dd>2 jaar op constructie- en fabricagefouten</dd></div>
+      <div class="rij"><dt>Prijs set (BF)</dt><dd class="num">€1.887,27 excl. btw</dd></div>
+      <div class="rij"><dt>Artikelnummer haard</dt><dd>VEN-ORI-220-CS</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- OFFERTE -->
+<section class="offerte" id="offerte">
+  <div class="wrap grid-off">
+    <div>
+      <span class="label reveal">Offerte aanvragen</span>
+      <h2 class="reveal">Black Friday-korting voor uw terras.</h2>
+      <p class="lead reveal">Vul in hoeveel haarden u zoekt. U krijgt een offerte met de Black Friday-prijs en, bij meerdere haarden, de staffelkorting.</p>
+      <ul class="off-punten reveal">
+        <li>20% korting op de set Original + Wind Shield, de hele maand november</li>
+        <li>Factuur op uw bedrijfsnaam, prijzen excl. btw</li>
+        <li>Advies over aantal en plaatsing</li>
+      </ul>
+    </div>
+    <form class="form reveal" id="offerteForm" novalidate>
+      <div class="veld"><label for="f-bedrijf">Bedrijfsnaam</label><input id="f-bedrijf" name="bedrijf" autocomplete="organization" required></div>
+      <div class="veld-2">
+        <div class="veld"><label for="f-naam">Uw naam</label><input id="f-naam" name="naam" autocomplete="name" required></div>
+        <div class="veld"><label for="f-plaats">Plaats</label><input id="f-plaats" name="plaats" autocomplete="address-level2"></div>
+      </div>
+      <div class="veld-2">
+        <div class="veld"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+        <div class="veld"><label for="f-tel">Telefoon</label><input id="f-tel" name="telefoon" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="veld-2">
+        <div class="veld"><label for="f-aantal">Aantal haarden</label><input id="f-aantal" name="aantal" type="number" min="1" value="2" inputmode="numeric"></div>
+        <div class="veld"><label for="f-type">Type zaak</label><select id="f-type" name="type"><option>Restaurant</option><option>Café / bar</option><option>Hotel</option><option>Strandpaviljoen / beachclub</option><option>Vakantiepark</option><option>Anders</option></select></div>
+      </div>
+      <div class="veld"><label for="f-opm">Iets over uw terras (optioneel)</label><textarea id="f-opm" name="opmerking" rows="3" placeholder="Bijvoorbeeld: aantal tafels, ondergrond, overdekt deel"></textarea></div>
+      <p class="fout" id="formFout" role="alert"></p>
+      <button class="btn btn-primair" type="submit" id="inWinkelwagen">Vraag offerte aan</button>
+      <p class="micro">We nemen zo snel mogelijk contact met u op. <span class="check">CHECK: reactietijd noemen?</span></p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap grid">
+    <div>
+      <span class="label">Veelgestelde vragen</span>
+      <h2>Wat horeca wil weten.</h2>
+      <p class="lead">Andere vraag? Mail naar info@ventorfire.com.</p>
+    </div>
+    <div>
+      <details><summary>Mag een buitenhaard op mijn terras?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Dat bepaalt uw gemeente. Regels voor open vuur op terrassen verschillen per gemeente, en sommige staan het niet toe. Kijk in uw terrasvergunning of vraag het na voordat u bestelt.</div></details>
+      <details><summary>Kan hij onder een luifel of parasol?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Nee. Gebruik de haard alleen in de open lucht, met voldoende afstand tot luifels, parasols, zeilen en gevels.</div></details>
+      <details><summary>Hebben mijn gasten last van rook?<span class="plus" aria-hidden="true"></span></summary><div class="antw">De rook gaat via de schoorsteen omhoog en komt er op 220 cm uit, boven de tafels. Rookvrij is geen houtvuur. Met droog hardhout (onder 20% vocht) en van bovenaf aansteken blijft het bij weinig.<p class="check">BEWIJS NODIG: ervaring van een horecaklant</p></div></details>
+      <details><summary>Is hij geschikt voor dagelijks gebruik?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja. VENTOR® heeft de Original ontwikkeld voor intensief professioneel gebruik. Hij is van cortenstaal, met een vuurplaat van 10 mm, en kan het hele jaar buiten blijven staan.</div></details>
+      <details><summary>Hoe doof ik hem bij sluitingstijd?<span class="plus" aria-hidden="true"></span></summary><div class="antw"><span class="check">CHECK: advies van VENTOR® nodig (laten uitbranden, as-opvang, nooit met water?)</span></div></details>
+      <details><summary>Krijg ik korting bij meerdere haarden?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja, bij meerdere haarden staat de staffelkorting op uw offerte. In november krijgt u daarnaast 20% Black Friday-korting op de set Original + Wind Shield.<p class="check">CHECK: zijn staffel en Black Friday-korting te combineren?</p></div></details>
+      <details><summary>Hoe wordt hij geleverd?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Op een mini-pallet, compleet en klaar voor gebruik. De vervoerder belt vooraf om een dag af te spreken.</div></details>
+      <details><summary>Kan ik een zakelijke bestelling retourneren?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Zakelijke bestellingen vallen niet onder het consumentenherroepingsrecht. Twijfelt u, bekijk de haard dan eerst bij een dealer of vraag advies over uw terras.</div></details>
+      <details><summary>Hoeveel garantie krijg ik?<span class="plus" aria-hidden="true"></span></summary><div class="antw">2 jaar op constructie- en fabricagefouten, vanaf de leverdatum.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- SLOT -->
+<section class="slot">
+  <img src="img/Ventor_63.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <span class="bf-slot">Black Friday voor horeca · hele maand november</span>
+    <h2>Zet het vuur midden op uw terras</h2>
+    <p>20% korting op de set Original + Wind Shield. Meerdere haarden? Vraag naar staffelkorting.</p>
+    <div class="acties">
+      <a class="btn btn-licht" href="#offerte">Vraag een offerte aan</a>
+      <a class="btn btn-lijn" href="../consument/">of bekijk de haard voor thuis</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/ventor-logo.jpg" alt="VENTOR®" width="140" height="26">
+    <span>Voorbeeldpagina horeca (Black Friday), opgesteld door Create &amp; Convert · oktober 2026 · <button type="button" id="checkKnop" class="linkknop">Open punten verbergen</button></span>
+  </div>
+</footer>
+
+<div class="balk" id="balk" aria-hidden="true">
+  <div class="wrap">
+    <div class="t"><b>VENTOR® Original voor horeca</b>Black Friday −20% · €1.887,27 excl. btw</div>
+    <a class="btn btn-primair" href="#offerte" tabindex="-1">Offerte</a>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  // galerij: terrasfoto's eerst
+  var B='img/';
+  var fotos=[
+    ['Ventor_57.jpg','Gasten aan tafel op een strandterras met de VENTOR® Original',1],
+    ['Ventor_63.jpg','Twee mannen bij de VENTOR® Original op een terras bij zonsondergang',1],
+    ['Ventor_02.jpg','Gasten proosten aan tafel naast het vuur',1],
+    ['Ventor_65.jpg','De VENTOR® Original op een houten terras',1],
+    ['Ventor_36.jpg','Gasten rond de VENTOR® Original in het avondlicht',1],
+    ['Ventor_original_buitenhaard.png','VENTOR® Original met brandend vuur',0],
+    ['Ventor_original_vuurkamer.jpg','Vuurkamer met lamellen, van dichtbij',1],
+    ['Ventor_haard_met_Mobility_kit_93efa256-fb4c-4179-80a5-97f460dbe4cc.png','VENTOR® Original op wielen met de Mobility Kit',0],
+    ['windscreen1.png','Het Wind Shield van cortenstaal',0],
+    ['onderdelen.png','Technische tekening van de onderdelen',0]
+  ];
+  var hoofd=document.getElementById('hoofdbeeld'), thumbs=document.getElementById('thumbs'), teller=document.getElementById('teller'), huidig=0;
+  fotos.forEach(function(f,i){
+    var b=document.createElement('button'); b.type='button'; if(f[2]) b.className='cover';
+    b.setAttribute('aria-label','Foto '+(i+1)+': '+f[1]); b.setAttribute('aria-current',i===0?'true':'false');
+    b.innerHTML='<img src="'+B+f[0]+'?width=220" alt="" loading="lazy">';
+    b.addEventListener('click',function(){toon(i)}); thumbs.appendChild(b);
+  });
+  function toon(i){
+    huidig=(i+fotos.length)%fotos.length; var f=fotos[huidig];
+    hoofd.classList.add('laden');
+    var n=new Image(); n.onload=n.onerror=function(){hoofd.src=n.src;hoofd.alt=f[1];hoofd.classList.toggle('cover',!!f[2]);hoofd.classList.remove('laden')};
+    n.src=B+f[0];
+    teller.textContent=(huidig+1)+' / '+fotos.length;
+    [].forEach.call(thumbs.children,function(t,k){t.setAttribute('aria-current',k===huidig?'true':'false')});
+    var t=thumbs.children[huidig]; thumbs.scrollTo({left:t.offsetLeft-thumbs.offsetLeft-thumbs.clientWidth/2+t.clientWidth/2,behavior:'smooth'});
+  }
+  document.querySelector('.pijl.vorige').addEventListener('click',function(){toon(huidig-1)});
+  document.querySelector('.pijl.volgende').addEventListener('click',function(){toon(huidig+1)});
+  var vak=document.getElementById('hoofd'), x0=null;
+  vak.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  vak.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)toon(huidig+(dx<0?1:-1));x0=null});
+
+  // rekenhulp
+  var PRIJS=1887.27, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal'), fAantal=document.getElementById('f-aantal');
+  function euro(n){return '€'+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2})}
+  function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); fAantal.value=n}
+  document.getElementById('min').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)-1;reken()});
+  document.getElementById('plus').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)+1;reken()});
+  inp.addEventListener('change',reken); reken();
+
+  // formulier (voorbeeld)
+  var toast=document.getElementById('toast'), timer;
+  function melding(t){toast.textContent=t;toast.classList.add('aan');clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('aan')},3500)}
+  document.getElementById('offerteForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var fout=document.getElementById('formFout'), leeg=[].filter.call(this.querySelectorAll('[required]'),function(x){return !x.value.trim()});
+    var mail=document.getElementById('f-mail');
+    [].forEach.call(this.querySelectorAll('input,select,textarea'),function(x){x.removeAttribute('aria-invalid')});
+    if(leeg.length){leeg.forEach(function(x){x.setAttribute('aria-invalid','true')});fout.textContent='Vul uw bedrijfsnaam, naam en e-mailadres in.';leeg[0].focus();return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail.value)){mail.setAttribute('aria-invalid','true');fout.textContent='Dit e-mailadres klopt niet. Kijk het even na.';mail.focus();return}
+    fout.textContent=''; melding('Voorbeeldpagina: in de live versie gaat uw aanvraag nu naar VENTOR®.');
+  });
+
+  // open punten tonen/verbergen
+  var ck=document.getElementById('checkKnop');
+  ck.addEventListener('click',function(){var aan=document.body.classList.toggle('zonder-check');ck.textContent=aan?'Open punten tonen':'Open punten verbergen'});
+
+  // aftelklok november
+  var start=new Date('2026-11-01T00:00:00+01:00'), einde=new Date('2026-11-30T23:59:59+01:00');
+  function klok(){var nu=new Date(), els=document.querySelectorAll('[data-klok]');
+    if(nu<start){els.forEach(function(e){e.textContent='1 t/m 30 november'});return}
+    var ms=einde-nu; if(ms<=0){els.forEach(function(e){e.textContent='Black Friday is voorbij'});return}
+    var d=Math.floor(ms/864e5),u=Math.floor(ms%864e5/36e5); els.forEach(function(e){e.textContent='Nog '+d+' dagen en '+u+' uur'})}
+  klok(); setInterval(klok,60000);
+
+  // vaste balk + rustige reveal
+  var balk=document.getElementById('balk'), koop=document.getElementById('kopen');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){var v=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;balk.classList.toggle('zichtbaar',v);balk.setAttribute('aria-hidden',!v);balk.querySelector('a').tabIndex=v?0:-1}).observe(koop);
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  } else {document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
