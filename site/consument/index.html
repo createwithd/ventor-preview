@@ -391,7 +391,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
 <div class="kop-sticky">
 <div class="bf-balk" role="region" aria-label="Black Friday">
-  <div class="wrap"><b>Black Friday</b><span class="lang">20% korting op de VENTOR® Original + gratis Wind Shield</span><span class="kort">−20% + gratis Wind Shield</span><span class="bf-klok" data-klok>Hele maand november</span></div>
+  <div class="wrap"><b>Black Friday</b><span class="lang">Alleen met Black Friday: 25% korting op de VENTOR® Original + gratis Wind Shield</span><span class="kort">−25% + gratis Wind Shield</span><span class="bf-klok" data-klok>Hele maand november</span></div>
 </div>
 <header class="top">
   <div class="wrap">
@@ -428,7 +428,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <label><input type="checkbox" checked disabled><span class="naam">Wind Shield<small>Sluit één kant helemaal af. De warmte kaatst terug naar de kant waar jij zit.</small></span><span class="bedrag">Cadeau<small style="display:block;color:var(--as-donker);font-size:12.5px">t.w.v. €274 · t/m 30 nov</small></span></label>
         <label><input type="checkbox" data-prijs="274"><span class="naam">Extra Wind Control-paneel<small>Waait het vaak uit dezelfde hoek? Scherm 2/3 van de vuurkamer af, en je ziet de vlammen nog.</small></span><span class="bedrag num">+ €274</span></label>
         <label><input type="checkbox" data-prijs="119"><span class="naam">Mobility Kit<small>Vier zwenkwielen, twee met rem. Rij de haard naar de plek waar de avond is.</small></span><span class="bedrag num">+ €119</span></label>
-        <div class="totaal" style="padding:12px 16px;margin:0;border-top:1px solid var(--lijn)"><span>Totaal met extra's</span><strong class="num" id="totaal" aria-live="polite">€2.076</strong></div>
+        <div class="totaal" style="padding:12px 16px;margin:0;border-top:1px solid var(--lijn)"><span>Totaal met extra's</span><strong class="num" id="totaal" aria-live="polite">€2.249</strong></div>
       </fieldset>
     </div>
 
@@ -436,7 +436,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <h1>VENTOR® Original cortenstalen buitenhaard, 220 cm</h1>
       <p class="kop-onder">De buitenhaard met het vuur op ooghoogte.</p>
 
-      <div class="bf-prijs"><span class="nu num">€2.076</span><s class="num" aria-label="Normaal €2.595">€2.595</s><span class="procent">Black Friday −20%</span></div>
+      <div class="bf-prijs"><span class="nu num">€2.249</span><s class="num" aria-label="Normaal €2.999">€2.999</s><span class="procent">Alleen Black Friday −25%</span></div><p style="margin-top:6px"><span class="check">CHECK: €2.999 moet 30 dagen vóór de actie de echte prijs zijn (nu €2.595)</span></p>
 
       <div class="cadeau-blok">
         <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
@@ -625,9 +625,9 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   <div class="wrap">
     <span class="bf-slot">Black Friday · hele maand november</span>
     <h2>Zet het vuur in het midden van je tuin</h2>
-    <p>20% korting op de VENTOR® Original, en het Wind Shield (t.w.v. €274) krijg je er gratis bij. Op voorraad en binnen 1-2 werkdagen bij je.</p>
+    <p>25% korting op de VENTOR® Original, en het Wind Shield (t.w.v. €274) krijg je er gratis bij. Op voorraad en binnen 1-2 werkdagen bij je.</p>
     <div class="acties">
-      <a class="btn btn-licht" href="#kopen">Bestel met 20% korting</a>
+      <a class="btn btn-licht" href="#kopen">Bestel met 25% korting</a>
       <a class="btn btn-lijn" href="#dealers">of bekijk hem eerst bij een dealer</a>
     </div>
     <p style="margin-top:22px;font-size:15px">Horeca? <a href="../horeca/" style="color:#F6F2EC">Bekijk het horeca-aanbod</a></p>
@@ -644,7 +644,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
 <div class="balk" id="balk" aria-hidden="true">
   <div class="wrap">
-    <div class="t"><b>VENTOR® Original</b><span class="num" id="balkPrijs">€2.076</span> <s style="color:#9C9289">€2.595</s><span class="balk-extra"> · −20% + gratis Wind Shield</span></div>
+    <div class="t"><b>VENTOR® Original</b><span class="num" id="balkPrijs">€2.249</span> <s style="color:#9C9289">€2.999</s><span class="balk-extra"> · −25% + gratis Wind Shield</span></div>
     <a class="btn btn-primair" href="#kopen" tabindex="-1">In winkelwagen</a>
   </div>
 </div>
@@ -728,7 +728,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   vak.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)toon(huidig+(dx<0?1:-1));x0=null});
   document.querySelector('.galerij').addEventListener('keydown',function(e){if(e.key==='ArrowRight')toon(huidig+1);if(e.key==='ArrowLeft')toon(huidig-1)});
   // totaalprijs
-  var basis=2076, totaal=document.getElementById('totaal'), balkPrijs=document.getElementById('balkPrijs');
+  var basis=2249, totaal=document.getElementById('totaal'), balkPrijs=document.getElementById('balkPrijs');
   function euro(n){return '€'+n.toLocaleString('nl-NL',{minimumFractionDigits:(n%1?2:0),maximumFractionDigits:2})}
   function reken(){
     var t=basis;
