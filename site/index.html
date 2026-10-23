@@ -5,28 +5,185 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <script>if(Date.now()>=new Date('2026-11-22T00:00:00+01:00').getTime())document.documentElement.classList.add('verlopen')</script>
-<title>VENTOR® preview</title>
+<title>VENTOR® Black Friday demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <style>
+:root{--houtskool:#1C1C1C;--corten:#8A4B2A;--corten-d:#6E3A20;--gloed:#D9822B;--zand:#E9D9BF;--wit:#F6F2EC;--as:#5E5853;--lijn:#DDD3C4;--kaart:#FFFFFF;--r:6px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--houtskool);background:var(--wit);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:Jost,Inter,sans-serif;font-weight:500;line-height:1.15;text-wrap:balance}
+.label{font-family:Jost,sans-serif;font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--corten)}
+.top{position:sticky;top:0;z-index:20;background:rgba(14,12,11,.96);color:var(--wit)}
+.top .wrap{display:flex;align-items:center;gap:24px;min-height:58px;flex-wrap:wrap}
+.top b{font-family:Jost,sans-serif;font-weight:500;letter-spacing:.16em}
+.top nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14.5px}
+.top nav a{text-decoration:none;color:#D8D0C6;padding:8px 0}
+.top nav a:hover,.top nav a:focus-visible{color:#fff}
+.top .bf{margin-left:auto;font-size:13px;color:var(--gloed);font-family:Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+header.held{padding:64px 0 40px}
+header.held h1{font-size:clamp(34px,5vw,56px);margin:10px 0 14px;max-width:18ch}
+header.held p{max-width:62ch;color:var(--as);font-size:18px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.chip{background:var(--kaart);border:1px solid var(--lijn);border-radius:999px;padding:7px 14px;font-size:14.5px}
+.chip b{color:var(--corten)}
+section{padding:56px 0;border-top:1px solid var(--lijn)}
+section h2{font-size:clamp(28px,3.4vw,38px);margin:8px 0 10px}
+section .intro{color:var(--as);max-width:64ch;margin-bottom:28px}
+.paginas{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pagina{background:var(--kaart);border:1px solid var(--lijn);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.pagina .shots{display:grid;grid-template-columns:3.2fr 1fr;gap:10px;padding:14px;background:#EFE8DD}
+.pagina .shots img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;box-shadow:0 2px 10px rgba(0,0,0,.12);aspect-ratio:16/10}
+.pagina .shots img.mob{aspect-ratio:9/19.5}
+.pagina .tekst{padding:20px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pagina h3{font-size:24px}
+.pagina p{color:var(--as);font-size:15.5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:4px;background:var(--corten);color:#fff;text-decoration:none;font-weight:500;border:0;font:inherit;cursor:pointer}
+.btn:hover{background:var(--corten-d)}
+.btn:focus-visible,.tab:focus-visible{outline:2px solid var(--gloed);outline-offset:3px}
+.pagina .btn{align-self:flex-start;margin-top:auto}
+.balk{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:24px}
+.tabs{display:inline-flex;background:#EAE1D3;border-radius:999px;padding:4px}
+.tab{border:0;background:transparent;padding:9px 18px;border-radius:999px;font:inherit;font-size:15px;cursor:pointer;color:var(--as)}
+.tab[aria-pressed="true"]{background:var(--houtskool);color:#fff}
+.ads{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.ad{background:var(--kaart);border:1px solid #E3DED7;border-radius:8px;overflow:hidden;font-size:14.5px}
+.ad .kop1{display:flex;align-items:center;gap:10px;padding:12px 14px}
+.ad .logo{width:36px;height:36px;border-radius:50%;background:var(--houtskool);color:var(--wit);display:flex;align-items:center;justify-content:center;font-family:Jost,sans-serif;font-weight:500}
+.ad .naam{font-weight:600;line-height:1.2}
+.ad .naam small{display:block;font-weight:400;color:#8A8580;font-size:12.5px}
+.ad .nr{margin-left:auto;font-size:12px;font-weight:600;color:var(--corten)}
+.ad .prim{padding:0 14px 12px;white-space:pre-line}
+.ad .prim.kort{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ad .meer{border:0;background:none;color:#8A8580;font:inherit;font-size:13.5px;padding:0 14px 10px;cursor:pointer}
+.ad img{width:100%;aspect-ratio:1;object-fit:cover}
+.ad .onder{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#F3F1EE}
+.ad .onder div{flex:1;min-width:0}
+.ad .dom{font-size:11.5px;color:#8A8580;text-transform:uppercase;letter-spacing:.03em}
+.ad .kopr{font-weight:600;line-height:1.3}
+.ad .besch{font-size:13px;color:#6A6560}
+.ad .cta{background:#E4E1DC;border-radius:5px;padding:8px 12px;font-weight:600;font-size:13.5px;white-space:nowrap}
+.stories{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.story{background:#000;border-radius:14px;overflow:hidden;position:relative;aspect-ratio:9/16}
+.story img{width:100%;height:100%;object-fit:cover}
+.story span{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px}
+.videos{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.vid{display:flex;flex-direction:column;gap:8px}
+.vid video{width:100%;aspect-ratio:9/16;background:#000;border-radius:14px;object-fit:cover}
+.vid b{font-size:14.5px;line-height:1.35}
+.vid small{color:var(--as);font-size:13px}
+.vid .doel{font-size:12px;font-weight:600;color:var(--corten);text-transform:uppercase;letter-spacing:.08em}
+.extra{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.blok{background:var(--kaart);border:1px solid var(--lijn);border-radius:var(--r);padding:22px}
+.blok h3{font-size:21px;margin:6px 0 8px}
+.blok p{color:var(--as);font-size:15.5px}
+.donker{background:var(--houtskool);color:var(--wit);border:0}
+.donker p{color:#D8D0C6}
+.donker .label{color:var(--gloed)}
+.donker .btn{margin-top:16px;background:var(--gloed);color:#0E0C0B}
+footer{padding:36px 0 56px;color:var(--as);font-size:14px;border-top:1px solid var(--lijn)}
+@media(max-width:1000px){.ads{grid-template-columns:1fr 1fr}.stories,.videos{grid-template-columns:repeat(3,1fr)}.extra{grid-template-columns:1fr}}
+@media(max-width:760px){.paginas{grid-template-columns:1fr}}
+@media(max-width:620px){.ads{grid-template-columns:1fr}.stories,.videos{grid-template-columns:1fr 1fr}.top .bf{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 html.verlopen body>*:not(.verlopen-melding){display:none!important}
 .verlopen-melding{display:none}
 html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;font:500 20px/1.5 Inter,system-ui,sans-serif;color:#1C1C1C;background:#F6F2EC}
-
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F6F2EC;color:#1C1C1C;font:400 17px/1.6 Inter,system-ui,sans-serif;padding:24px;box-sizing:border-box}
-main{max-width:520px}
-h1{font:500 30px/1.2 Jost,Inter,system-ui,sans-serif;margin:0 0 8px}
-p{margin:0 0 24px;color:#4A4440}
-a{display:block;padding:16px 20px;margin-bottom:12px;background:#fff;border:1px solid #DDD3C4;border-radius:4px;color:#8A4B2A;font-weight:600;text-decoration:none}
-a:hover,a:focus-visible{border-color:#8A4B2A}
 </style>
 </head>
 <body>
 <div class="verlopen-melding"><p>Deze preview is verlopen.</p></div>
+<div class="top"><div class="wrap"><b>VENTOR®</b><nav><a href="#paginas">Pagina's</a><a href="#ads">Advertenties</a><a href="#videos">Video's</a><a href="#meer">Presentatie</a></nav><span class="bf">Black Friday · 1 t/m 30 nov</span></div></div>
+
 <main>
-<h1>VENTOR® Black Friday</h1>
-<p>Conceptpagina's van Create &amp; Convert, ter beoordeling. Deze preview is online tot 22 november 2026.</p>
-<a href="consument/">Productpagina voor consumenten</a>
-<a href="horeca/">Pagina voor horeca</a>
+<header class="held"><div class="wrap">
+  <span class="label">Demo · Create &amp; Convert</span>
+  <h1>Black Friday voor VENTOR®: alles op één plek</h1>
+  <p>De nieuwe productpagina's voor consumenten en horeca, de Meta-advertenties met hun teksten en de video-advertenties van de echte Instagram-beelden. Alles is klikbaar en speelt af.</p>
+  <div class="chips"><span class="chip"><b>−25%</b> op de haard, alleen met Black Friday</span><span class="chip"><b>Gratis Wind Shield</b> t.w.v. €274</span><span class="chip">€2.999 → <b>€2.249</b></span><span class="chip">1 t/m 30 november</span></div>
+</div></header>
+
+<section id="paginas"><div class="wrap">
+  <span class="label">Pagina's</span>
+  <h2>Twee productpagina's</h2>
+  <p class="intro">Gebouwd op het merkfundament: het product eerst, de actie direct in beeld, en echte foto's en video's. Klik door om de pagina te bekijken; de knoppen werken als voorbeeld.</p>
+  <div class="paginas">
+    <article class="pagina">
+      <div class="shots"><img src="demo/pages/consument-desktop.jpg" alt="De consumentenpagina op desktop" loading="lazy"><img class="mob" src="demo/pages/consument-mobiel.jpg" alt="De consumentenpagina op mobiel" loading="lazy"></div>
+      <div class="tekst"><span class="label">Consument</span><h3>Black Friday-productpagina</h3><p>Voor De Gastheer: vuur op ooghoogte, prijs met −25%, het gratis Wind Shield en direct in de winkelwagen.</p><a class="btn" href="consument/">Open de pagina</a></div>
+    </article>
+    <article class="pagina">
+      <div class="shots"><img src="demo/pages/horeca-desktop.jpg" alt="De horecapagina op desktop" loading="lazy"><img class="mob" src="demo/pages/horeca-mobiel.jpg" alt="De horecapagina op mobiel" loading="lazy"></div>
+      <div class="tekst"><span class="label">Horeca</span><h3>Pagina voor terrassen</h3><p>In u-vorm, met aantal haarden, prijs incl. en excl. btw, factuur op bedrijfsnaam en direct bestellen.</p><a class="btn" href="horeca/">Open de pagina</a></div>
+    </article>
+  </div>
+</div></section>
+
+<section id="ads"><div class="wrap">
+  <span class="label">Meta-advertenties</span>
+  <h2>20 beeldadvertenties</h2>
+  <p class="intro">Tien per doelgroep, elk met een eigen hook en steeds de haard groot in beeld. Zo zien ze eruit in de feed, met de echte tekst, kop en knop. In het stories-formaat zie je de staande versie.</p>
+  <div class="balk">
+    <div class="tabs" role="group" aria-label="Doelgroep"><button class="tab" type="button" data-groep="consument" aria-pressed="true">Consument</button><button class="tab" type="button" data-groep="horeca" aria-pressed="false">Horeca</button></div>
+    <div class="tabs" role="group" aria-label="Formaat"><button class="tab" type="button" data-formaat="feed" aria-pressed="true">Feed</button><button class="tab" type="button" data-formaat="stories" aria-pressed="false">Stories</button></div>
+  </div>
+  <div id="adsLijst"></div>
+</div></section>
+
+<section id="videos"><div class="wrap">
+  <span class="label">Video-advertenties</span>
+  <h2>5 video's voor Reels en Stories</h2>
+  <p class="intro">Gemaakt van de reels op @ventor_fire, met de originele muziek. Bovenin de hook, onderin de Black Friday-actie, en een eindbeeld met de haard.</p>
+  <div class="videos" id="videoLijst"></div>
+</div></section>
+
+<section id="meer"><div class="wrap">
+  <span class="label">Achtergrond</span>
+  <h2>Merkfundament en presentatie</h2>
+  <div class="extra">
+    <div class="blok"><span class="label">Kernbelofte</span><h3>Langer samen bij het vuur.</h3><p>De premium buitenhaard met het vuur op ooghoogte, 360° zicht en een schoorsteen die de rook omhoog stuurt. Handgemaakt in Nederland.</p></div>
+    <div class="blok"><span class="label">Doelgroep</span><h3>De Gastheer</h3><p>48–62 jaar, ruime tuin, ontvangt graag familie en vrienden. Wil langer buiten zitten, zonder rookgedoe en zonder te pronken.</p></div>
+    <div class="blok donker"><span class="label">Presentatie</span><h3>De klantpresentatie</h3><p>Merkfundament, onderzoek, de actie, de pagina's en alle advertenties in tien slides.</p><a class="btn" href="https://claude.ai/artifact/CAF8osN9v2TcaTqFJEgg1Q">Open de presentatie</a></div>
+  </div>
+</div></section>
 </main>
+
+<footer><div class="wrap">Demo van Create &amp; Convert voor VENTOR® · concept, niet de echte winkel · online tot 22 november 2026</div></footer>
+
+<script>
+var D={"consument": [{"id": "c01", "hook": "Om 23:00 zit iedereen nog buiten.", "kop": "Black Friday: 25% korting", "beschr": "+ gratis Wind Shield", "tekst": "Het eten is op, de glazen zijn nog vol, en niemand wil naar binnen. De VENTOR® Original zet het vuur op ooghoogte, midden in je tuin. Alleen met Black Friday: 25% korting op de haard, en het Wind Shield krijg je er gratis bij. T/m 30 november."}, {"id": "c02", "hook": "Ruiken je kleren na een avond bij de vuurkorf?", "kop": "−25% op vuur zonder rook in je gezicht", "beschr": "+ gratis Wind Shield", "tekst": "Ruiken je kleren na een avond bij de vuurkorf? Dat komt doordat de rook op zithoogte vrijkomt. Bij de VENTOR® gaat hij door een schoorsteen van 40 cm breed en komt hij er op 220 cm uit, boven de hoofden. Alleen met Black Friday: −25% en een gratis Wind Shield."}, {"id": "c03", "hook": "Het vuur op ooghoogte. Iedereen schuift aan.", "kop": "Vuur op ooghoogte, nu −25%", "beschr": "Alleen met Black Friday", "tekst": "Bij een vuurkorf kijk je naar beneden. Bij de VENTOR® Original zit het vuur op ooghoogte, achter slanke lamellen, dus zittend en staand kijk je in de vlammen. Alleen met Black Friday: 25% korting + gratis Wind Shield."}, {"id": "c04", "hook": "De verlengde pijp zit er al op.", "kop": "De pijp zit er al op · −25%", "beschr": "+ gratis Wind Shield", "tekst": "Wie een tuinhaard heeft, kent het: een pijp erbij kopen omdat hij niet goed trekt. Bij de VENTOR® zit de schoorsteen er standaard op, 40 cm breed en tot 220 cm hoog. Alleen met Black Friday: 25% korting op de haard, met het Wind Shield gratis."}, {"id": "c05", "hook": "Je tuin is af. Op één ding na.", "kop": "Je tuin is af. Bijna.", "beschr": "−25% + gratis Wind Shield", "tekst": "Bestrating ligt, de lounge staat, de verlichting doet het. Wat ontbreekt is een plek waar iedereen 's avonds vanzelf gaat zitten. De VENTOR® Original: het vuur op ooghoogte, midden in je tuin. Nu 25% Black Friday-korting + gratis Wind Shield."}, {"id": "c06", "hook": "Met de jaren alleen maar mooier.", "kop": "Mooier met de jaren · −25%", "beschr": "Alleen t/m 30 november", "tekst": "De VENTOR® Original is van cortenstaal. Hij krijgt een warme roestkleur die elk jaar mooier wordt, en schilderen of behandelen hoeft nooit. Alleen met Black Friday: 25% korting, met het Wind Shield gratis erbij. T/m 30 november."}, {"id": "c07", "hook": "Het middelpunt van elke avond.", "kop": "Het middelpunt van je tuin · −25%", "beschr": "+ gratis Wind Shield", "tekst": "220 cm hoog, het vuur op ooghoogte en van alle kanten te zien. De VENTOR® Original is het middelpunt van elke avond in de tuin. Alleen met Black Friday: −25% + gratis Wind Shield."}, {"id": "c08", "hook": "Vuur van alle kanten. Geen achterkant.", "kop": "Vuur van alle kanten · −25%", "beschr": "+ gratis Wind Shield", "tekst": "Geen achterkant, geen slechte plek. Slanke lamellen rondom de vuurkamer, dus vanuit elke stoel zie je de vlammen. Alleen met Black Friday: 25% korting op de VENTOR® Original + gratis Wind Shield."}, {"id": "c09", "hook": "Dit is geen vuurkorf.", "kop": "Dit is geen vuurkorf · −25%", "beschr": "+ gratis Wind Shield", "tekst": "Een vuurkorf staat op de grond en de rook gaat waar de wind hem heen blaast. De VENTOR® Original is een buitenhaard van 220 cm, met het vuur op ooghoogte en een schoorsteen die trekt. Alleen met Black Friday: −25% + gratis Wind Shield."}, {"id": "c10", "hook": "Black Friday bij VENTOR®.", "kop": "Black Friday: 25% korting", "beschr": "+ gratis Wind Shield t.w.v. €274", "tekst": "Black Friday bij VENTOR®: 25% korting op de Original, en het Wind Shield (t.w.v. €274) krijg je er gratis bij. De buitenhaard met het vuur op ooghoogte, handgemaakt in Nederland. Alleen t/m 30 november."}], "horeca": [{"id": "h01", "hook": "Het terras waar gasten blijven zitten.", "kop": "Black Friday voor horeca: −25%", "beschr": "+ gratis Wind Shield", "tekst": "Een terras met een vuur in het midden. De VENTOR® Original zet het vuur op ooghoogte, met lamellen rondom, dus elke tafel kijkt erin. Alleen met Black Friday: 25% korting op de haard en een gratis Wind Shield. T/m 30 november."}, {"id": "h02", "hook": "Uw terras ook in maart en oktober.", "kop": "Uw terras ook in maart · −25%", "beschr": "+ gratis Wind Shield", "tekst": "Een heater geeft warmte. Een vuur geeft uw gasten ook iets om naar te kijken. De VENTOR® Original staat het hele jaar buiten, van cortenstaal zonder onderhoud. Alleen met Black Friday: −25% + gratis Wind Shield."}, {"id": "h03", "hook": "Gebouwd voor elke dag op een druk terras.", "kop": "Gebouwd voor het terras · −25%", "beschr": "Direct te bestellen", "tekst": "Cortenstaal, een vuurplaat van 10 mm, een vonkenvanger en optioneel op wielen. De VENTOR® Original is gebouwd voor dagelijks gebruik op het terras. Alleen met Black Friday: 25% korting en een gratis Wind Shield."}, {"id": "h04", "hook": "Black Friday voor horeca.", "kop": "−25% + gratis Wind Shield", "beschr": "Factuur op uw bedrijfsnaam", "tekst": "Black Friday voor horeca: 25% korting op de VENTOR® Original en een gratis Wind Shield bij elke haard. Direct te bestellen, met factuur op uw bedrijfsnaam. Alleen t/m 30 november."}, {"id": "h05", "hook": "Het vuur op ooghoogte. Elke tafel kijkt erin.", "kop": "Elke tafel aan het vuur · −25%", "beschr": "+ gratis Wind Shield", "tekst": "Het vuur van de VENTOR® Original brandt op ooghoogte, achter slanke lamellen. Zo kijkt elke tafel in de vlammen en is er geen slechte plek op uw terras. Alleen met Black Friday: −25% + gratis Wind Shield."}, {"id": "h06", "hook": "De rook gaat boven uw gasten weg.", "kop": "Rook boven de tafels · −25%", "beschr": "Alleen met Black Friday", "tekst": "Bij een vuurkorf hangt de rook tussen de tafels. Bij de VENTOR® Original gaat hij door een schoorsteen van 40 cm breed en komt hij er op 220 cm uit, boven uw gasten. Alleen met Black Friday: −25% + gratis Wind Shield."}, {"id": "h07", "hook": "Eén vuur, tafels rondom.", "kop": "Eén vuur, tafels rondom · −25%", "beschr": "+ gratis Wind Shield", "tekst": "Eén haard in het midden, tafels eromheen. 360° zicht op het vuur, op ooghoogte, en gebouwd om elke dag buiten te staan. Alleen met Black Friday: 25% korting + gratis Wind Shield."}, {"id": "h08", "hook": "Het middelpunt van uw terras.", "kop": "Het middelpunt van uw terras", "beschr": "−25% + gratis Wind Shield", "tekst": "220 cm cortenstaal met het vuur op ooghoogte. De VENTOR® Original is het middelpunt van uw terras, en het eerste wat gasten zien. Alleen met Black Friday: −25% + gratis Wind Shield."}, {"id": "h09", "hook": "Warmte waar uw gasten omheen gaan zitten.", "kop": "Warmte én een vuur · −25%", "beschr": "Direct te bestellen", "tekst": "Een heater geeft warmte. De VENTOR® geeft ook een vuur om naar te kijken, midden tussen de tafels. Handgemaakt in Nederland van cortenstaal. Alleen met Black Friday: −25% + gratis Wind Shield. Direct te bestellen."}, {"id": "h10", "hook": "Black Friday voor uw terras.", "kop": "Black Friday voor uw terras", "beschr": "Gratis Wind Shield bij elke haard", "tekst": "Black Friday voor uw terras: 25% korting op de VENTOR® Original, en bij elke haard een gratis Wind Shield. Alleen t/m 30 november."}], "videos": [{"naam": "ventor-bf-video-c1-avond", "lengte": "12,6 s", "hook": "Om 23:00 zit iedereen nog buiten.", "tekst_van": "c01"}, {"naam": "ventor-bf-video-c2-vlammen", "lengte": "10,6 s", "hook": "Het vuur op ooghoogte. Iedereen schuift aan.", "tekst_van": "c03"}, {"naam": "ventor-bf-video-c3-tuin", "lengte": "9,5 s", "hook": "Je tuin is af. Op één ding na.", "tekst_van": "c05"}, {"naam": "ventor-bf-video-h1-papas", "lengte": "12,6 s", "hook": "Het terras waar gasten blijven zitten.", "tekst_van": "h01"}, {"naam": "ventor-bf-video-h2-tafels", "lengte": "10,3 s", "hook": "Een vuur midden tussen de tafels.", "tekst_van": "h05"}]};
+var groep='consument', formaat='feed';
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+function adsTekenen(){
+  var lijst=document.getElementById('adsLijst'), ads=D[groep];
+  if(formaat==='stories'){
+    lijst.className='stories';
+    lijst.innerHTML=ads.map(function(a){return '<div class="story"><img src="demo/ads/ventor-bf-'+a.id+'-st.jpg" alt="'+esc(a.id+': '+a.hook)+'" loading="lazy"><span>'+a.id+'</span></div>'}).join('');
+    return;
+  }
+  lijst.className='ads';
+  lijst.innerHTML=ads.map(function(a){
+    return '<article class="ad"><div class="kop1"><div class="logo" aria-hidden="true">V</div><div class="naam">VENTOR<small>Gesponsord</small></div><span class="nr">'+a.id+'</span></div>'+
+      '<p class="prim kort">'+esc(a.tekst)+'</p><button class="meer" type="button">Meer weergeven</button>'+
+      '<img src="demo/ads/ventor-bf-'+a.id+'-sq.jpg" alt="'+esc(a.id+': '+a.hook)+'" loading="lazy">'+
+      '<div class="onder"><div><div class="dom">ventorfire.com</div><div class="kopr">'+esc(a.kop)+'</div><div class="besch">'+esc(a.beschr)+'</div></div><span class="cta">Nu kopen</span></div></article>';
+  }).join('');
+  [].forEach.call(lijst.querySelectorAll('.meer'),function(b){b.addEventListener('click',function(){var p=b.previousElementSibling;var kort=p.classList.toggle('kort');b.textContent=kort?'Meer weergeven':'Minder weergeven'})});
+}
+[].forEach.call(document.querySelectorAll('[data-groep]'),function(b){b.addEventListener('click',function(){groep=b.dataset.groep;[].forEach.call(document.querySelectorAll('[data-groep]'),function(x){x.setAttribute('aria-pressed',x===b)});adsTekenen()})});
+[].forEach.call(document.querySelectorAll('[data-formaat]'),function(b){b.addEventListener('click',function(){formaat=b.dataset.formaat;[].forEach.call(document.querySelectorAll('[data-formaat]'),function(x){x.setAttribute('aria-pressed',x===b)});adsTekenen()})});
+adsTekenen();
+var alle=D.consument.concat(D.horeca), perId={}; alle.forEach(function(a){perId[a.id]=a});
+document.getElementById('videoLijst').innerHTML=D.videos.map(function(v){
+  var horeca=/-h\d-/.test(v.naam);
+  return '<div class="vid"><video controls playsinline preload="metadata" poster="demo/video/'+v.naam+'.jpg"><source src="demo/video/'+v.naam+'.mp4" type="video/mp4"></video><span class="doel">'+(horeca?'Horeca':'Consument')+' · '+esc(v.lengte)+'</span><b>'+esc(v.hook)+'</b><small>'+esc((perId[v.tekst_van]||{}).kop||'')+'</small></div>';
+}).join('');
+</script>
 </body>
 </html>
