@@ -356,6 +356,9 @@ body.zonder-check .check{display:none}
 /* ===== horeca ===== */
 .reken{border:1px solid var(--lijn);border-radius:var(--radius);padding:16px 18px;margin:4px 0 18px;background:#fff}
 .reken label{display:block;font-weight:600;font-size:15px;margin-bottom:10px}
+.reken-rij{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.reken-rij .reken-uit{margin-top:0;flex-direction:column;align-items:flex-end;gap:2px}
+.reken-rij .reken-uit span{font-size:13.5px;color:var(--as-donker)}
 .stepper{display:inline-flex;border:1px solid var(--lijn);border-radius:var(--radius);overflow:hidden}
 .stepper button{width:48px;height:48px;border:0;background:var(--wit);font-size:22px;color:var(--tekst)}
 .stepper button:hover{background:var(--zand)}
@@ -432,7 +435,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <li><a href="#specs">Specificaties</a></li>
       <li><a href="#faq">Vragen</a></li>
     </ul>
-    <a class="btn btn-primair" href="#offerte">Offerte aanvragen</a>
+    <a class="btn btn-primair" href="#kopen">In winkelwagen</a>
   </div>
 </header>
 </div>
@@ -451,17 +454,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <span class="teller" id="teller" aria-live="polite">1 / 13</span>
       </div>
       <div class="thumbs" id="thumbs" role="group" aria-label="Foto's"></div>
-      <div class="reken extra-onder">
-        <label for="aantal">Aantal haarden voor uw terras</label>
-        <div class="stepper">
-          <button type="button" id="min" aria-label="Eén minder">−</button>
-          <input id="aantal" type="number" min="1" max="50" value="2" inputmode="numeric">
-          <button type="button" id="plus" aria-label="Eén meer">+</button>
-        </div>
-        <div class="reken-uit"><span>Indicatie incl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€4.498,00</strong></div>
-        <p class="reken-noot">Excl. btw: <span class="num" id="horecaExcl">€3.717,36</span></p>
-        <p class="reken-noot">Black Friday-prijs × aantal. Staffelkorting voor meerdere haarden staat op uw offerte. <span class="check">CHECK: staffel vanaf hoeveel stuks, en bovenop de 25%?</span></p>
-      </div>
     </div>
 
     <div class="info">
@@ -470,7 +462,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
       <div class="bf-prijs"><span class="nu num">€2.249</span><s class="num" aria-label="Normaal €2.999">€2.999</s><span class="procent">Alleen Black Friday −25%</span></div>
       <p class="bf-set">per haard, incl. btw · €1.858,68 excl. btw</p>
-      <p style="margin-top:6px"><span class="check">CHECK: €2.999 moet in de 30 dagen vóór 1 november de verkoopprijs zijn</span></p>
 
       <div class="cadeau-blok">
         <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
@@ -486,7 +477,27 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><span><b>Staat het hele jaar buiten.</b> Cortenstaal, geen onderhoud behalve de as.</span></li>
       </ul>
 
-      <a class="btn btn-primair" href="#offerte" id="naarOfferte">Vraag een offerte aan</a>
+      <div class="reken">
+        <label for="aantal">Aantal haarden</label>
+        <div class="reken-rij">
+          <div class="stepper">
+            <button type="button" id="min" aria-label="Eén minder">−</button>
+            <input id="aantal" type="number" min="1" max="50" value="1" inputmode="numeric">
+            <button type="button" id="plus" aria-label="Eén meer">+</button>
+          </div>
+          <div class="reken-uit"><strong class="num" id="horecaTotaal" aria-live="polite">€2.249,00</strong><span>excl. btw <span class="num" id="horecaExcl">€1.858,68</span></span></div>
+        </div>
+      </div>
+      <button class="btn btn-primair" id="inWinkelwagen" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>
+        In winkelwagen
+      </button>
+      <ul class="vertrouwen">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Bezorgd op een pallet, op afspraak</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>iDEAL, creditcard of Bancontact</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6"/></svg>Factuur op uw bedrijfsnaam</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>2 jaar garantie</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -546,7 +557,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <div class="reveal"><h3>Ondergrond</h3><p>Een vlakke, niet-brandbare ondergrond: tegels, klinkers of beton. Niet op een houten vlonder zonder hittebestendige plaat.</p></div>
       <div class="reveal"><h3>Toezicht</h3><p>De buitenkant wordt heet. Zorg dat er altijd iemand van het team toezicht houdt, en houd kinderen op afstand.</p></div>
       <div class="reveal"><h3>Hout</h3><p>Droog hardhout met minder dan 20% vocht. Dat geeft de minste rook voor uw gasten en de buren.</p></div>
-      <div class="reveal tip"><h3>Advies voor uw terras?</h3><p>Stuur een foto of plattegrond mee met uw offerteaanvraag. Dan denken we mee over het aantal en de plek.</p></div>
+      <div class="reveal tip"><h3>Advies voor uw terras?</h3><p>Mail een foto of plattegrond naar info@ventorfire.com. Dan denken we mee over het aantal en de plek.</p></div>
     </div>
     <p class="check blok reveal">CHECK: mogen de haarden op de houten vlonders van de strandterrassen op de foto's staan? Zo ja, met welke ondergrond?</p>
   </div>
@@ -574,40 +585,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   </div>
 </section>
 
-<!-- OFFERTE -->
-<section class="offerte" id="offerte">
-  <div class="wrap grid-off">
-    <div>
-      <span class="label reveal">Offerte aanvragen</span>
-      <h2 class="reveal">Black Friday-korting voor uw terras.</h2>
-      <p class="lead reveal">Vul in hoeveel haarden u zoekt. U krijgt een offerte met de Black Friday-prijs en, bij meerdere haarden, de staffelkorting.</p>
-      <ul class="off-punten reveal">
-        <li>25% korting op de haard en een gratis Wind Shield, de hele maand november</li>
-        <li>Factuur op uw bedrijfsnaam, prijzen excl. btw</li>
-        <li>Advies over aantal en plaatsing</li>
-      </ul>
-    </div>
-    <form class="form reveal" id="offerteForm" novalidate>
-      <div class="veld"><label for="f-bedrijf">Bedrijfsnaam</label><input id="f-bedrijf" name="bedrijf" autocomplete="organization" required></div>
-      <div class="veld-2">
-        <div class="veld"><label for="f-naam">Uw naam</label><input id="f-naam" name="naam" autocomplete="name" required></div>
-        <div class="veld"><label for="f-plaats">Plaats</label><input id="f-plaats" name="plaats" autocomplete="address-level2"></div>
-      </div>
-      <div class="veld-2">
-        <div class="veld"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
-        <div class="veld"><label for="f-tel">Telefoon</label><input id="f-tel" name="telefoon" type="tel" autocomplete="tel"></div>
-      </div>
-      <div class="veld-2">
-        <div class="veld"><label for="f-aantal">Aantal haarden</label><input id="f-aantal" name="aantal" type="number" min="1" value="2" inputmode="numeric"></div>
-        <div class="veld"><label for="f-type">Type zaak</label><select id="f-type" name="type"><option>Restaurant</option><option>Café / bar</option><option>Hotel</option><option>Strandpaviljoen / beachclub</option><option>Vakantiepark</option><option>Anders</option></select></div>
-      </div>
-      <div class="veld"><label for="f-opm">Iets over uw terras (optioneel)</label><textarea id="f-opm" name="opmerking" rows="3" placeholder="Bijvoorbeeld: aantal tafels, ondergrond, overdekt deel"></textarea></div>
-      <p class="fout" id="formFout" role="alert"></p>
-      <button class="btn btn-primair" type="submit" id="inWinkelwagen">Vraag offerte aan</button>
-      <p class="micro">We nemen zo snel mogelijk contact met u op. <span class="check">CHECK: reactietijd noemen?</span></p>
-    </form>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section class="faq" id="faq">
@@ -623,7 +600,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <details><summary>Hebben mijn gasten last van rook?<span class="plus" aria-hidden="true"></span></summary><div class="antw">De rook gaat via de schoorsteen omhoog en komt er op 220 cm uit, boven de tafels. Rookvrij is geen houtvuur. Met droog hardhout (onder 20% vocht) en van bovenaf aansteken blijft het bij weinig.<p class="check">BEWIJS NODIG: ervaring van een horecaklant</p></div></details>
       <details><summary>Is hij geschikt voor dagelijks gebruik?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja. VENTOR® heeft de Original ontwikkeld voor intensief professioneel gebruik. Hij is van cortenstaal, met een vuurplaat van 10 mm, en kan het hele jaar buiten blijven staan.</div></details>
       <details><summary>Hoe doof ik hem bij sluitingstijd?<span class="plus" aria-hidden="true"></span></summary><div class="antw"><span class="check">CHECK: advies van VENTOR® nodig (laten uitbranden, as-opvang, nooit met water?)</span></div></details>
-      <details><summary>Krijg ik korting bij meerdere haarden?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Ja, bij meerdere haarden staat de staffelkorting op uw offerte. In november krijgt u daarnaast 25% Black Friday-korting op de haard en een gratis Wind Shield.<p class="check">CHECK: zijn staffel en Black Friday-korting te combineren?</p></div></details>
       <details><summary>Hoe wordt hij geleverd?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Op een mini-pallet, compleet en klaar voor gebruik. De vervoerder belt vooraf om een dag af te spreken.</div></details>
       <details><summary>Kan ik een zakelijke bestelling retourneren?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Zakelijke bestellingen vallen niet onder het consumentenherroepingsrecht. Twijfelt u, bekijk de haard dan eerst bij een dealer of vraag advies over uw terras.</div></details>
       <details><summary>Hoeveel garantie krijg ik?<span class="plus" aria-hidden="true"></span></summary><div class="antw">2 jaar op constructie- en fabricagefouten, vanaf de leverdatum.</div></details>
@@ -637,9 +613,9 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   <div class="wrap">
     <span class="bf-slot">Black Friday voor horeca · hele maand november</span>
     <h2>Zet het vuur midden op uw terras</h2>
-    <p>25% korting op de haard en een gratis Wind Shield. Meerdere haarden? Vraag naar staffelkorting.</p>
+    <p>25% korting op de haard en een gratis Wind Shield, alleen met Black Friday. Direct te bestellen, met factuur op uw bedrijfsnaam.</p>
     <div class="acties">
-      <a class="btn btn-licht" href="#offerte">Vraag een offerte aan</a>
+      <a class="btn btn-licht" href="#kopen">Bestel met 25% korting</a>
       <a class="btn btn-lijn" href="../consument/">of bekijk de haard voor thuis</a>
     </div>
   </div>
@@ -656,7 +632,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 <div class="balk" id="balk" aria-hidden="true">
   <div class="wrap">
     <div class="t"><b>VENTOR® Original voor horeca</b><span class="num">€2.249</span> <s style="color:#9C9289">€2.999</s><span class="balk-extra"> · −25% + gratis Wind Shield</span></div>
-    <a class="btn btn-primair" href="#offerte" tabindex="-1">Offerte</a>
+    <a class="btn btn-primair" href="#kopen" tabindex="-1">In winkelwagen</a>
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
@@ -731,24 +707,18 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   vak.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)toon(huidig+(dx<0?1:-1));x0=null});
 
   // rekenhulp
-  var PRIJS=2249, EXCL=1858.68, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal'), fAantal=document.getElementById('f-aantal');
+  var PRIJS=2249, EXCL=1858.68, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal');
   function euro(n){return '€'+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2})}
-  function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); var ex=document.getElementById('horecaExcl'); if(ex) ex.textContent=euro(Math.round(n*EXCL*100)/100); fAantal.value=n}
+  function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); var ex=document.getElementById('horecaExcl'); if(ex) ex.textContent=euro(Math.round(n*EXCL*100)/100)}
   document.getElementById('min').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)-1;reken()});
   document.getElementById('plus').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)+1;reken()});
   inp.addEventListener('change',reken); reken();
 
-  // formulier (voorbeeld)
+  // winkelwagen (voorbeeld)
   var toast=document.getElementById('toast'), timer;
-  function melding(t){toast.textContent=t;toast.classList.add('aan');clearTimeout(timer);timer=setTimeout(function(){toast.classList.remove('aan')},3500)}
-  document.getElementById('offerteForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var fout=document.getElementById('formFout'), leeg=[].filter.call(this.querySelectorAll('[required]'),function(x){return !x.value.trim()});
-    var mail=document.getElementById('f-mail');
-    [].forEach.call(this.querySelectorAll('input,select,textarea'),function(x){x.removeAttribute('aria-invalid')});
-    if(leeg.length){leeg.forEach(function(x){x.setAttribute('aria-invalid','true')});fout.textContent='Vul uw bedrijfsnaam, naam en e-mailadres in.';leeg[0].focus();return}
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail.value)){mail.setAttribute('aria-invalid','true');fout.textContent='Dit e-mailadres klopt niet. Kijk het even na.';mail.focus();return}
-    fout.textContent=''; melding('Voorbeeldpagina: in de live versie gaat uw aanvraag nu naar VENTOR®.');
+  document.getElementById('inWinkelwagen').addEventListener('click',function(){
+    toast.textContent='Voorbeeldpagina: in de live winkel gaan '+inp.value+' haard(en) nu naar de winkelwagen.';
+    toast.classList.add('aan'); clearTimeout(timer); timer=setTimeout(function(){toast.classList.remove('aan')},3500);
   });
 
   // open punten tonen/verbergen
