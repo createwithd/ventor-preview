@@ -458,7 +458,8 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
           <input id="aantal" type="number" min="1" max="50" value="2" inputmode="numeric">
           <button type="button" id="plus" aria-label="Eén meer">+</button>
         </div>
-        <div class="reken-uit"><span>Indicatie excl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€3.717,36</strong></div>
+        <div class="reken-uit"><span>Indicatie incl. btw</span><strong class="num" id="horecaTotaal" aria-live="polite">€4.498,00</strong></div>
+        <p class="reken-noot">Excl. btw: <span class="num" id="horecaExcl">€3.717,36</span></p>
         <p class="reken-noot">Black Friday-prijs × aantal. Staffelkorting voor meerdere haarden staat op uw offerte. <span class="check">CHECK: staffel vanaf hoeveel stuks, en bovenop de 25%?</span></p>
       </div>
     </div>
@@ -467,13 +468,13 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <h1>VENTOR® Original voor horeca: cortenstalen buitenhaard, 220 cm</h1>
       <p class="kop-onder">Het vuur waar uw gasten omheen gaan zitten.</p>
 
-      <div class="bf-prijs"><span class="nu num">€1.858,68</span><s class="num" aria-label="Normaal €2.478,51">€2.478,51</s><span class="procent">Alleen Black Friday −25%</span></div>
-      <p class="bf-set">excl. btw per haard · €2.249 incl. btw</p>
-      <p style="margin-top:6px"><span class="check">CHECK: €2.999 moet 30 dagen vóór de actie de echte prijs zijn (nu €2.595)</span></p>
+      <div class="bf-prijs"><span class="nu num">€2.249</span><s class="num" aria-label="Normaal €2.999">€2.999</s><span class="procent">Alleen Black Friday −25%</span></div>
+      <p class="bf-set">per haard, incl. btw · €1.858,68 excl. btw</p>
+      <p style="margin-top:6px"><span class="check">CHECK: €2.999 moet in de 30 dagen vóór 1 november de verkoopprijs zijn</span></p>
 
       <div class="cadeau-blok">
         <img src="img/windscreen1.png" alt="Het Wind Shield van cortenstaal">
-        <div><p class="cadeau-label">Black Friday-cadeau</p><p class="kop">+ Gratis Wind Shield <span>t.w.v. €226,45 excl. btw</span></p><p><b>Alleen t/m 30 november.</b> Bij elke haard. Sluit één kant af en kaatst de warmte naar uw gasten.</p></div>
+        <div><p class="cadeau-label">Black Friday-cadeau</p><p class="kop">+ Gratis Wind Shield <span>t.w.v. €274</span></p><p><b>Alleen t/m 30 november.</b> Bij elke haard. Sluit één kant af en kaatst de warmte naar uw gasten.</p></div>
       </div>
 
       <p class="voorraad"><span class="stip" aria-hidden="true"></span>Op voorraad, levering op een afgesproken dag. <span class="laag">Nog beperkte voorraad.</span> <span class="check">CHECK: klopt de lage voorraad, en de levertijd bij grotere aantallen?</span></p>
@@ -567,7 +568,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <div class="rij"><dt>In de levering</dt><dd>Haard, Wind Control-paneel; in november ook het Wind Shield</dd></div>
       <div class="rij"><dt>Productie</dt><dd>Handgemaakt in Nederland</dd></div>
       <div class="rij"><dt>Garantie</dt><dd>2 jaar op constructie- en fabricagefouten</dd></div>
-      <div class="rij"><dt>Black Friday-prijs</dt><dd class="num">€1.858,68 excl. btw per haard</dd></div>
+      <div class="rij"><dt>Black Friday-prijs</dt><dd class="num">€2.249 per haard (€1.858,68 excl. btw)</dd></div>
       <div class="rij"><dt>Artikelnummer haard</dt><dd>VEN-ORI-220-CS</dd></div>
     </dl>
   </div>
@@ -654,7 +655,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
 <div class="balk" id="balk" aria-hidden="true">
   <div class="wrap">
-    <div class="t"><b>VENTOR® Original voor horeca</b><span class="balk-extra">−25% + gratis Wind Shield · </span>€1.858,68 excl. btw</div>
+    <div class="t"><b>VENTOR® Original voor horeca</b><span class="num">€2.249</span> <s style="color:#9C9289">€2.999</s><span class="balk-extra"> · −25% + gratis Wind Shield</span></div>
     <a class="btn btn-primair" href="#offerte" tabindex="-1">Offerte</a>
   </div>
 </div>
@@ -730,9 +731,9 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   vak.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)toon(huidig+(dx<0?1:-1));x0=null});
 
   // rekenhulp
-  var PRIJS=1858.68, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal'), fAantal=document.getElementById('f-aantal');
+  var PRIJS=2249, EXCL=1858.68, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal'), fAantal=document.getElementById('f-aantal');
   function euro(n){return '€'+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2})}
-  function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); fAantal.value=n}
+  function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); var ex=document.getElementById('horecaExcl'); if(ex) ex.textContent=euro(Math.round(n*EXCL*100)/100); fAantal.value=n}
   document.getElementById('min').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)-1;reken()});
   document.getElementById('plus').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)+1;reken()});
   inp.addEventListener('change',reken); reken();
