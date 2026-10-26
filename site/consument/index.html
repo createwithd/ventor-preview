@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <script>if(Date.now()>=new Date('2026-11-22T00:00:00+01:00').getTime())document.documentElement.classList.add('verlopen')</script>
-<title>VENTOR® Black Friday</title>
+<title>Black Friday | VENTOR® Original cortenstalen buitenhaard</title>
 <meta name="description" content="Buitenhaard met het vuur op ooghoogte, 360° zicht en een schoorsteen tot 220 cm. Handgemaakt in Nederland van cortenstaal. Op voorraad.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -264,6 +264,35 @@ footer img{height:16px;width:auto;filter:invert(1);mix-blend-mode:screen}
 .balk .t b{display:block;font-size:16px;font-family:Jost,sans-serif;font-weight:500}
 .balk .btn{min-height:48px;padding:0 22px}
 
+
+.werkt-op{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500;margin:0 0 16px;color:var(--tekst-zacht)}
+.werkt-op svg{width:20px;height:20px;color:var(--corten);flex:none}
+.btn-brochure{width:100%;margin-top:10px;background:transparent;border:1px solid var(--corten);color:var(--corten);cursor:pointer}
+.btn-brochure:hover{background:var(--corten);color:#fff}
+.btn-brochure svg{width:20px;height:20px}
+.werking{padding:var(--sectie) 0;background:var(--wit)}
+.werking .stappen{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;padding:0;counter-reset:st}
+.werking .stappen li{background:#fff;border:1px solid var(--lijn);border-radius:var(--radius);padding:24px}
+.werking .stappen li::before{counter-increment:st;content:counter(st);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--corten);color:#fff;font-family:Jost,sans-serif;font-weight:500;margin-bottom:14px}
+.werking h3{font-family:Jost,sans-serif;font-weight:500;font-size:20px;margin:0 0 8px}
+.werking .stappen p{margin:0;color:var(--tekst-zacht);font-size:15.5px;line-height:1.55}
+@media(max-width:900px){.werking .stappen{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.werking .stappen{grid-template-columns:1fr}}
+.bm{position:fixed;inset:0;z-index:90;background:rgba(14,12,11,.6);display:none;align-items:center;justify-content:center;padding:16px}
+.bm.open{display:flex}
+.bm-kaart{background:var(--wit);border-radius:10px;max-width:440px;width:100%;padding:28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.bm-kaart h3{font-family:Jost,sans-serif;font-weight:500;font-size:26px;margin:0 0 6px}
+.bm-kaart p{margin:0 0 18px;color:var(--tekst-zacht);font-size:15px}
+.bm-kaart label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
+.bm-kaart input[type=text],.bm-kaart input[type=email]{width:100%;min-height:48px;border:1px solid var(--lijn);border-radius:6px;padding:0 14px;font:inherit;font-size:16px;margin-bottom:14px;background:#fff}
+.bm-kaart .vink{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;color:var(--tekst-zacht);margin-bottom:18px}
+.bm-kaart .vink input{margin-top:3px}
+.bm-kaart .btn{width:100%;cursor:pointer}
+.bm-sluit{position:absolute;top:10px;right:12px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;width:44px;height:44px;color:var(--tekst-zacht)}
+.bm-fout{color:#A3341C;font-size:14px;margin:-6px 0 12px;display:none}
+.bm-klaar{display:none}
+.bm.klaar .bm-form{display:none}
+.bm.klaar .bm-klaar{display:block}
 .toast{position:fixed;left:50%;top:84px;transform:translate(-50%,-20px);background:var(--houtskool);color:var(--wit);padding:14px 20px;border-radius:var(--radius);font-size:15px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s var(--ease);z-index:70;max-width:calc(100% - 32px)}
 .toast.aan{opacity:1;transform:translate(-50%,0)}
 
@@ -446,6 +475,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <h1>VENTOR® Original cortenstalen buitenhaard, 220 cm</h1>
       <p class="kop-onder">De buitenhaard met het vuur op ooghoogte.</p>
 
+      <p class="werkt-op"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8.5A4 4 0 0 1 8 11.5C8 9 9.5 8 10 6c1 1.5 1.5 2.5 2-3z"/><path d="M4 21l16-4M4 17l16 4"/></svg>Brandt op hout · geen gas of stroom nodig · <a href="#zo-werkt-hij">zo werkt hij</a></p>
       <div class="bf-prijs"><span class="nu num">€2.249</span><s class="num" aria-label="Normaal €2.999">€2.999</s><span class="procent">Alleen Black Friday −25%</span></div>
 
       <div class="cadeau-blok">
@@ -466,6 +496,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>
         In winkelwagen
       </button>
+      <button class="btn btn-brochure" type="button" data-brochure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg> Download de brochure</button>
     </div>
   </div>
 </section>
@@ -487,6 +518,21 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 </section>
 
 <!-- 4. VIJF VOORDELEN -->
+<!-- ZO WERKT HIJ -->
+<section class="werking" id="zo-werkt-hij">
+  <div class="wrap">
+    <span class="label">Zo werkt hij</span>
+    <h2>Een echt houtvuur, geen gas</h2>
+    <p class="lead">De VENTOR® Original stookt je op hout. Er is geen gasfles, stroom of aansluiting nodig: zetten, hout erin en aansteken.</p>
+    <ol class="stappen">
+      <li><h3>Hout op de vuurplaat</h3><p>Leg droog hardhout (onder 20% vocht) op de vuurplaat van 10 mm in de vuurkamer, op ooghoogte.</p></li>
+      <li><h3>Van bovenaf aansteken</h3><p>Grote blokken onderin, kleinere kruislings erop, aanmaakhout en een aanmaakblokje bovenop. Zo warmt de schoorsteen snel op.</p></li>
+      <li><h3>De schoorsteen trekt</h3><p>Lucht komt onderin binnen, de rook gaat omhoog en komt er op 220 cm uit. De vonkenvanger houdt vonken tegen.</p></li>
+      <li><h3>Uit laten branden</h3><p>Bijleggen wanneer je wilt. Na afloop laat je het vuur uitbranden en haalt je de as eruit.</p></li>
+    </ol>
+  </div>
+</section>
+
 <section class="voordelen-v2" id="voordelen">
   <div class="wrap">
     <span class="label reveal">Waarom de VENTOR® Original</span>
@@ -616,6 +662,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <p class="lead">Staat je vraag er niet bij? Chat met ons of mail naar info@ventorfire.com.</p>
     </div>
     <div>
+      <details><summary>Werkt hij op gas of op hout?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Op hout. De VENTOR® Original is een houtgestookte buitenhaard: geen gas, geen stroom en geen aansluiting nodig. Stook op droog hardhout onder 20% vocht, dan krijgt je een mooi vuur met weinig rook.</div></details>
       <details><summary>Rookt hij echt minder dan mijn vuurkorf?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Bij een vuurkorf komt de rook op zithoogte vrij en gaat hij waar de wind hem heen blaast. Bij de VENTOR® gaat hij door de schoorsteen en komt hij er op 220 cm uit. Rookvrij is geen enkele houtgestookte haard. Hoeveel je ervan merkt, hangt vooral af van je hout: droog hardhout onder 20% vocht geeft veel minder rook dan nat hout.</div></details>
       <details><summary>Komt er bij het aansteken rook uit de voorkant?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Bij een koude schoorsteen trekt elke haard nog niet meteen goed. Steek hem daarom van bovenaf aan: grote blokken onderin, middelgrote kruislings erop, aanmaakhout en een aanmaakblokje bovenop. Zo warmt de schoorsteen snel op en gaat hij sneller trekken.</div></details>
       <details><summary>Moet ik de pijp verlengen?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Nee. De schoorsteen is al 40 cm breed en loopt door tot 220 cm hoog. Verlengen is niet nodig.</div></details>
@@ -659,6 +706,25 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   <div class="wrap">
     <div class="t"><b>VENTOR® Original</b><span class="num" id="balkPrijs">€2.249</span> <s style="color:#9C9289">€2.999</s><span class="balk-extra"> · −25% + gratis Wind Shield</span></div>
     <a class="btn btn-primair" href="#kopen" tabindex="-1">In winkelwagen</a>
+  </div>
+</div>
+<div class="bm" id="brochureModal" role="dialog" aria-modal="true" aria-labelledby="bmKop">
+  <div class="bm-kaart">
+    <button class="bm-sluit" type="button" aria-label="Sluiten">×</button>
+    <form class="bm-form" id="brochureForm" novalidate>
+      <h3 id="bmKop">Download de brochure</h3>
+      <p>Alle maten, uitvoeringen en accessoires van de VENTOR® Original in één pdf. Laat je naam en e-mailadres achter, dan download je hem direct.</p>
+      <label for="bmNaam">Naam</label><input type="text" id="bmNaam" autocomplete="name" required>
+      <label for="bmMail">E-mailadres</label><input type="email" id="bmMail" autocomplete="email" required>
+      <p class="bm-fout" id="bmFout">Vul je naam en een geldig e-mailadres in.</p>
+      <label class="vink"><input type="checkbox" id="bmNieuws"> Ik wil ook af en toe nieuws en aanbiedingen van VENTOR® ontvangen.</label>
+      <button class="btn btn-primair" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg> Download de brochure</button>
+    </form>
+    <div class="bm-klaar">
+      <h3>Bedankt!</h3>
+      <p>De brochure opent in een nieuw tabblad. Gebeurt dat niet, klik dan hieronder.</p>
+      <a class="btn btn-primair" id="bmLink" href="https://cdn.shopify.com/s/files/1/1035/0405/2569/files/3-luik_A4_Ventor_digi.pdf?v=1786966936" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg> Open de brochure (pdf)</a>
+    </div>
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
@@ -782,6 +848,26 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   } else {
     document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
   }
+
+  // brochure: eerst naam en e-mail, dan downloaden
+  (function(){
+    var m=document.getElementById('brochureModal'), f=document.getElementById('brochureForm'), fout=document.getElementById('bmFout'), terug=null;
+    function open(){terug=document.activeElement;m.classList.add('open');m.classList.remove('klaar');setTimeout(function(){document.getElementById('bmNaam').focus()},30)}
+    function dicht(){m.classList.remove('open');if(terug)terug.focus()}
+    [].forEach.call(document.querySelectorAll('[data-brochure]'),function(b){b.addEventListener('click',open)});
+    m.querySelector('.bm-sluit').addEventListener('click',dicht);
+    m.addEventListener('click',function(e){if(e.target===m)dicht()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))dicht()});
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var n=document.getElementById('bmNaam').value.trim(), ml=document.getElementById('bmMail').value.trim();
+      if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(ml)){fout.style.display='block';return}
+      fout.style.display='none';
+      // live: hier naam, e-mail en nieuwsbrief-vinkje naar Klaviyo/Shopify sturen
+      m.classList.add('klaar');
+      window.open(document.getElementById('bmLink').href,'_blank','noopener');
+    });
+  })();
 })();
 </script>
 </body>

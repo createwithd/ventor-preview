@@ -264,6 +264,55 @@ footer img{height:16px;width:auto;filter:invert(1);mix-blend-mode:screen}
 .balk .t b{display:block;font-size:16px;font-family:Jost,sans-serif;font-weight:500}
 .balk .btn{min-height:48px;padding:0 22px}
 
+
+.werkt-op{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500;margin:0 0 16px;color:var(--tekst-zacht)}
+.werkt-op svg{width:20px;height:20px;color:var(--corten);flex:none}
+.btn-brochure{width:100%;margin-top:10px;background:transparent;border:1px solid var(--corten);color:var(--corten);cursor:pointer}
+.btn-brochure:hover{background:var(--corten);color:#fff}
+.btn-brochure svg{width:20px;height:20px}
+.werking{padding:var(--sectie) 0;background:var(--wit)}
+.werking .stappen{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;padding:0;counter-reset:st}
+.werking .stappen li{background:#fff;border:1px solid var(--lijn);border-radius:var(--radius);padding:24px}
+.werking .stappen li::before{counter-increment:st;content:counter(st);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--corten);color:#fff;font-family:Jost,sans-serif;font-weight:500;margin-bottom:14px}
+.werking h3{font-family:Jost,sans-serif;font-weight:500;font-size:20px;margin:0 0 8px}
+.werking .stappen p{margin:0;color:var(--tekst-zacht);font-size:15.5px;line-height:1.55}
+@media(max-width:900px){.werking .stappen{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.werking .stappen{grid-template-columns:1fr}}
+.bm{position:fixed;inset:0;z-index:90;background:rgba(14,12,11,.6);display:none;align-items:center;justify-content:center;padding:16px}
+.bm.open{display:flex}
+.bm-kaart{background:var(--wit);border-radius:10px;max-width:440px;width:100%;padding:28px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.bm-kaart h3{font-family:Jost,sans-serif;font-weight:500;font-size:26px;margin:0 0 6px}
+.bm-kaart p{margin:0 0 18px;color:var(--tekst-zacht);font-size:15px}
+.bm-kaart label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
+.bm-kaart input[type=text],.bm-kaart input[type=email]{width:100%;min-height:48px;border:1px solid var(--lijn);border-radius:6px;padding:0 14px;font:inherit;font-size:16px;margin-bottom:14px;background:#fff}
+.bm-kaart .vink{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13.5px;color:var(--tekst-zacht);margin-bottom:18px}
+.bm-kaart .vink input{margin-top:3px}
+.bm-kaart .btn{width:100%;cursor:pointer}
+.bm-sluit{position:absolute;top:10px;right:12px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;width:44px;height:44px;color:var(--tekst-zacht)}
+.bm-fout{color:#A3341C;font-size:14px;margin:-6px 0 12px;display:none}
+.bm-klaar{display:none}
+.bm.klaar .bm-form{display:none}
+.bm.klaar .bm-klaar{display:block}
+
+.bundels{display:flex;flex-direction:column;gap:10px;margin:6px 0 16px;border:0;padding:0}
+.bundels legend{font-size:15px;font-weight:600;margin-bottom:8px}
+.bundel{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--lijn);border-radius:10px;background:#F3F0EB;cursor:pointer;position:relative}
+.bundel input{position:absolute;opacity:0;pointer-events:none}
+.bundel:has(input:checked){border:2px solid var(--gloed);background:#fff;padding:11px 13px}
+.bundel:has(input:focus-visible){outline:2px solid var(--corten);outline-offset:2px}
+.bundel .bb{width:54px;height:54px;flex:none;border-radius:8px;background:#fff;border:1px solid var(--lijn);position:relative;display:flex;align-items:center;justify-content:center}
+.bundel .bb img{max-height:46px;width:auto}
+.bundel .bb i{position:absolute;top:-8px;right:-8px;background:var(--houtskool);color:#fff;font-style:normal;font-size:11px;font-weight:700;border-radius:999px;padding:2px 6px}
+.bundel .bt{flex:1;min-width:0}
+.bundel .bt b{font-weight:600;font-size:16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.bundel .bt small{display:block;color:var(--tekst-zacht);font-size:13.5px;margin-top:2px}
+.bundel .tag{text-transform:none;letter-spacing:0;font-family:Inter,sans-serif;font-size:12px;font-weight:600;border-radius:5px;padding:2px 8px;background:#F8E3CF;color:var(--corten-d,#6E3A20)}
+.bundel .tag.top{background:var(--houtskool);color:#fff}
+.bundel .bp{text-align:right;white-space:nowrap}
+.bundel .bp strong{font-family:Jost,sans-serif;font-weight:500;font-size:19px;display:block}
+.bundel .bp s{font-size:13.5px;color:var(--tekst-zacht)}
+.bundel-totaal{font-size:14px;color:var(--tekst-zacht);margin:-6px 0 14px}
+@media(max-width:420px){.bundel .bp strong{font-size:17px}.bundel{gap:10px}}
 .toast{position:fixed;left:50%;top:84px;transform:translate(-50%,-20px);background:var(--houtskool);color:var(--wit);padding:14px 20px;border-radius:var(--radius);font-size:15px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s var(--ease);z-index:70;max-width:calc(100% - 32px)}
 .toast.aan{opacity:1;transform:translate(-50%,0)}
 
@@ -471,6 +520,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <button type="button" id="matenKnop">Bekijk de maten</button>
       </div>
 
+      <p class="werkt-op"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8.5A4 4 0 0 1 8 11.5C8 9 9.5 8 10 6c1 1.5 1.5 2.5 2-3z"/><path d="M4 21l16-4M4 17l16 4"/></svg>Brandt op hout · geen gas of stroom nodig · <a href="#zo-werkt-hij">zo werkt hij</a></p>
       <div class="bf-prijs"><span class="nu num">€2.249</span><s class="num" aria-label="Normaal €2.999">€2.999</s><span class="procent">Alleen Black Friday −25%</span></div>
       <p class="bf-set">per haard, incl. btw · €1.858,68 excl. btw</p>
 
@@ -488,21 +538,35 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><span><b>Staat het hele jaar buiten.</b> Cortenstaal, geen onderhoud behalve de as.</span></li>
       </ul>
 
-      <div class="reken">
-        <label for="aantal">Aantal haarden</label>
-        <div class="reken-rij">
-          <div class="stepper">
-            <button type="button" id="min" aria-label="Eén minder">−</button>
-            <input id="aantal" type="number" min="1" max="50" value="1" inputmode="numeric">
-            <button type="button" id="plus" aria-label="Eén meer">+</button>
-          </div>
-          <div class="reken-uit"><strong class="num" id="horecaTotaal" aria-live="polite">€2.249,00</strong><span>excl. btw <span class="num" id="horecaExcl">€1.858,68</span></span></div>
-        </div>
-      </div>
+      <fieldset class="bundels">
+        <legend>Kies uw bundel</legend>
+        <label class="bundel"><input type="radio" name="bundel" value="1" data-prijs="2249.0" checked>
+          <span class="bb"><img src="img/Ventor_original_buitenhaard.png" alt="" loading="lazy"></span>
+          <span class="bt"><b>1 haard </b><small>Gratis Wind Shield · u bespaart €750</small></span>
+          <span class="bp"><strong class="num">€2.249</strong><s class="num">€2.999</s></span>
+        </label>
+        <label class="bundel"><input type="radio" name="bundel" value="2" data-prijs="4048.2">
+          <span class="bb"><img src="img/Ventor_original_buitenhaard.png" alt="" loading="lazy"><i>2×</i></span>
+          <span class="bt"><b>2 haarden <span class="tag">Extra −10%</span></b><small>2 gratis Wind Shields · u bespaart €1.949,80</small></span>
+          <span class="bp"><strong class="num">€4.048,20</strong><s class="num">€5.998</s></span>
+        </label>
+        <label class="bundel"><input type="radio" name="bundel" value="5" data-prijs="8996.0">
+          <span class="bb"><img src="img/Ventor_original_buitenhaard.png" alt="" loading="lazy"><i>5×</i></span>
+          <span class="bt"><b>5 haarden <span class="tag">Extra −20%</span></b><small>5 gratis Wind Shields · u bespaart €5.999</small></span>
+          <span class="bp"><strong class="num">€8.996</strong><s class="num">€14.995</s></span>
+        </label>
+        <label class="bundel"><input type="radio" name="bundel" value="10" data-prijs="16867.5">
+          <span class="bb"><img src="img/Ventor_original_buitenhaard.png" alt="" loading="lazy"><i>10×</i></span>
+          <span class="bt"><b>10 haarden <span class="tag top">Beste voordeel · extra −25%</span></b><small>10 gratis Wind Shields · u bespaart €13.122,50</small></span>
+          <span class="bp"><strong class="num">€16.867,50</strong><s class="num">€29.990</s></span>
+        </label>
+      </fieldset>
+      <p class="bundel-totaal">Totaal incl. btw · <span class="num" id="bundelExcl">€1.858,68</span> excl. btw</p>
       <button class="btn btn-primair" id="inWinkelwagen" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>
         In winkelwagen
       </button>
+      <button class="btn btn-brochure" type="button" data-brochure><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg> Download de brochure</button>
       <ul class="vertrouwen">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Bezorgd op een pallet, op afspraak</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>iDEAL, creditcard of Bancontact</li>
@@ -530,6 +594,21 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 </section>
 
 <!-- VOORDELEN HORECA -->
+<!-- ZO WERKT HIJ -->
+<section class="werking" id="zo-werkt-hij">
+  <div class="wrap">
+    <span class="label">Zo werkt hij</span>
+    <h2>Een echt houtvuur, geen gas</h2>
+    <p class="lead">De VENTOR® Original stookt u op hout. Er is geen gasfles, stroom of aansluiting nodig: zetten, hout erin en aansteken.</p>
+    <ol class="stappen">
+      <li><h3>Hout op de vuurplaat</h3><p>Leg droog hardhout (onder 20% vocht) op de vuurplaat van 10 mm in de vuurkamer, op ooghoogte.</p></li>
+      <li><h3>Van bovenaf aansteken</h3><p>Grote blokken onderin, kleinere kruislings erop, aanmaakhout en een aanmaakblokje bovenop. Zo warmt de schoorsteen snel op.</p></li>
+      <li><h3>De schoorsteen trekt</h3><p>Lucht komt onderin binnen, de rook gaat omhoog en komt er op 220 cm uit. De vonkenvanger houdt vonken tegen.</p></li>
+      <li><h3>Uit laten branden</h3><p>Bijleggen wanneer u wilt. Na afloop laat u het vuur uitbranden en haalt u de as eruit.</p></li>
+    </ol>
+  </div>
+</section>
+
 <section class="voordelen-v2">
   <div class="wrap">
     <span class="label reveal">Waarom horeca kiest voor VENTOR®</span>
@@ -603,6 +682,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       <p class="lead">Andere vraag? Mail naar info@ventorfire.com.</p>
     </div>
     <div>
+      <details><summary>Werkt hij op gas of op hout?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Op hout. De VENTOR® Original is een houtgestookte buitenhaard: geen gas, geen stroom en geen aansluiting nodig. Stook op droog hardhout onder 20% vocht, dan krijgt u een mooi vuur met weinig rook.</div></details>
       <details><summary>Mag een buitenhaard op mijn terras?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Dat bepaalt uw gemeente. Regels voor open vuur op terrassen verschillen per gemeente, en sommige staan het niet toe. Kijk in uw terrasvergunning of vraag het na voordat u bestelt.</div></details>
       <details><summary>Kan hij onder een luifel of parasol?<span class="plus" aria-hidden="true"></span></summary><div class="antw">Nee. Gebruik de haard alleen in de open lucht, met voldoende afstand tot luifels, parasols, zeilen en gevels.</div></details>
       <details><summary>Hebben mijn gasten last van rook?<span class="plus" aria-hidden="true"></span></summary><div class="antw">De rook gaat via de schoorsteen omhoog en komt er op 220 cm uit, boven de tafels. Rookvrij is geen houtvuur. Met droog hardhout (onder 20% vocht) en van bovenaf aansteken blijft het bij weinig.</div></details>
@@ -640,6 +720,25 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   <div class="wrap">
     <div class="t"><b>VENTOR® Original voor horeca</b><span class="num">€2.249</span> <s style="color:#9C9289">€2.999</s><span class="balk-extra"> · −25% + gratis Wind Shield</span></div>
     <a class="btn btn-primair" href="#kopen" tabindex="-1">In winkelwagen</a>
+  </div>
+</div>
+<div class="bm" id="brochureModal" role="dialog" aria-modal="true" aria-labelledby="bmKop">
+  <div class="bm-kaart">
+    <button class="bm-sluit" type="button" aria-label="Sluiten">×</button>
+    <form class="bm-form" id="brochureForm" novalidate>
+      <h3 id="bmKop">Download de brochure</h3>
+      <p>Alle maten, uitvoeringen en accessoires van de VENTOR® Original in één pdf. Laat uw naam en e-mailadres achter, dan download u hem direct.</p>
+      <label for="bmNaam">Naam</label><input type="text" id="bmNaam" autocomplete="name" required>
+      <label for="bmMail">E-mailadres</label><input type="email" id="bmMail" autocomplete="email" required>
+      <p class="bm-fout" id="bmFout">Vul uw naam en een geldig e-mailadres in.</p>
+      <label class="vink"><input type="checkbox" id="bmNieuws"> Ik wil ook af en toe nieuws en aanbiedingen van VENTOR® ontvangen.</label>
+      <button class="btn btn-primair" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg> Download de brochure</button>
+    </form>
+    <div class="bm-klaar">
+      <h3>Bedankt!</h3>
+      <p>De brochure opent in een nieuw tabblad. Gebeurt dat niet, klik dan hieronder.</p>
+      <a class="btn btn-primair" id="bmLink" href="https://cdn.shopify.com/s/files/1/1035/0405/2569/files/3-luik_A4_Ventor_digi.pdf?v=1786966936" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg> Open de brochure (pdf)</a>
+    </div>
   </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
@@ -718,18 +817,16 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 
   var mk=document.getElementById('matenKnop'); if(mk) mk.addEventListener('click',function(){toon(1);document.getElementById('hoofd').scrollIntoView({behavior:'smooth',block:'center'})});
 
-  // rekenhulp
-  var PRIJS=2249, EXCL=1858.68, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal');
+  // bundels
   function euro(n){return '€'+n.toLocaleString('nl-NL',{minimumFractionDigits:2,maximumFractionDigits:2})}
-  function reken(){var n=Math.max(1,Math.min(50,parseInt(inp.value,10)||1)); inp.value=n; uit.textContent=euro(n*PRIJS); var ex=document.getElementById('horecaExcl'); if(ex) ex.textContent=euro(Math.round(n*EXCL*100)/100)}
-  document.getElementById('min').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)-1;reken()});
-  document.getElementById('plus').addEventListener('click',function(){inp.value=(parseInt(inp.value,10)||1)+1;reken()});
-  inp.addEventListener('change',reken); reken();
+  function gekozen(){return document.querySelector('input[name="bundel"]:checked')}
+  function bundel(){var b=gekozen();document.getElementById('bundelExcl').textContent=euro(Math.round(parseFloat(b.dataset.prijs)/1.21*100)/100)}
+  [].forEach.call(document.querySelectorAll('input[name="bundel"]'),function(x){x.addEventListener('change',bundel)}); bundel();
 
   // winkelwagen (voorbeeld)
   var toast=document.getElementById('toast'), timer;
   document.getElementById('inWinkelwagen').addEventListener('click',function(){
-    toast.textContent='Voorbeeldpagina: in de live winkel gaan '+inp.value+' haard(en) nu naar de winkelwagen.';
+    toast.textContent='Voorbeeldpagina: in de live winkel gaan '+gekozen().value+' haard(en) nu naar de winkelwagen.';
     toast.classList.add('aan'); clearTimeout(timer); timer=setTimeout(function(){toast.classList.remove('aan')},3500);
   });
 
@@ -752,6 +849,26 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
   } else {document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+
+  // brochure: eerst naam en e-mail, dan downloaden
+  (function(){
+    var m=document.getElementById('brochureModal'), f=document.getElementById('brochureForm'), fout=document.getElementById('bmFout'), terug=null;
+    function open(){terug=document.activeElement;m.classList.add('open');m.classList.remove('klaar');setTimeout(function(){document.getElementById('bmNaam').focus()},30)}
+    function dicht(){m.classList.remove('open');if(terug)terug.focus()}
+    [].forEach.call(document.querySelectorAll('[data-brochure]'),function(b){b.addEventListener('click',open)});
+    m.querySelector('.bm-sluit').addEventListener('click',dicht);
+    m.addEventListener('click',function(e){if(e.target===m)dicht()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))dicht()});
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var n=document.getElementById('bmNaam').value.trim(), ml=document.getElementById('bmMail').value.trim();
+      if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(ml)){fout.style.display='block';return}
+      fout.style.display='none';
+      // live: hier naam, e-mail en nieuwsbrief-vinkje naar Klaviyo/Shopify sturen
+      m.classList.add('klaar');
+      window.open(document.getElementById('bmLink').href,'_blank','noopener');
+    });
+  })();
 })();
 </script>
 </body>
