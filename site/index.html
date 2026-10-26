@@ -114,7 +114,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 .bud{display:flex;align-items:baseline;gap:10px;margin:6px 0 4px}
 .bud b{font-family:Jost,sans-serif;font-weight:500;font-size:30px}
 .bud span{font-size:14px;color:var(--as)}
-.serp{grid-template-columns:repeat(2,minmax(0,1fr))}
 .shopgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 .sk{display:flex;flex-direction:column;gap:8px;font-family:Arial,Helvetica,sans-serif}
 .sk .q{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #DFE1E5;border-radius:999px;padding:6px 12px;font-size:13px;color:#202124;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -141,7 +140,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 .btab th{font-weight:500;font-size:13px;color:var(--as);background:#FAF7F2}
 .btab td.n,.btab th.n{text-align:right;white-space:nowrap}
 .btab tr:last-child td{border-bottom:0;font-weight:600}
-.serp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+.serp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;align-items:start}
 .gk{background:#fff;border:1px solid #E3DED7;border-radius:8px;padding:16px 18px 18px;font-family:Arial,Helvetica,sans-serif;color:#202124}
 .gk .wat{font-family:Inter,sans-serif;font-size:12px;font-weight:600;color:var(--corten);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
 .zb{display:flex;align-items:center;gap:10px;border:1px solid #DFE1E5;border-radius:999px;padding:9px 16px;font-size:15px;box-shadow:0 1px 4px rgba(32,33,36,.12)}
@@ -211,7 +210,9 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 .voetnoot{font-size:13px;color:var(--as);margin-top:14px}
 @media(max-width:1000px){.kw,.camps,.pmax,.assets{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.kw,.camps,.pmax,.assets{grid-template-columns:minmax(0,1fr)}.g-h{font-size:18px}}
+@media(max-width:1100px){.serp{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.serp{grid-template-columns:minmax(0,1fr)}}
+.serp .gk{padding:14px 14px 16px}.serp .g-h{font-size:17px}.serp .zb{font-size:14px;padding:8px 12px}
 </style>
 </head>
 <body>
