@@ -272,8 +272,9 @@ footer img{height:16px;width:auto;filter:invert(1);mix-blend-mode:screen}
 .btn-brochure svg{width:20px;height:20px}
 .werking{padding:var(--sectie) 0;background:var(--wit)}
 .werking .stappen{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;padding:0;counter-reset:st}
-.werking .stappen li{background:#fff;border:1px solid var(--lijn);border-radius:var(--radius);padding:24px}
+.werking .stappen li{display:block;background:#fff;border:1px solid var(--lijn);border-radius:var(--radius);padding:24px}
 .werking .stappen li::before{counter-increment:st;content:counter(st);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--corten);color:#fff;font-family:Jost,sans-serif;font-weight:500;margin-bottom:14px}
+.werking .stappen li::before{float:none}
 .werking h3{font-family:Jost,sans-serif;font-weight:500;font-size:20px;margin:0 0 8px}
 .werking .stappen p{margin:0;color:var(--tekst-zacht);font-size:15.5px;line-height:1.55}
 @media(max-width:900px){.werking .stappen{grid-template-columns:1fr 1fr}}
@@ -518,21 +519,6 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 </section>
 
 <!-- 4. VIJF VOORDELEN -->
-<!-- ZO WERKT HIJ -->
-<section class="werking" id="zo-werkt-hij">
-  <div class="wrap">
-    <span class="label">Zo werkt hij</span>
-    <h2>Een echt houtvuur, geen gas</h2>
-    <p class="lead">De VENTOR® Original stookt je op hout. Er is geen gasfles, stroom of aansluiting nodig: zetten, hout erin en aansteken.</p>
-    <ol class="stappen">
-      <li><h3>Hout op de vuurplaat</h3><p>Leg droog hardhout (onder 20% vocht) op de vuurplaat van 10 mm in de vuurkamer, op ooghoogte.</p></li>
-      <li><h3>Van bovenaf aansteken</h3><p>Grote blokken onderin, kleinere kruislings erop, aanmaakhout en een aanmaakblokje bovenop. Zo warmt de schoorsteen snel op.</p></li>
-      <li><h3>De schoorsteen trekt</h3><p>Lucht komt onderin binnen, de rook gaat omhoog en komt er op 220 cm uit. De vonkenvanger houdt vonken tegen.</p></li>
-      <li><h3>Uit laten branden</h3><p>Bijleggen wanneer je wilt. Na afloop laat je het vuur uitbranden en haalt je de as eruit.</p></li>
-    </ol>
-  </div>
-</section>
-
 <section class="voordelen-v2" id="voordelen">
   <div class="wrap">
     <span class="label reveal">Waarom de VENTOR® Original</span>
@@ -654,6 +640,21 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
 </section>
 
 <!-- 8. FAQ -->
+<!-- ZO WERKT HIJ -->
+<section class="werking" id="zo-werkt-hij">
+  <div class="wrap">
+    <span class="label">Zo werkt hij</span>
+    <h2>Een echt houtvuur, geen gas</h2>
+    <p class="lead">De VENTOR® Original brandt op hout. Er is geen gasfles, stroom of aansluiting nodig: zetten, hout erin en aansteken.</p>
+    <ol class="stappen">
+      <li><h3>Hout op de vuurplaat</h3><p>Leg droog hardhout (onder 20% vocht) op de vuurplaat van 10 mm in de vuurkamer, op ooghoogte.</p></li>
+      <li><h3>Van bovenaf aansteken</h3><p>Grote blokken onderin, kleinere kruislings erop, aanmaakhout en een aanmaakblokje bovenop. Zo warmt de schoorsteen snel op.</p></li>
+      <li><h3>De schoorsteen trekt</h3><p>Lucht komt onderin binnen, de rook gaat omhoog en komt er op 220 cm uit. De vonkenvanger houdt vonken tegen.</p></li>
+      <li><h3>Uit laten branden</h3><p>Bijleggen wanneer je wilt. Na afloop laat je het vuur uitbranden en haalt je de as eruit.</p></li>
+    </ol>
+  </div>
+</section>
+
 <section class="faq" id="faq">
   <div class="wrap grid">
     <div>
