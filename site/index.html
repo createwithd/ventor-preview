@@ -109,17 +109,106 @@ footer{padding:36px 0 56px;color:var(--as);font-size:14px;border-top:1px solid v
 html.verlopen body>*:not(.verlopen-melding){display:none!important}
 .verlopen-melding{display:none}
 html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;font:500 20px/1.5 Inter,system-ui,sans-serif;color:#1C1C1C;background:#F6F2EC}
+
+/* Google Ads */
+.kw{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.kwt{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:10px}
+.kwt th{font-weight:500;font-size:12.5px;color:var(--as);text-align:left;padding:6px 0;border-bottom:1px solid var(--lijn)}
+.kwt td{padding:7px 0;border-bottom:1px solid #EEE7DC;vertical-align:top}
+.kwt td+td,.kwt th+th{text-align:right;padding-left:10px;white-space:nowrap}
+.kwt td:first-child{font-weight:500}
+.blok .meta{font-size:13px;color:var(--as);margin-top:10px}
+.neg{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.neg span{font-size:13px;background:#F1EBE2;border-radius:999px;padding:3px 10px;text-decoration:line-through;color:#7A726A}
+.camps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px}
+.camps .blok b{font-family:Jost,sans-serif;font-weight:500;font-size:30px;display:block;margin-top:6px}
+.tabel-wrap{overflow-x:auto;background:var(--kaart);border:1px solid var(--lijn);border-radius:var(--r)}
+.btab{width:100%;border-collapse:collapse;font-size:15px;min-width:720px}
+.btab th,.btab td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--lijn)}
+.btab th{font-weight:500;font-size:13px;color:var(--as);background:#FAF7F2}
+.btab td.n,.btab th.n{text-align:right;white-space:nowrap}
+.btab tr:last-child td{border-bottom:0;font-weight:600}
+.serp{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.gk{background:#fff;border:1px solid #E3DED7;border-radius:8px;padding:16px 18px 18px;font-family:Arial,Helvetica,sans-serif;color:#202124}
+.gk .wat{font-family:Inter,sans-serif;font-size:12px;font-weight:600;color:var(--corten);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
+.zb{display:flex;align-items:center;gap:10px;border:1px solid #DFE1E5;border-radius:999px;padding:9px 16px;font-size:15px;box-shadow:0 1px 4px rgba(32,33,36,.12)}
+.zb svg{flex:none}
+.g-sp{font-weight:700;font-size:14px;margin:16px 0 10px}
+.g-site{display:flex;align-items:center;gap:10px}
+.g-fav{width:28px;height:28px;border-radius:50%;background:#1C1C1C;color:#F6F2EC;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:none}
+.g-naam{font-size:14px;line-height:1.25}
+.g-url{font-size:12px;color:#4D5156}
+.g-h{font-size:19px;line-height:1.3;color:#1A0DAB;margin:8px 0 4px;font-weight:400}
+.g-d{font-size:14px;line-height:1.58;color:#4D5156}
+.g-call{font-size:14px;color:#4D5156;margin-top:2px}
+.g-sl{list-style:none;margin-top:10px;border-top:1px solid #ECEDEF}
+.g-sl li{display:flex;justify-content:space-between;align-items:center;padding:10px 2px;border-bottom:1px solid #ECEDEF;color:#1A0DAB;font-size:15px}
+.g-sl li::after{content:"›";color:#70757A;font-size:20px;line-height:1}
+.shop{background:#fff;border:1px solid #E3DED7;border-radius:8px;padding:16px 18px 18px;font-family:Arial,Helvetica,sans-serif;color:#202124}
+.shop+.shop{margin-top:22px}
+.shop .wat{font-family:Inter,sans-serif;font-size:12px;font-weight:600;color:var(--corten);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:block}
+.shop-rij{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+.prod{flex:0 0 190px;border:1px solid #DADCE0;border-radius:12px;overflow:hidden;background:#fff}
+.prod img{width:100%;aspect-ratio:1;object-fit:cover}
+.prod .pi{padding:10px 12px 12px;font-size:13.5px;line-height:1.4}
+.prod .pt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#202124}
+.prod .pp{font-size:16px;font-weight:700;margin-top:6px}
+.prod .pp s{font-size:13px;font-weight:400;color:#70757A;margin-left:6px}
+.prod .pk{display:inline-block;margin-top:4px;font-size:12px;font-weight:700;color:#137333;background:#E6F4EA;border-radius:4px;padding:1px 6px}
+.prod .pw{font-size:12.5px;color:#4D5156;margin-top:4px}
+.prod.leeg{background:#F8F9FA}
+.prod.leeg .vlak{aspect-ratio:1;background:#EDEFF1}
+.prod.leeg .pi div{height:10px;background:#E3E5E8;border-radius:4px;margin:6px 0}
+.pmax{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.pm{display:flex;flex-direction:column;gap:8px}
+.pm .wat{font-size:12px;font-weight:600;color:var(--corten);text-transform:uppercase;letter-spacing:.08em}
+.pm .kaartje{background:#fff;border:1px solid #E3DED7;border-radius:10px;overflow:hidden;font-family:Arial,Helvetica,sans-serif;color:#202124}
+.pm img.l{width:100%;aspect-ratio:1.91/1;object-fit:cover}
+.pm .tx{padding:12px 14px 14px;font-size:13.5px;line-height:1.45}
+.pm .tx b{display:block;font-size:16px;line-height:1.3;margin-bottom:4px}
+.pm .gs{font-size:12px;color:#5F6368}
+.pm .gs strong{color:#202124}
+.pm .knop{display:inline-block;margin-top:10px;background:#8A4B2A;color:#fff;border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:700}
+.pm .knop.blauw{background:#065FD4}
+.short{position:relative;aspect-ratio:9/16;background:#000;border-radius:12px;overflow:hidden;cursor:zoom-in}
+.short video{width:100%;height:100%;object-fit:cover}
+.short .ov{position:absolute;left:0;right:0;bottom:0;padding:40px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+.short .ov b{display:block;font-size:14.5px;margin:4px 0 8px}
+.short .ov span.k{display:block;text-align:center;background:#fff;color:#0F0F0F;border-radius:999px;padding:8px;font-weight:700}
+.yt{position:relative}
+.yt .dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:12px;padding:1px 5px;border-radius:4px}
+.yt-rij{display:flex;gap:10px;padding:12px 14px 14px;font-size:13.5px;line-height:1.4}
+.yt-rij .g-fav{width:36px;height:36px}
+.mail{font-family:Arial,Helvetica,sans-serif;font-size:13.5px}
+.mail .r{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-bottom:1px solid #ECEDEF}
+.mail .r .g-fav{width:36px;height:36px}
+.mail .r div{min-width:0}
+.mail .r .vn{font-weight:700}
+.mail .r .bd{font-size:11px;font-weight:700;border:1px solid #202124;border-radius:3px;padding:0 3px;margin-right:6px}
+.mail .r .sn{color:#5F6368;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mail .r.grijs{opacity:.45}
+.mail .r.grijs i{display:block;height:9px;background:#DADCE0;border-radius:4px;margin:5px 0;width:var(--w,80%)}
+.disp img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.disp.sq img{aspect-ratio:1}
+.disp .logo-r{display:flex;align-items:center;gap:8px;font-size:12px;color:#5F6368}
+.assets{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}
+.assets ul{list-style:none;margin-top:8px;font-size:14.5px}
+.assets li{padding:6px 0;border-bottom:1px solid #EEE7DC}
+.assets li:last-child{border-bottom:0}
+.voetnoot{font-size:13px;color:var(--as);margin-top:14px}
+@media(max-width:1000px){.kw,.camps,.pmax,.assets{grid-template-columns:repeat(2,minmax(0,1fr))}.serp{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:620px){.kw,.camps,.pmax,.assets{grid-template-columns:minmax(0,1fr)}.g-h{font-size:18px}}
 </style>
 </head>
 <body>
 <div class="verlopen-melding"><p>Deze preview is verlopen.</p></div>
-<div class="top"><div class="wrap"><b>VENTOR®</b><nav><a href="#paginas">Pagina's</a><a href="#consument-ads">Ads consument</a><a href="#horeca-ads">Ads horeca</a><a href="#meer">Presentatie</a></nav><span class="bf">Black Friday · 1 t/m 30 nov</span></div></div>
+<div class="top"><div class="wrap"><b>VENTOR®</b><nav><a href="#paginas">Pagina's</a><a href="#consument-ads">Ads consument</a><a href="#horeca-ads">Ads horeca</a><a href="#google">Google Ads</a><a href="#meer">Presentatie</a></nav><span class="bf">Black Friday · 1 t/m 30 nov</span></div></div>
 
 <main>
 <header class="held"><div class="wrap">
   <span class="label">Demo · Create &amp; Convert</span>
   <h1>Black Friday voor VENTOR®: alles op één plek</h1>
-  <p>De nieuwe productpagina's voor consumenten en horeca, de Meta-advertenties met hun teksten en de video-advertenties van de echte Instagram-beelden. Alles is klikbaar en speelt af.</p>
+  <p>De nieuwe productpagina's voor consumenten en horeca, de Meta-advertenties met hun teksten, de video-advertenties van de echte Instagram-beelden en de Google Ads-campagne met zoektermen, budget en voorbeeldadvertenties. Alles is klikbaar en speelt af.</p>
   <div class="chips"><span class="chip"><b>−25%</b> op de haard, alleen met Black Friday</span><span class="chip"><b>Gratis Wind Shield</b> t.w.v. €274</span><span class="chip">€2.999 → <b>€2.249</b></span><span class="chip">1 t/m 30 november</span></div>
 </div></header>
 
@@ -163,6 +252,167 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   <div class="ads vads" id="horeca-video"></div>
 </div></section>
 
+<section id="google"><div class="wrap">
+  <span class="label">Google Ads · testbudget</span>
+  <h2>Google Ads: zoektermen, budget en advertenties</h2>
+  <p class="intro">We testen acht weken, van 3 november tot en met 28 december 2026, met €2.500. We adverteren alleen op zoektermen van mensen die een houtgestookte buitenhaard zoeken. Hieronder zie je hoe de advertenties eruitzien in Google Zoeken, Shopping en op YouTube, Gmail en websites (Performance Max).</p>
+  <div class="chips" style="margin:-8px 0 8px"><span class="chip"><b>€2.500</b> testbudget</span><span class="chip">8 weken · 3 nov – 28 dec</span><span class="chip">3 campagnes</span><span class="chip">Klik vanaf <b>€0,45</b></span></div>
+
+  <h3 class="sub">Zoektermen <span>volume per maand in Nederland · geschatte prijs per klik</span></h3>
+  <div class="kw">
+    <div class="blok"><span class="label">Campagne 1</span><h3>Cortenstaal</h3><p>Mensen die precies dit product zoeken.</p>
+      <table class="kwt"><thead><tr><th>Zoekterm</th><th>Volume</th><th>Klik</th></tr></thead><tbody>
+        <tr><td>buitenhaard cortenstaal</td><td>140</td><td>€0,96</td></tr>
+        <tr><td>tuinhaard cortenstaal</td><td>110</td><td>€0,96</td></tr>
+        <tr><td>cortenstaal buitenhaard</td><td>100</td><td>€0,95</td></tr>
+        <tr><td>buitenkachel cortenstaal</td><td>100</td><td>€0,60</td></tr>
+        <tr><td>cortenstaal tuinhaard</td><td>70</td><td>€0,84</td></tr>
+        <tr><td>cortenstaal haard</td><td>60</td><td>€0,40</td></tr>
+        <tr><td>tuinkachel cortenstaal</td><td>30</td><td>€0,78</td></tr>
+        <tr><td>terraskachel cortenstaal</td><td>10</td><td>€0,64</td></tr>
+      </tbody></table></div>
+    <div class="blok"><span class="label">Campagne 2</span><h3>Schoorsteen en hout</h3><p>Mensen die een houtgestookte haard met pijp zoeken.</p>
+      <table class="kwt"><thead><tr><th>Zoekterm</th><th>Volume</th><th>Klik</th></tr></thead><tbody>
+        <tr><td>tuinhaard met schoorsteen</td><td>210</td><td>€0,67</td></tr>
+        <tr><td>houtkachel buiten met pijp</td><td>210</td><td>€0,61</td></tr>
+        <tr><td>buitenhaard met pijp</td><td>140</td><td>€0,63</td></tr>
+        <tr><td>tuinkachel met pijp</td><td>140</td><td>€0,56</td></tr>
+        <tr><td>buitenhaard hout</td><td>140</td><td>€0,84</td></tr>
+        <tr><td>tuinkachel hout</td><td>110</td><td>€0,71</td></tr>
+        <tr><td>buitenhaard kopen</td><td>30–150</td><td>€0,69</td></tr>
+      </tbody></table></div>
+    <div class="blok"><span class="label">Test in december</span><h3>Brede zoektermen</h3><p>Veel volume. Alleen met een lager bod en zonder de goedkope zoekers.</p>
+      <table class="kwt"><thead><tr><th>Zoekterm</th><th>Volume</th><th>Klik</th></tr></thead><tbody>
+        <tr><td>houtkachel buiten</td><td>1.600</td><td>€0,62</td></tr>
+        <tr><td>buitenhaard</td><td>1.600</td><td>€0,70</td></tr>
+        <tr><td>tuinkachel</td><td>1.000</td><td>€0,81</td></tr>
+        <tr><td>terraskachel</td><td>880</td><td>€0,49</td></tr>
+      </tbody></table>
+      <p class="meta">Hier adverteren we níét op:</p>
+      <div class="neg"><span>action</span><span>gamma</span><span>intratuin</span><span>marktplaats</span><span>gas</span><span>pellet</span><span>elektrisch</span><span>gietijzer</span><span>rvs</span><span>zelf maken</span><span>pizzaoven</span><span>vuurschaal</span><span>merken van concurrenten</span></div></div>
+  </div>
+  <p class="voetnoot">Bron: Ubersuggest en Ahrefs, Nederland, oktober 2026. Het volume is het gemiddelde aantal zoekopdrachten per maand.</p>
+
+  <h3 class="sub">Campagnes en budget <span>€2.500 in 8 weken</span></h3>
+  <div class="camps">
+    <div class="blok"><span class="label">Zoeken</span><h3>1 · Cortenstaal</h3><b>€1.050</b><p>De belangrijkste campagne, met €15 tot €20 per dag.</p></div>
+    <div class="blok"><span class="label">Zoeken</span><h3>2 · Schoorsteen en hout</h3><b>€798</b><p>Een breder publiek, met €12 tot €15 per dag.</p></div>
+    <div class="blok"><span class="label">Shopping + YouTube, Gmail, websites</span><h3>3 · Performance Max</h3><b>€630</b><p>De haard met foto en prijs in Shopping, vanaf 17 november. €15 per dag.</p></div>
+  </div>
+  <div class="tabel-wrap"><table class="btab">
+    <thead><tr><th>Fase</th><th>Periode</th><th class="n">Cortenstaal</th><th class="n">Schoorsteen en hout</th><th class="n">Performance Max</th><th class="n">Per dag</th><th class="n">Totaal</th></tr></thead>
+    <tbody>
+      <tr><td>1 · Leren</td><td>3 – 16 nov</td><td class="n">€15</td><td class="n">€12</td><td class="n">–</td><td class="n">€27</td><td class="n">€378</td></tr>
+      <tr><td>2 · Opschalen + Black Friday</td><td>17 nov – 7 dec</td><td class="n">€20</td><td class="n">€15</td><td class="n">€15</td><td class="n">€50</td><td class="n">€1.050</td></tr>
+      <tr><td>3 · Budget naar de winnaars</td><td>8 – 28 dec</td><td class="n">€20</td><td class="n">€15</td><td class="n">€15</td><td class="n">€50</td><td class="n">€1.050</td></tr>
+      <tr><td>Reserve</td><td></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">€22</td></tr>
+      <tr><td>Totaal</td><td>8 weken</td><td class="n">€1.050</td><td class="n">€798</td><td class="n">€630</td><td class="n"></td><td class="n">€2.500</td></tr>
+    </tbody></table></div>
+  <p class="voetnoot">In fase 3 is de verdeling een richtlijn: het budget gaat naar de campagne die de meeste verkopen oplevert. We evalueren na 2 weken, na Black Friday en aan het einde.</p>
+
+  <h3 class="sub">Zoekadvertenties <span>zo staan ze bovenaan in Google · mobiel</span></h3>
+  <div class="serp">
+    <div class="gk"><span class="wat">Campagne 1 · Black Friday</span>
+      <div class="zb"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#9AA0A6" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>tuinhaard cortenstaal</div>
+      <div class="g-sp">Gesponsord</div>
+      <div class="g-site"><span class="g-fav">V</span><div><div class="g-naam">VENTOR</div><div class="g-url">https://www.ventorfire.com › tuinhaard › cortenstaal</div></div></div>
+      <div class="g-h">VENTOR® Cortenstalen Tuinhaard | Black Friday: -25% Korting | Handgemaakt in Nederland</div>
+      <div class="g-d">Cortenstalen buitenhaard van 220 cm, handgemaakt in Nederland. Sfeer rondom het vuur. Alleen t/m 30 november: −25% en een gratis Wind Shield t.w.v. €274.</div>
+      <div class="g-call">Cortenstaal · 360° zicht · Vonkenvanger · Onderhoudsarm</div>
+      <ul class="g-sl"><li>VENTOR® Original</li><li>Wind Shield</li><li>Veelgestelde vragen</li><li>Voor horeca</li></ul>
+    </div>
+    <div class="gk"><span class="wat">Campagne 1 · Black Friday</span>
+      <div class="zb"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#9AA0A6" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>buitenhaard cortenstaal</div>
+      <div class="g-sp">Gesponsord</div>
+      <div class="g-site"><span class="g-fav">V</span><div><div class="g-naam">VENTOR</div><div class="g-url">https://www.ventorfire.com › buitenhaard › cortenstaal</div></div></div>
+      <div class="g-h">Buitenhaard van Cortenstaal | 220 cm Hoog met Schoorsteen | Gratis Wind Shield bij -25%</div>
+      <div class="g-d">De schoorsteen voert de rook omhoog. Met vonkenvanger en 360° zicht op het vuur. Cortenstaal krijgt een roestlaag die het staal beschermt. Nooit verven of behandelen.</div>
+      <div class="g-call">Handgemaakt in Nederland · Cortenstaal · 360° zicht</div>
+      <ul class="g-sl"><li>VENTOR® Original</li><li>Zo werkt hij</li><li>Wind Shield</li><li>Dealers</li></ul>
+    </div>
+    <div class="gk"><span class="wat">Campagne 2 · Schoorsteen en hout</span>
+      <div class="zb"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#9AA0A6" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>tuinhaard met schoorsteen</div>
+      <div class="g-sp">Gesponsord</div>
+      <div class="g-site"><span class="g-fav">V</span><div><div class="g-naam">VENTOR</div><div class="g-url">https://www.ventorfire.com › tuinhaard › schoorsteen</div></div></div>
+      <div class="g-h">Tuinhaard met Schoorsteen | Vuur op Ooghoogte, 360° Zicht | VENTOR® Original</div>
+      <div class="g-d">De schoorsteen zit er standaard op, 40 cm breed en tot 220 cm hoog. Geen pijp bijkopen. Voor tuin, veranda en horecaterras. Bekijk de VENTOR® Original en bestel direct online.</div>
+      <div class="g-call">Handgemaakt in Nederland · Vonkenvanger · Cortenstaal</div>
+      <ul class="g-sl"><li>VENTOR® Original</li><li>Veelgestelde vragen</li><li>Wind Shield</li><li>Voor horeca</li></ul>
+    </div>
+    <div class="gk"><span class="wat">Campagne 2 · Na Black Friday (december)</span>
+      <div class="zb"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#9AA0A6" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>houtkachel buiten</div>
+      <div class="g-sp">Gesponsord</div>
+      <div class="g-site"><span class="g-fav">V</span><div><div class="g-naam">VENTOR</div><div class="g-url">https://www.ventorfire.com › houtkachel › buiten</div></div></div>
+      <div class="g-h">Houtkachel voor Buiten | Cortenstaal, 220 cm Hoog | Langer Samen bij het Vuur</div>
+      <div class="g-d">Cortenstaal krijgt een roestlaag die het staal beschermt. Nooit verven of behandelen. De schoorsteen voert de rook omhoog. Met vonkenvanger en 360° zicht op het vuur.</div>
+      <div class="g-call">Handgemaakt in Nederland · Op voorraad · Onderhoudsarm</div>
+      <ul class="g-sl"><li>VENTOR® Original</li><li>Zo werkt hij</li><li>Veelgestelde vragen</li><li>Dealers</li></ul>
+    </div>
+  </div>
+
+  <h3 class="sub">Shopping <span>de haard met foto en prijs, bovenaan in Google</span></h3>
+  <div class="shop"><span class="wat">Tijdens Black Friday</span>
+    <div class="zb"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#9AA0A6" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>buitenhaard cortenstaal</div>
+    <div class="g-sp">Gesponsord · Producten</div>
+    <div class="shop-rij">
+      <div class="prod"><img class="zoom" src="demo/google/shop-original.jpg" data-groot="demo/google/shop-original.jpg" alt="VENTOR Original in Google Shopping" loading="lazy"><div class="pi"><div class="pt">VENTOR® Original buitenhaard cortenstaal 220 cm</div><div class="pp">€2.249,00<s>€2.999</s></div><span class="pk">−25%</span><div class="pw">ventorfire.com</div></div></div>
+      <div class="prod"><img class="zoom" src="demo/google/shop-windshield.jpg" data-groot="demo/google/shop-windshield.jpg" alt="Wind Shield in Google Shopping" loading="lazy"><div class="pi"><div class="pt">VENTOR® Wind Shield cortenstaal windscherm</div><div class="pp">€274,00</div><div class="pw">ventorfire.com</div></div></div>
+      <div class="prod leeg" aria-hidden="true"><div class="vlak"></div><div class="pi"><div></div><div style="width:60%"></div><div style="width:40%"></div></div></div>
+      <div class="prod leeg" aria-hidden="true"><div class="vlak"></div><div class="pi"><div></div><div style="width:60%"></div><div style="width:40%"></div></div></div>
+    </div>
+  </div>
+  <div class="shop"><span class="wat">In december</span>
+    <div class="zb"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#9AA0A6" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>tuinhaard cortenstaal</div>
+    <div class="g-sp">Gesponsord · Producten</div>
+    <div class="shop-rij">
+      <div class="prod leeg" aria-hidden="true"><div class="vlak"></div><div class="pi"><div></div><div style="width:60%"></div><div style="width:40%"></div></div></div>
+      <div class="prod"><img class="zoom" src="demo/google/shop-original.jpg" data-groot="demo/google/shop-original.jpg" alt="VENTOR Original in Google Shopping" loading="lazy"><div class="pi"><div class="pt">VENTOR® Original tuinhaard cortenstaal met schoorsteen</div><div class="pp">€2.595,00</div><div class="pw">ventorfire.com</div></div></div>
+      <div class="prod leeg" aria-hidden="true"><div class="vlak"></div><div class="pi"><div></div><div style="width:60%"></div><div style="width:40%"></div></div></div>
+      <div class="prod leeg" aria-hidden="true"><div class="vlak"></div><div class="pi"><div></div><div style="width:60%"></div><div style="width:40%"></div></div></div>
+    </div>
+  </div>
+
+  <h3 class="sub">Performance Max <span>één campagne · Shopping, YouTube, Gmail, Discover en websites</span></h3>
+  <div class="pmax">
+    <div class="pm"><span class="wat">YouTube Shorts</span>
+      <div class="short" data-video="demo/video/ventor-bf-video-c1-avond.mp4"><video muted loop playsinline preload="metadata" poster="demo/video/ventor-bf-video-c1-avond.jpg"><source src="demo/video/ventor-bf-video-c1-avond.mp4" type="video/mp4"></video>
+        </div>
+      <div class="kaartje"><div class="yt-rij"><span class="g-fav">V</span><div><b style="font-size:15px">Black Friday: −25% op de VENTOR® Original</b><div class="gs"><strong>Gesponsord</strong> · ventorfire.com</div><span class="knop blauw">Nu kopen</span></div></div></div>
+    </div>
+    <div class="pm"><span class="wat">YouTube-startpagina</span>
+      <div class="kaartje"><div class="yt"><img class="l zoom" src="demo/google/pmax-land-strand.jpg" data-groot="demo/google/pmax-land-strand.jpg" alt="YouTube-advertentie" loading="lazy"><span class="dur">0:10</span></div>
+        <div class="yt-rij"><span class="g-fav">V</span><div><b style="font-size:15px">Langer samen bij het vuur</b><div class="gs"><strong>Gesponsord</strong> · VENTOR</div><div style="margin-top:4px">De VENTOR® Original: 220 cm cortenstaal met het vuur op ooghoogte.</div><span class="knop blauw">Nu kopen</span></div></div></div>
+      <span class="wat" style="margin-top:14px">Gmail</span>
+      <div class="kaartje mail">
+        <div class="r"><span class="g-fav">V</span><div><div><span class="bd">Advertentie</span><span class="vn">VENTOR</span></div><div><b>Black Friday: −25% op de VENTOR® Original</b></div><div class="sn">De buitenhaard met het vuur op ooghoogte, plus een gratis Wind Shield t.w.v. €274.</div></div></div>
+        <div class="r grijs" aria-hidden="true"><span class="g-fav" style="background:#DADCE0"></span><div style="flex:1"><i style="--w:40%"></i><i></i><i style="--w:65%"></i></div></div>
+        <div class="r grijs" aria-hidden="true"><span class="g-fav" style="background:#DADCE0"></span><div style="flex:1"><i style="--w:30%"></i><i style="--w:90%"></i><i style="--w:55%"></i></div></div>
+      </div>
+    </div>
+    <div class="pm"><span class="wat">Discover-feed</span>
+      <div class="kaartje"><img class="l zoom" src="demo/google/pmax-land-terras.jpg" data-groot="demo/google/pmax-land-terras.jpg" alt="Discover-advertentie" loading="lazy">
+        <div class="tx"><b>Om 23:00 zit iedereen nog buiten. Het vuur brandt op ooghoogte.</b><div class="gs"><strong>Gesponsord</strong> · VENTOR</div><div style="margin-top:6px">Handgemaakt in Nederland. Nu −25% met Black Friday.</div></div></div>
+      <span class="wat" style="margin-top:14px">Website (display)</span>
+      <div class="kaartje disp sq"><img class="zoom" src="demo/google/pmax-sq-tafels.jpg" data-groot="demo/google/pmax-sq-tafels.jpg" alt="Display-advertentie" loading="lazy">
+        <div class="tx"><div class="logo-r"><span class="g-fav">V</span>VENTOR · Advertentie</div><b style="margin-top:8px">Buitenhaard van Cortenstaal</b>Vuur op ooghoogte, 360° zicht. Alleen t/m 30 november: −25% en een gratis Wind Shield.<br><span class="knop">Nu kopen</span></div></div>
+    </div>
+    <div class="pm"><span class="wat">Website (display, staand)</span>
+      <div class="kaartje disp"><img class="zoom" src="demo/google/pmax-port-tuin.jpg" data-groot="demo/google/pmax-port-tuin.jpg" alt="Staande display-advertentie" loading="lazy">
+        <div class="tx"><div class="logo-r"><span class="g-fav">V</span>VENTOR · Advertentie</div><b style="margin-top:8px">Het Middelpunt van je Tuin</b>De VENTOR® Original: 220 cm cortenstaal met het vuur op ooghoogte.<br><span class="knop">Bekijk de haard</span></div></div>
+    </div>
+    <div class="pm"><span class="wat">Beeldmateriaal</span>
+      <div class="kaartje"><img class="l zoom" src="demo/ads/ventor-bf-c07-sq.jpg" data-groot="demo/ads/ventor-bf-c07-sq.jpg" alt="Vierkante advertentie uit de Meta-set" loading="lazy" style="aspect-ratio:1">
+        <div class="tx"><b>Ook de Meta-beelden</b>De vierkante en staande beelden van de Meta-campagne gebruiken we ook in Performance Max. Zo is het merk overal hetzelfde.</div></div>
+    </div>
+  </div>
+
+  <div class="assets">
+    <div class="blok"><span class="label">Koppen · max. 30 tekens</span><ul><li>VENTOR® Original</li><li>Buitenhaard van Cortenstaal</li><li>Langer Samen bij het Vuur</li><li>Vuur op Ooghoogte</li><li>Handgemaakt in Nederland</li><li>Black Friday: -25% Korting</li><li>Gratis Wind Shield t.w.v. €274</li><li>Tuinhaard met Schoorsteen</li><li>Het Middelpunt van je Tuin</li></ul></div>
+    <div class="blok"><span class="label">Lange koppen en beschrijvingen</span><ul><li>De VENTOR® Original: 220 cm cortenstaal met het vuur op ooghoogte.</li><li>Black Friday: 25% korting op de VENTOR® Original + gratis Wind Shield.</li><li>Om 23:00 zit iedereen nog buiten. Het vuur brandt op ooghoogte.</li><li>De schoorsteen voert de rook omhoog. Met vonkenvanger en 360° zicht op het vuur.</li><li>Cortenstaal krijgt een roestlaag die het staal beschermt. Nooit verven of behandelen.</li></ul></div>
+    <div class="blok"><span class="label">Wie ziet de advertenties</span><ul><li><b>Zoekthema's:</b> de zoektermen van campagne 1 en 2</li><li><b>Eigen segment:</b> mensen die zochten op tuinhaard, buitenhaard of houtkachel buiten</li><li><b>Bezoekers</b> van ventorfire.com</li><li><b>Interesses:</b> huis en tuin, buitenleven</li><li><b>Leeftijd</b> 45–65, De Gastheer</li></ul></div>
+  </div>
+</div></section>
+
 <section id="meer"><div class="wrap">
   <span class="label">Achtergrond</span>
   <h2>Merkfundament en presentatie</h2>
@@ -203,7 +453,7 @@ function kaart(a,media){
 // video's spelen stil af zodra ze in beeld komen
 if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.play().catch(function(){})}else{e.target.pause()}})},{threshold:.5});
-  [].forEach.call(document.querySelectorAll('.ad video'),function(v){io.observe(v)});
+  [].forEach.call(document.querySelectorAll('.ad video,.short video'),function(v){io.observe(v)});
 }
 var lb=document.getElementById('lb'), lbIn=document.getElementById('lbInhoud');
 function open(html){lbIn.innerHTML=html;lb.classList.add('open');document.body.style.overflow='hidden';var v=lbIn.querySelector('video');if(v){v.play().catch(function(){})}}
