@@ -422,6 +422,18 @@ body.zonder-check .check{display:none}
 html.verlopen body>*:not(.verlopen-melding){display:none!important}
 .verlopen-melding{display:none}
 html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;font:500 20px/1.5 Inter,system-ui,sans-serif;color:#1C1C1C;background:#F6F2EC}
+
+.nt-knop{position:fixed;right:16px;bottom:96px;z-index:120;display:flex;align-items:center;gap:8px;background:#FFE36E;color:#1C1C1C;border:0;border-radius:999px;padding:12px 18px;font:600 14px/1 Inter,system-ui,sans-serif;box-shadow:0 4px 16px rgba(0,0,0,.25);cursor:pointer}
+.nt-knop:focus-visible{outline:3px solid #1C1C1C;outline-offset:2px}
+.nt-laag{position:absolute;left:0;top:0;width:100%;height:0;z-index:45;pointer-events:none;display:none}
+html.nt-aan .nt-laag{display:block}
+.nt-laag svg{position:absolute;left:0;top:0;overflow:visible}
+.nt{position:absolute;width:290px;background:#FFE36E;color:#1C1C1C;padding:14px 16px 16px;border-radius:2px;box-shadow:0 6px 18px rgba(0,0,0,.22);font:400 13px/1.42 Inter,system-ui,sans-serif;pointer-events:auto;transform:rotate(-1deg)}
+.nt:nth-child(even){transform:rotate(1deg);background:#FFEA8A}
+.nt b{display:block;font:700 15px/1.25 Inter,system-ui,sans-serif;margin-bottom:5px}
+.nt i{position:absolute;top:-10px;left:-10px;width:26px;height:26px;border-radius:50%;background:#1C1C1C;color:#FFE36E;font:700 12px/26px Inter,system-ui,sans-serif;text-align:center;font-style:normal}
+html.nt-aan .nt-doel{outline:2px dashed #E0A800;outline-offset:4px}
+@media(max-width:900px){.nt-knop{bottom:150px}.nt{width:calc(100% - 32px);transform:none!important}}
 </style>
 </head>
 <body>
@@ -869,6 +881,72 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       window.open(document.getElementById('bmLink').href,'_blank','noopener');
     });
   })();
+})();
+</script>
+<script>
+(function(){
+  var NOTES=[[".bf-balk", "Black Friday-balk blijft staan", "De actie is altijd in beeld, ook tijdens het scrollen. Zelfde woorden als in de advertenties, zodat wie uit Meta komt meteen herkent waarvoor hij klikte (message match). De einddatum geeft een reden om nu te kopen."], ["#hoofd", "Product eerst, met echte beelden", "Het eerste wat je ziet is de haard zelf, brandend en in een tuin. Video’s van het eigen Instagram laten het vuur echt zien. Onder elk beeld staat één zin met één voordeel, zodat de galerij ook verkoopt."], [".info h1", "Naam plus één belofte", "Duidelijke productnaam (ook goed voor Google), daaronder de kernbelofte uit het merkfundament: het vuur op ooghoogte. Eén zin, geen opsomming, zodat het blijft hangen."], [".bf-prijs", "Korting in één oogopslag", "Doorgestreepte prijs en −25% naast elkaar. Bezoekers zien zonder rekenen wat ze besparen. “Alleen Black Friday” maakt duidelijk dat het tijdelijk is."], [".cadeau-blok", "Cadeau met een prijskaartje", "Het Wind Shield t.w.v. €274 met foto erbij. Een concreet cadeau voelt vaak waardevoller dan nog meer procenten korting, en de datum (t/m 30 november) geeft extra urgentie."], [".voorraad", "Levertijd en voorraad", "Beantwoordt de vraag “wanneer heb ik hem?” vóór die gesteld wordt. “Nog beperkte voorraad” is eerlijke schaarste: het klopt, dus we mogen het zeggen."], [".info .voordelen", "Vier redenen vlak boven de knop", "Voor wie snel beslist: de vier sterkste koopargumenten, kort. Alles wat meer uitleg nodig heeft staat lager op de pagina, zodat het koopblok rustig blijft."], ["#inWinkelwagen", "Eén duidelijke hoofdknop", "Eén actie in een opvallende kleur. De brochureknop eronder is bewust rustiger, zodat hij niet concurreert met kopen."], ["[data-brochure]", "Brochure voor de twijfelaar", "Een haard van ruim €2.000 koop je niet altijd in één keer. Wie nog twijfelt laat naam en e-mail achter. Zo bouwen we een lijst op die we tijdens Black Friday kunnen opvolgen met e-mails."], [".werkt-op", "Hout of gas? Meteen duidelijk", "Een vraag die veel mensen hebben, direct in het koopblok beantwoord, met een link naar de uitleg lager op de pagina."], [".intro h2", "Het verhaal: de avond", "Storytelling uit het merkfundament. De Gastheer wil langer buiten zitten met vrienden en familie. We verkopen de avond rond het vuur, niet het staal."], ["#voordelen h2", "Vijf voordelen, steeds met bewijs", "Elk voordeel begint met wat je merkt en eindigt met de feiten (maat, dikte, materiaal). De video’s laten het zien in plaats van het alleen te beloven."], ["#past-hij h2", "Twijfels wegnemen", "Ruimte, ondergrond, buren: de vragen waarop mensen afhaken beantwoorden we voordat ze ze stellen."], ["#specs h2", "Alles op een rij", "Voor de rationele koper die alles wil checken. Eén tabel die je in een paar seconden scant."], ["#dealers h2", "Echt bewijs, geen verzonnen reviews", "Echte foto’s van klanten en terrassen van het eigen Instagram. Daaronder de dealers, voor wie hem eerst in het echt wil zien. Dat geeft vertrouwen bij een grote aankoop."], ["#zo-werkt-hij h2", "Zo werkt hij", "Voor wie nog nooit een houthaard had: vier simpele stappen. Dat verlaagt de drempel, want “ingewikkeld” is een reden om niet te kopen."], ["#faq h2", "De echte vragen, eerlijk beantwoord", "Rook, kleren, de pijp, de buren: vragen uit het onderzoek. We beloven niets wat niet klopt (geen “rookvrij”), dat maakt de rest van de pagina geloofwaardig."], [".slot h2", "De laatste duw", "Voor wie tot onderaan scrolt: nog één keer de belofte, het aanbod en de knop, zodat niemand terug naar boven hoeft."]], laag, svg, NS='http://www.w3.org/2000/svg';
+  var knop=document.createElement('button'); knop.type='button'; knop.className='nt-knop'; knop.setAttribute('aria-pressed','false');
+  knop.textContent='Toon uitleg'; document.body.appendChild(knop);
+  function maak(){
+    laag=document.createElement('div'); laag.className='nt-laag'; laag.setAttribute('aria-label','Uitleg bij de pagina');
+    svg=document.createElementNS(NS,'svg'); laag.appendChild(svg);
+    svg.innerHTML='<defs><marker id="ntPunt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1C1C1C"/></marker></defs>';
+    NOTES.forEach(function(n,i){var d=document.createElement('div');d.className='nt';d.innerHTML='<i>'+(i+1)+'</i><b></b><span></span>';d.querySelector('b').textContent=n[1];d.querySelector('span').textContent=n[2];laag.appendChild(d)});
+    document.body.appendChild(laag);
+  }
+  function plaats(){
+    if(!laag) return;
+    var vw=document.documentElement.clientWidth, sy=window.scrollY, sx=window.scrollX, mob=vw<900, bezet=[], hmax=0;
+    [].forEach.call(svg.querySelectorAll('path.nt-pijl'),function(p){p.remove()});
+    [].forEach.call(document.querySelectorAll('.nt-doel'),function(e){e.classList.remove('nt-doel')});
+    var kaarten=laag.querySelectorAll('.nt');
+    NOTES.forEach(function(n,i){
+      var el=document.querySelector(n[0]), k=kaarten[i];
+      if(!el||!el.getClientRects().length){k.style.display='none';return}
+      k.style.display='';
+      var r=el.getBoundingClientRect(), e={l:r.left+sx,t:r.top+sy,r:r.right+sx,b:r.bottom+sy,w:r.width,h:r.height};
+      if(el.closest('.kop-sticky,.top')){e.t=r.top;e.b=r.bottom}
+      el.classList.add('nt-doel');
+      var w=k.offsetWidth, h=k.offsetHeight, x, y, kant;
+      if(mob){x=16;y=e.t-h-18;kant='boven'}
+      else if(n[0]==='#hoofd'){x=e.l+20;y=e.t+20;kant='in'}
+      else if(e.r+50+w<vw-12){x=e.r+50;y=e.t+Math.min(20,e.h/3);kant='rechts'}
+      else if(e.l-50-w>12){x=e.l-50-w;y=e.t+Math.min(20,e.h/3);kant='links'}
+      else {x=Math.max(12,Math.min(vw-w-12,e.r-w));y=e.b+24;kant='onder'}
+      var ks=document.querySelector('.kop-sticky'); if(el.closest('.kop-sticky')&&ks){y=ks.getBoundingClientRect().bottom+sy+22}
+      y=Math.max(y,8);
+      var stop=false; while(!stop){stop=true;bezet.forEach(function(b){if(x<b.x+b.w+10&&x+w+10>b.x&&y<b.y+b.h+12&&y+h+12>b.y){y=b.y+b.h+14;stop=false}})}
+      bezet.push({x:x,y:y,w:w,h:h});
+      k.style.left=x+'px'; k.style.top=y+'px';
+      var x1,y1,x2,y2;
+      if(kant==='rechts'){x1=x;y1=y+Math.min(h/2,40);x2=e.r+6;y2=Math.max(e.t+8,Math.min(e.b-8,y1))}
+      else if(kant==='links'){x1=x+w;y1=y+Math.min(h/2,40);x2=e.l-6;y2=Math.max(e.t+8,Math.min(e.b-8,y1))}
+      else if(kant==='boven'){x1=x+40;y1=y+h;x2=Math.max(e.l+12,Math.min(e.r-12,x1+30));y2=e.t-4}
+      else if(kant==='in'){x1=x+w;y1=y+h-20;x2=x+w+70;y2=y+h+90}
+      else {x1=x+w/2;y1=y;x2=Math.max(e.l+12,Math.min(e.r-12,x1));y2=e.b+4}
+      var mx=(x1+x2)/2, p=document.createElementNS(NS,'path');
+      p.setAttribute('d','M'+x1+' '+y1+' Q'+mx+' '+(Math.min(y1,y2)-18)+' '+x2+' '+y2);
+      p.setAttribute('class','nt-pijl'); p.setAttribute('fill','none'); p.setAttribute('stroke','#1C1C1C'); p.setAttribute('stroke-width','2.5'); p.setAttribute('marker-end','url(#ntPunt)');
+      svg.appendChild(p); hmax=Math.max(hmax,y+h);
+    });
+    svg.setAttribute('width',vw); svg.setAttribute('height',Math.max(hmax,document.documentElement.scrollHeight));
+  }
+  function zet(aan){
+    document.documentElement.classList.toggle('nt-aan',aan);
+    knop.textContent=aan?'Verberg uitleg':'Toon uitleg'; knop.setAttribute('aria-pressed',aan);
+    if(aan){
+      if(!laag) maak();
+      [].forEach.call(document.querySelectorAll('.reveal'),function(r){r.classList.add('zichtbaar','in','is-in','visible')});
+      plaats(); setTimeout(plaats,400);
+    } else {[].forEach.call(document.querySelectorAll('.nt-doel'),function(e){e.classList.remove('nt-doel')})}
+    try{localStorage.setItem('ventorUitleg',aan?'1':'0')}catch(e){}
+  }
+  knop.addEventListener('click',function(){zet(!document.documentElement.classList.contains('nt-aan'))});
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){if(document.documentElement.classList.contains('nt-aan'))plaats()},150)});
+  window.addEventListener('load',function(){if(document.documentElement.classList.contains('nt-aan'))plaats()});
+  var start=/[?&]uitleg=1/.test(location.search); try{if(localStorage.getItem('ventorUitleg')==='1')start=true}catch(e){}
+  if(start) zet(true);
 })();
 </script>
 </body>
