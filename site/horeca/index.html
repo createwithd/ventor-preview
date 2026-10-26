@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <script>if(Date.now()>=new Date('2026-11-22T00:00:00+01:00').getTime())document.documentElement.classList.add('verlopen')</script>
-<title>VENTOR® Horeca Black Friday</title>
+<title>Black Friday horeca | VENTOR® Original voor uw terras</title>
 <meta name="description" content="Black Friday voor horeca: 25% korting op de VENTOR® Original met Wind Shield. Buitenhaard met het vuur op ooghoogte voor uw terras. Handgemaakt in Nederland.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -280,6 +280,11 @@ footer img{height:16px;width:auto;filter:invert(1);mix-blend-mode:screen}
 .koop-v2 .prijs{margin:20px 0 2px}
 .prijs-klein{font-size:14px;color:var(--as-donker)}
 .prijs-klein a{color:var(--corten)}
+.maten{display:flex;align-items:stretch;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
+.maten div{display:flex;flex-direction:column;justify-content:center;background:#fff;border:1px solid var(--lijn,#DDD3C4);border-radius:6px;padding:8px 14px;line-height:1.2}
+.maten b{font-family:Jost,sans-serif;font-weight:500;font-size:20px;color:var(--houtskool,#1C1C1C)}
+.maten span{font-size:13px;color:var(--as,#5E5853)}
+.maten button{border:0;background:none;color:var(--corten,#8A4B2A);font:inherit;font-size:14.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:8px 4px;min-height:44px}
 .voorraad{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:14px 0 16px;font-size:15px;font-weight:500}
 .stip{width:9px;height:9px;border-radius:50%;background:#2F7D4A;box-shadow:0 0 0 3px rgba(47,125,74,.15)}
 .koop-v2 .voordelen{margin:18px 0 22px}
@@ -451,7 +456,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
         <button class="pijl vorige" type="button" aria-label="Vorige foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="pijl volgende" type="button" aria-label="Volgende foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         <p class="bijschrift" id="bijschrift"></p>
-        <span class="teller" id="teller" aria-live="polite">1 / 13</span>
+        <span class="teller" id="teller" aria-live="polite">1 / 14</span>
       </div>
       <div class="thumbs" id="thumbs" role="group" aria-label="Foto's"></div>
     </div>
@@ -459,6 +464,12 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     <div class="info">
       <h1>VENTOR® Original voor horeca: cortenstalen buitenhaard, 220 cm</h1>
       <p class="kop-onder">Het vuur waar uw gasten omheen gaan zitten.</p>
+      <div class="maten" aria-label="Maten">
+        <div><b class="num">220 cm</b><span>hoog</span></div>
+        <div><b class="num">Ø 62 cm</b><span>vuurkamer</span></div>
+        <div><b class="num">Ø 40 cm</b><span>schoorsteen</span></div>
+        <button type="button" id="matenKnop">Bekijk de maten</button>
+      </div>
 
       <div class="bf-prijs"><span class="nu num">€2.249</span><s class="num" aria-label="Normaal €2.999">€2.999</s><span class="procent">Alleen Black Friday −25%</span></div>
       <p class="bf-set">per haard, incl. btw · €1.858,68 excl. btw</p>
@@ -639,6 +650,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   var B='img/';
   var fotos=[
     ['Ventor_57.jpg','Gasten aan tafel op een strandterras met de VENTOR® Original',1],
+    ['beeld/maten.jpg','Maten van de VENTOR® Original: 220 cm hoog, vuurkamer Ø 62 cm, schoorsteen Ø 40 cm',0],
     ['video/terras-gasten.mp4','Video: gasten op een strandterras rond de VENTOR® Original',1,'video/terras-gasten.jpg'],
     ['video/vlammen.mp4','Video: de vlammen in de vuurkamer van dichtbij',1,'video/vlammen.jpg'],
     ['video/papas-beach-house.mp4','Video: de VENTOR® Original op het terras van Papas Beach House',1,'video/papas-beach-house.jpg'],
@@ -657,11 +669,13 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
     var b=document.createElement('button'); b.type='button'; if(f[2]) b.className='cover';
     b.setAttribute('aria-label','Foto '+(i+1)+': '+f[1]); b.setAttribute('aria-current',i===0?'true':'false');
     var isV=/\.mp4$/.test(f[0]); if(isV) b.className+=' video';
-    b.innerHTML='<img src="'+(isV?f[3]:B+f[0])+'" alt="" loading="lazy">';
+    var lok=!isV&&f[0].indexOf('/')>-1;
+    b.innerHTML='<img src="'+(isV?f[3]:lok?f[0].replace('.jpg','-klein.jpg'):B+f[0])+'" alt="" loading="lazy">';
     b.addEventListener('click',function(){toon(i)}); thumbs.appendChild(b);
   });
   var BIJ={
     'Ventor_57.jpg':'Een vuur midden tussen de tafels.',
+    'beeld/maten.jpg':'220 cm hoog, vuurkamer Ø 62 cm, schoorsteen Ø 40 cm.',
     'video/terras-gasten.mp4':'Gasten rond het vuur, ook na zonsondergang.',
     'video/vlammen.mp4':'Een groot vuur, van alle tafels te zien.',
     'video/papas-beach-house.mp4':'Op het terras van Papas Beach House.',
@@ -689,7 +703,7 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
       vid.pause(); vakje.classList.remove('toont-video');
       hoofd.classList.add('laden');
       var nieuw=new Image(); nieuw.onload=nieuw.onerror=function(){hoofd.src=nieuw.src;hoofd.alt=f[1];hoofd.classList.toggle('cover',!!f[2]);hoofd.classList.remove('laden')};
-      nieuw.src=B+f[0];
+      nieuw.src=f[0].indexOf('/')>-1?f[0]:B+f[0];
     }
     bijschrift.textContent=BIJ[f[0]]||'';
     teller.textContent=(huidig+1)+' / '+fotos.length;
@@ -701,6 +715,8 @@ html.verlopen .verlopen-melding{display:flex;min-height:100vh;align-items:center
   var vak=document.getElementById('hoofd'), x0=null;
   vak.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
   vak.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)toon(huidig+(dx<0?1:-1));x0=null});
+
+  var mk=document.getElementById('matenKnop'); if(mk) mk.addEventListener('click',function(){toon(1);document.getElementById('hoofd').scrollIntoView({behavior:'smooth',block:'center'})});
 
   // rekenhulp
   var PRIJS=2249, EXCL=1858.68, inp=document.getElementById('aantal'), uit=document.getElementById('horecaTotaal');
